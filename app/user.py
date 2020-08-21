@@ -7,6 +7,7 @@ from app.db_sql import add_user, select_user
 user = Blueprint('user', __name__)
 
 
+# 注册页面,传输数据为json,方式为
 @user.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
@@ -22,12 +23,14 @@ def register():
             if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0:
                 user = select_user(username, password)
                 if user is not None:
+                    add_user(username, password, email, liking)
                     return redirect(url_for('user.login'))
                 else:
                     return jsonify(type_information='False')
-            return redirect(url_for('user.login'))
+            return render_template('register.html')
 
 
+# 登录页面,传输数据为json,类型为POST
 @user.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
@@ -38,11 +41,11 @@ def login():
             data = json.load(data)
             username = data.get('username')
             password = data.get('password')
-            user = selcet_user(username, password)
-            if user is not None:
-                return render_template('login.html')
-            else:
+            users = select_user(username, password)
+            if users is not None:
                 return redirect(url_for('job.index'), jsonify(username=username))
+            else:
+                return render_template('login.html')
 
 
 

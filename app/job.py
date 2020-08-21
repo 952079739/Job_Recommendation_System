@@ -8,6 +8,7 @@ from app.db_sql import select_company, select_position
 job = Blueprint('job', __name__)
 
 
+# 返回job页面,返回页面为job.html,返回数据为json
 @job.route('/index')
 def index():
     data = request.get_data()
@@ -25,6 +26,7 @@ def index():
     return render_template('job.html', jsonify(username=name, p_list=position_list, c_list=company_list))
 
 
+# 查询为职位为python的job，返回job.html
 @job.route('/python', method='GET')
 def job_python():
     job_data = request.get_data()
@@ -40,7 +42,7 @@ def job_python():
         position_list.append({'name': job_information.name,
                               'treatment': job_information.position_treatment,
                               })
-    return render_template('job.html', jsonify(username=name, p_list=position_list, c_list=company_list))
+    return render_template('job.html', jsonify(username=username, p_list=position_list, c_list=company_list))
 
 
 
