@@ -181,14 +181,15 @@ body{
 
 .user-list-btn{
 	padding:5px;
-	margin-left: 40px;
+	margin-left: 20px;
 	background-color: #33b753;
 	border: none;
 	color: white;
 }
+
 .user-list-btn1{
 	padding:5px;
-	margin-left: 40px;
+	margin-left: 20px;
 	background-color: white;
 	border: none;
 	color:#33b753;
