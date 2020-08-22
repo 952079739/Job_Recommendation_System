@@ -1,5 +1,5 @@
 .container{
-	width: 1300px;
+	border: 1px;
 }
 
 :focus {
@@ -62,16 +62,22 @@ img{
 }
 
 .container-small{
-	padding-top: 150px;
+	padding-top: 190px;
 	padding-left: 20px;
-	max-width:460px;	
+	max-width:460px;
 }
 
-/*.container-adapt{
+.container-small1{
+	padding-top: 120px;
+	padding-left: 20px;
+	max-width:460px;
+}
+
+.container-adapt{
 	margin: 0 350px 0 350px;
 	width: 1500px;
 	position: relative;
-}*/
+}
 .img-bg{
 	padding-top: 100px;
 	width: 660px;
@@ -347,4 +353,11 @@ dd {
 .sort-title .sort-by.active {
     color: #fff;
     background-color: #41af55;
+}
+
+.buttom-form{
+	width: 37%;
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
 }
