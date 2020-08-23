@@ -12,3 +12,8 @@
 3.source flask_env.sh
 
 4.flask run
+
+
+使用json原生数据
+实现伪登录 张三 12345
+页面的伪显示
