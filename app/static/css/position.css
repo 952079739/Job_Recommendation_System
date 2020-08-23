@@ -75,9 +75,10 @@
 	margin-bottom: 20px;
 }
 
-.company-sketch img{
-	margin-left: 90px;
+.company-sketch img{	
+	margin: 0 auto ;
 	margin-bottom: 30px;
+
 }
 
 .company-desc{
