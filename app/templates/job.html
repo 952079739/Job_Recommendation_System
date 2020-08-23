@@ -90,66 +90,22 @@
 					</div>
 				
 					<!--具体显示-->
-					<div class="position-list">
-						
-						<div class="position-list-item clearfix">
-							<div class="col-sm-5">
-								<a href="position-info.html" class="title">软件测试工程师</a>
-								<div class="info infoleft">
-									<span class="glyphicon glyphicon-map-marker">成都·武侯区·新会展中心</span>
-									<span class="glyphicon glyphicon-education">python</span>	
-								</div>
-							</div>
-							<div class="col-sm-4">
-								<a class="title1" href="#">广电运通金融电子</a>								
-							</div>
-							
-							<div class="col-sm-2">
-								<img src="../static/img/example.png" alt="公司Logo" />
-							</div>
-						</div>
-						
-									
+					<div class="position-list" id="position_list">														
 					</div>
 				</div>
 
 				<div class="col-sm-3">
 					<!--推荐栏1-->
-					<div class="recommend-card">
+					<div class="recommend-card" id="recommend_like">
 						<div class="card-title clearfix"><span>|</span>猜你喜欢
 							<a href="#">换一批</a>
-						</div>
-						
-						<div class="card-body clearfix">
-							<div class="col-sm-4">
-								<img src="../static/img/example.png" alt="公司Logo" />
-							</div>
-							<div class="col-sm-8 card-body-abr">
-								<a href="position-info.html" class="title">软件测试工程师</a>
-								<br />
-								<a class="title1" href="#">广电运通金融电子</a>
-							</div>
-						</div>	
-							
-						
+						</div>					
 					</div>
 					<!--推荐栏2-->
-					<div class="recommend-card">
+					<div class="recommend-card" id="recommend_hot">
 						<div class="card-title clearfix"><span>|</span>热门职位
 							<a href="#">换一批</a>
 						</div>
-						
-						<div class="card-body clearfix">
-							<div class="col-sm-4">
-								<img src="../static/img/example.png" alt="公司Logo" />
-							</div>
-							<div class="col-sm-8 card-body-abr">
-								<a href="position-info.html" class="title">软件测试工程师</a>
-								<br />
-								<a class="title1" href="#">广电运通金融电子</a>
-							</div>
-						</div>
-						
 											
 					</div>
 				</div>
@@ -164,6 +120,107 @@
 		<script src="../static/lib/jquery/jquery-3.4.1.js"></script>
 		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 		<script src="../static/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+		
+		<script>
+			$(function(){
+				job_build()
+				likejob_build()
+				hotjob_build()
+				
+				//左边职业显示
+				function job_build(){
+					var jobtemp = '';
+					$.ajax({
+						type:"get",
+						url:"../static/date/job.json",
+						dataType:"json",
+						success:function(result){
+							var joblist = result.position
+							console.log(joblist)
+							for(var i = 0; i < joblist.length; i++){
+								jobtemp += 	'<div class="position-list-item clearfix">'+
+												'<div class="col-sm-6">'+
+													'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+													'<div class="info infoleft">'+
+														'<div class="col-sm-8 row">'+
+														'<span class="glyphicon glyphicon-map-marker">'+joblist[i].position_place+'</span>'+
+														'</div>'+
+														'<div class="col-sm-4">'+
+														'<span class="glyphicon glyphicon-education">'+joblist[i].position_type+'</span>'+	
+														'</div>'+
+													'</div>'+
+												'</div>'+
+												'<div class="col-sm-3">'+
+													'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+								
+												'</div>'+
+												'<div class="col-sm-2">'+
+													'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+												'</div>'+
+											'</div>'
+							}
+							$("#position_list").append(jobtemp)
+						}
+					});
+				}	
+				
+				//猜测职位
+				function likejob_build(){
+					var likejobtemp = '';
+					$.ajax({
+						type:"get",
+						url:"../static/date/job.json",
+						dataType:"json",
+						success:function(result){
+							var joblist = result.position
+							console.log(joblist)
+							for(var i = 0; i < joblist.length-4; i++){
+								likejobtemp += '<div class="card-body clearfix">'+
+											'<div class="col-sm-4">'+
+												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+											'</div>'+
+											'<div class="col-sm-8 card-body-abr">'+
+												'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+													'<br />'+
+												'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+
+											'</div>'+
+										'</div>'
+							}
+							$("#recommend_like").append(likejobtemp)
+						}
+					});
+				}	
+				
+				//热门职业
+				function hotjob_build(){
+					var hotjobtemp = '';
+					$.ajax({
+						type:"get",
+						url:"../static/date/job.json",
+						dataType:"json",
+						success:function(result){
+							var joblist = result.position
+							console.log(joblist)
+							for(var i = 4; i < joblist.length; i++){
+								hotjobtemp += '<div class="card-body clearfix">'+
+											'<div class="col-sm-4">'+
+												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+											'</div>'+
+											'<div class="col-sm-8 card-body-abr">'+
+												'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+													'<br />'+
+												'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+
+											'</div>'+
+										'</div>'
+							}
+							$("#recommend_hot").append(hotjobtemp)
+						}
+					});
+				}	
+				
+				
+			})
+		</script>
+		
 		<!--自己的插件 -->
 		<script src="../static/js/index.js"></script>
 	</body>
