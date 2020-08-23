@@ -140,10 +140,11 @@
 							for(var i = 0; i < joblist.length; i++){
 								jobtemp += 	'<div class="position-list-item clearfix">'+
 												'<div class="col-sm-6">'+
-													'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+													'<button class="title" id="position_infomation" position_id="'+joblist[i].id+'" >'+joblist[i].name+
+													'</button>'+
 													'<div class="info infoleft">'+
 														'<div class="col-sm-8 row">'+
-														'<span class="glyphicon glyphicon-map-marker">'+joblist[i].position_place+'</span>'+
+														'<span class="glyphicon glyphicon-map-marker">'+joblist[i].position_place+'</span>'+										
 														'</div>'+
 														'<div class="col-sm-4">'+
 														'<span class="glyphicon glyphicon-education">'+joblist[i].position_type+'</span>'+	
@@ -151,7 +152,7 @@
 													'</div>'+
 												'</div>'+
 												'<div class="col-sm-3">'+
-													'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+								
+													'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+												
 												'</div>'+
 												'<div class="col-sm-2">'+
 													'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
@@ -179,9 +180,9 @@
 												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
 											'</div>'+
 											'<div class="col-sm-8 card-body-abr">'+
-												'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+												'<button class="title" id="position_infomation" position_id="'+joblist[i].id+'" >'+joblist[i].name+'</button>'+
 													'<br />'+
-												'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+
+												'<button class="title1" href="#">'+joblist[i].company[0].name+'</button>'+
 											'</div>'+
 										'</div>'
 							}
@@ -206,19 +207,25 @@
 												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
 											'</div>'+
 											'<div class="col-sm-8 card-body-abr">'+
-												'<a href="position-info.html" class="title">'+joblist[i].name+'</a>'+
+												'<button id="position_infomation" position_id="'+joblist[i].id+'" class="title">'+joblist[i].name+'</button>'+
 													'<br />'+
-												'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+
+												'<button class="title1" href="#">'+joblist[i].company[0].name+'</button>'+
 											'</div>'+
 										'</div>'
 							}
 							$("#recommend_hot").append(hotjobtemp)
 						}
 					});
-				}	
-				
-				
+				}					
 			})
+			
+			$(document).on("click","#position_infomation",function (){
+				var position_id = $(this).attr("position_id")
+				location.href="position-info.html?"+"id="+encodeURI(position_id)
+			})
+			
+			
+			
 		</script>
 		
 		<!--自己的插件 -->

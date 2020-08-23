@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>猎聘</title>
+		<title>职位</title>
 		<link rel="stylesheet" href="../static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../static/css/main.css" />
 		<link rel="stylesheet" href="../static/css/position.css" />
@@ -34,14 +34,11 @@
 					<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> 张三</span></a>
 					<ul class="dropdown-menu dropdown-menu-left">
 						<li>
-							<a href="index-login.html">返回主页</a>
-						</li>
-						<li>
-							<a href="user/user-index.html">个人中心</a>
-						</li>
+							<a href="job.html">返回主页</a>
+						</li>					
 						<li role="separator" class="divider"></li>
 						<li>
-							<a href="index.html">退出</a>
+							<a href="login.html">退出</a>
 						</li>
 					</ul>
 				</div>
@@ -51,11 +48,11 @@
 		<div class="container position-top">
 			<div class="position-list-item ">
 				<div class="col-sm-7">
-					<h1>系统运维</h1>
+					<h1 id="position_nameh"></h1>
 					<div class="position-info-1 row">
 						<div class="col-sm-1 "></div>
-						<div class="col-sm-2 position-info-reward"><span class="glyphicon glyphicon-education">python</span></div>
-						<div class="col-sm-5"><span class="glyphicon glyphicon-map-marker">成都·武侯区·新会展中心</span></div>
+						<div class="col-sm-2 position-info-reward"><span class="glyphicon glyphicon-education" id="position_typeh"></span></div>
+						<div class="col-sm-5"><span class="glyphicon glyphicon-map-marker" id="position_placeh"></span></div>
 					</div>
 				</div>
 				
@@ -69,12 +66,12 @@
 		</div>
 
 		<div class="container">
-			<div class="col-sm-8">
+			<div class="col-sm-8">				
 				<div class="user-list">					
 					<div class="user-list-item1"><span>|</span> 职位待遇</div>
 				</div>
-				<div class="position-desc">
-					零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假
+				<div class="position-desc" id="position_treatmenth">
+					
 				</div>
 				
 				<div class="position-evaluate" id="evaluate_update">
@@ -109,9 +106,11 @@
 				
 			<div class="col-sm-4">
 				<div class="company-sketch">
-					<img src="../static/img/company/company1.png" />
-					<h4>美团</h4>
-					<p>email：231232@168.com</p>
+					<div id="company_img">
+						
+					</div>		
+					<h4 id="company_nameh"></h4>
+					<p id="company_emailh"></p>
 			</div>
 		</div>		
 		
@@ -120,6 +119,49 @@
 		<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 		<script src="../static/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 		<script>
+			var position_grade = ''
+			
+			$(function(){
+				position_info_add()				
+				
+				//职位信息变通
+				function position_info_add(){
+					//获取链接中id
+					var href = location.href
+					var tol = href.length
+					var pos = href.indexOf("=")
+					var id = decodeURI(href.substr(pos+1,tol-pos))
+					var img = ''
+					
+					
+					$.ajax({
+						type:"get",
+						url:"../static/date/job.json",
+						dataType:"json",
+						success:function(result){
+							var positionlist = result.position
+							console.log(positionlist)
+							for(var i = 0; i < positionlist.length; i++){
+								if(positionlist[i].id == id){							
+									$("#position_nameh").append(positionlist[i].name)
+									$("#position_typeh").append(positionlist[i].position_type)
+									$("#position_placeh").append(positionlist[i].position_place)
+									$("#position_treatmenth").append(positionlist[i].position_treatment)						
+									$("#company_nameh").append(positionlist[i].company[0].name)
+									$("#company_emailh").append(positionlist[i].company[0].email)
+									img += '<img src="'+positionlist[i].company[0].photo_addr+'" />'
+									$("#company_img").append(img)
+									position_grade = positionlist[i].position_grade
+								}
+								if(position_grade > 0){
+									$('#evaluate_update').empty()	
+									evaluate_add()
+								}
+							}
+						}
+					})
+				}
+			})
 			
 			//在此判断若没有评分则按下列进行实现		
 			$('#evaluate_update_a').click(function(){
@@ -136,10 +178,9 @@
 				$('#evaluate_update')
 				.append($("<div class='user-list'></div>")
 				.append($("<div class='user-list-item1'></div>")
-				.append($("<span>|</span>")).append(" 您对此的评价为：").append("需要获得数据")))		
+				.append($("<span>|</span>")).append(" 您对此的评价为：").append(position_grade+"分")))		
 				}
-			
-			
+											
 		</script>
 		<!--自己的插件 -->
 		<script src="../static/js/index.js"></script>
