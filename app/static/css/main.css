@@ -128,7 +128,8 @@ img{
 	margin-top: 0;
 }
 .position-list-item .title {
-	display: block;
+	border: 0;
+	background-color: white;
 	color: #000000;
 	font-size: 18px;
 	font-weight: 500;
@@ -236,7 +237,21 @@ img{
 	color: #999;
 }
 .recommend-card .card-body .card-body-abr{
-	padding-top: 20px;
+	padding-top: 20px;	
+}
+
+.recommend-card .card-body .card-body-abr .title{
+	border: 0;
+	background-color: white;
+}
+
+.recommend-card .card-body .card-body-abr:hover{
+	color: #02b84c;
+}
+
+.recommend-card .card-body .card-body-abr .title1{
+	border: 0;
+	background-color: white;
 }
 
 .card-title span{

@@ -6,11 +6,12 @@
       "position_type":"python",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
       "position_place":"成都·武侯区·新会展中心",
+      "position_grade":"5",
       "company":[
       		{
       			"id":"1",
       			"name":"美团",
-      			"email":"231232@168.com",
+      			"email":"231232@168.com",  
       			"photo_addr":"../static/img/company/company1.png"
       		}
       ]
@@ -21,6 +22,7 @@
       "position_type":"python",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
       "position_place":"成都·高新区·新会展中心",
+      "position_grade":"5",
       "company":[
       		{
       			"id":"2",
@@ -36,6 +38,7 @@
       "position_type":"java",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
       "position_place":"成都·高新区·商贸大厦",
+      "position_grade":"5",
       "company":[
       		{
       			"id":"2",
@@ -50,7 +53,8 @@
       "name":"软件测试",
       "position_type":"java",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
-      "position_place":"成都·高新区·龙马公园",
+      "position_place":"成都·高新区·摩天大楼",
+      "position_grade":"5",
       "company":[
       		{
       			"id":"2",
@@ -61,7 +65,7 @@
       ]
     },
     {
-      "id":"4",
+      "id":"5",
       "name":"蓝色骑士",
       "position_type":"骑士",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
@@ -76,7 +80,7 @@
       ]
     },
     {
-      "id":"1",
+      "id":"6",
       "name":"黄色骑士",
       "position_type":"骑士",
       "position_treatment":"零食下午茶,年终奖,员工旅游,五险一金,节日福利,定期体检,带薪年假",
