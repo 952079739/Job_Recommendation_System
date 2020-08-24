@@ -36,7 +36,7 @@ def add_user(name, password, email, liking):
 
 
 def select_position(p_type):
-    positions = Position.query.filter(position_type=p_type).all()
+    positions = Position.query.filter(Position.position_type == p_type).first()
     return positions
 
 

@@ -15,6 +15,8 @@ def index():
     data = json.load(data)
     name = data.get('username')
     positions = Position.query.all()
+    # position = select_position('python')
+    # position_name = position.position_treatment
     position_list = []
     company_list = []
     for position in positions:
@@ -26,8 +28,9 @@ def index():
     return render_template('job.html', jsonify(username=name, p_list=position_list, c_list=company_list))
 
 
+
 # 查询为职位为python的job，返回job.html
-@job.route('/python', method='GET')
+@job.route('/python', methods=['GET'])
 def job_python():
     job_data = request.get_data()
     job_type = json.load(job_data)

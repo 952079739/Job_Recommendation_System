@@ -89,7 +89,8 @@ if __name__ == '__main__':
     # db.session.add_all([test_user_three, test_company_one])
     # db.session.add_all([test_position_one, test_position_two])
     # db.session.commit()
-    user = User.query.filter(User.name == 'li').first()
+    position = Position.query.filter(Position.position_type == 'python').first()
+
 
 
 
