@@ -144,12 +144,12 @@
 							for(var i = 0; i < positionlist.length; i++){
 								if(positionlist[i].id == id){							
 									$("#position_nameh").append(positionlist[i].name)
-									$("#position_typeh").append(positionlist[i].position_type)
+									$("#position_typeh").append(positionlist[i].classify.name)
 									$("#position_placeh").append(positionlist[i].position_place)
 									$("#position_treatmenth").append(positionlist[i].position_treatment)						
-									$("#company_nameh").append(positionlist[i].company[0].name)
-									$("#company_emailh").append(positionlist[i].company[0].email)
-									img += '<img src="'+positionlist[i].company[0].photo_addr+'" />'
+									$("#company_nameh").append(positionlist[i].company.name)
+									$("#company_emailh").append(positionlist[i].company.email)
+									img += '<img src="'+positionlist[i].company.photo_addr+'" />'
 									$("#company_img").append(img)
 									position_grade = positionlist[i].position_grade
 								}
@@ -178,7 +178,7 @@
 				$('#evaluate_update')
 				.append($("<div class='user-list'></div>")
 				.append($("<div class='user-list-item1'></div>")
-				.append($("<span>|</span>")).append(" 您对此的评价为：").append(position_grade+"分")))		
+				.append($("<span>|</span>")).append("该职位的总评价为：").append(position_grade+"分")))		
 				}
 											
 		</script>
