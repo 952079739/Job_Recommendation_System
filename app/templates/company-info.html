@@ -47,9 +47,9 @@
 			<img src="../static/img/user.png" />
 		</div>
 		<div class="col-sm-8 clearfix">
-			<p class="info-p1">求职有限公司<span class="glyphicon glyphicon-check"></span></p>
+			<p class="info-p1" id="company_nameh"></p>
 			<p class="info-p2">
-			<span>邮箱：32132131@gmail.com</span>
+			<span id="company_emailh"></span>
 			
 			</p>			
 		</div>
@@ -71,22 +71,8 @@
 				
 				<div class="user-list" id="company_function_recruit">					
 					<div class="user-list-item1"><span>|</span> 我的发布</div>
-					<div class="container user-list-width">
+					<div class="container user-list-width" id="company_release">
 						
-						<div class="col-sm-4 user-list-rm1">	
-							<a href="../position/position-info.html" class="user-list-title1">软件测试工程师</a>	
-							<button class="add-margin user-list-btn2" data-toggle="modal" data-target="#reUpdateModal" ><span>编辑</span></button>
-							<button class="user-list-btn3"><span>删除</span></button>
-							<div >
-							<div class="col-sm-5 row">
-								<img src="../static/img/example.png" />
-							</div>
-							<div class="col-sm-7 user-list-title2">
-								<a href="#">广电运通金融电子</a>
-							</div>	
-							</div>		
-						</div>
-																		
 					</div>
 										
 				</div>
@@ -236,14 +222,96 @@
     	
     	$(function(){
     		username_add()
+    		companyinfo_add()
+    		release_build()
+    		
     		//增加名字
 				function username_add(){
 					var date = sessionStorage.getItem('username')
 					$("#user_name").append(date)
 				}
+				
+				
+			//公司信息显示
+				function companyinfo_add(){
+					var date = sessionStorage.getItem('username')
+					$.ajax({
+								type:"get",
+								url:"../static/date/user.json",
+								dataType:"json",				
+								success:function(result){
+								    var userinfolist = result.user
+									for (var i = 0; i<userinfolist.length; i++) {
+										if(userinfolist[i].name == date){
+											$("#company_nameh").append(userinfolist[i].company.name).append('<span class="glyphicon glyphicon-check"></span>')
+											$("#company_emailh").append(userinfolist[i].company.email)	
+										}
+									}	
+								}
+							})	
+				}
+				
+			//我的招聘
+				function release_build(){
+					var userinfolist
+					var position
+					var date = sessionStorage.getItem('username')
+					
+					$.ajax({
+						type:"get",
+						url:"../static/date/job.json",
+						async:false,
+						dataType:"json",				
+						success:function(result){
+							position = result.position
+						}
+					})
+					
+					$.ajax({
+								type:"get",
+								async:false,
+								url:"../static/date/user.json",
+								dataType:"json",				
+								success:function(result){
+								   userinfolist = result.user					
+								}
+					})
+					
+					
+					var temp = ''	
+					for (var i = 0; i<userinfolist.length; i++) {
+						if(userinfolist[i].name == date){
+							for (var j = 0; j<userinfolist[i].company.position.length; j++) {
+								for (var z = 0; z < position.length; z++){
+									if(userinfolist[i].company.position[j].id == position[z].id){
+										temp += '<div class="col-sm-4 user-list-rm1">'+
+										'<button id="position_infomation" position_id="'+position[z].id+'" class="user-list-title1">'+position[z].name+'</button>'+
+										'<button class="add-margin user-list-btn2" data-toggle="modal" data-target="#reUpdateModal" ><span>编辑</span></button>'+
+										'<button class="user-list-btn3"><span>删除</span></button>'+
+										'<div >'+
+										'<div class="col-sm-5 row">'+
+										'<img src="'+position[z].company.photo_addr+'" />'+
+										'</div>'+
+										'<div class="col-sm-7 user-list-title2">'+
+										'<a href="#">'+position[z].company.name+'</a>'+
+										'</div>	'+
+										'</div>'+
+										'</div>'
+									}	
+								}		
+							}	
+						}
+					}
+					$("#company_release").append(temp)
+					
+				}
+				
     	})
     	 	
-    	
+    	$(document).on("click","#position_infomation",function (){
+				var position_id = $(this).attr("position_id")
+				location.href="position-info.html?"+"id="+encodeURI(position_id)
+			})
     </script>
     <script src="../static/js/index.js"></script>
 </body>
