@@ -27,7 +27,7 @@
 			</ul>-->
 			
 			<div class="col-sm-2 btn-groupn navbar-right">
-				<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> 张三</span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" id="user_name"> </span></a>
 				<ul class="dropdown-menu dropdown-menu-left">
 					<li>
 						<a href="user-info.html">我的求职</a>
@@ -71,26 +71,15 @@
 							<li class="condition">
 								<dl class="clearfix" data-selector="industrys" id="industry_id">
 									<dt class="special">行业：</dt>
-									<dd class="active" data-code="">不限</dd>
-									<dd data-code="1">互联网/游戏/软件</dd>
-									<dd data-code="2">电子/通信/硬件</dd>
-									<dd data-code="3">房地产/建筑/物业</dd>
-									<dd data-code="4">金融</dd>
-									<dd data-code="5">消费品</dd>
-									<dd data-code="6">汽车/机械/制造</dd>
-									<dd data-code="7">服务/外包/中介</dd>
-									<dd data-code="8">广告/传媒/教育/文化</dd>
-									<dd data-code="9">交通/贸易/物流</dd>
-									<dd data-code="10">制药/医疗</dd>
-									<dd data-code="11">能源/化工/环保</dd>
-									<dd data-code="12">政府/农林牧渔</dd>
+									<dd class="active" data-id="000">不限</dd>
 								</dl>
 							</li>
 						</ul>
 					</div>
 				
 					<!--具体显示-->
-					<div class="position-list" id="position_list">														
+					<div class="position-list" id="position_list">	
+						
 					</div>
 				</div>
 
@@ -122,10 +111,39 @@
 		<script src="../static/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 		
 		<script>
+			
+			var href = location.href
+					
+			
 			$(function(){
+				username_add()
+				classify_build()
 				job_build()
 				likejob_build()
 				hotjob_build()
+				
+				//增加名字
+				function username_add(){
+					var date = sessionStorage.getItem('username')
+					$("#user_name").append(date)
+				}
+				
+				//分类显示
+				function classify_build(){
+					var classifytemp = '';
+					$.ajax({
+						type:"get",
+						url:"../static/date/classify.json",
+						dataType:"json",
+						success:function(result){
+							var classifylist = result.classify
+							for(var i = 0; i < classifylist.length; i++){
+								classifytemp += '<dd data-id="'+classifylist[i].id+'">'+classifylist[i].name+'</dd>'
+							}
+							$("#industry_id").append(classifytemp)
+						}
+					});
+				}
 				
 				//左边职业显示
 				function job_build(){
@@ -147,15 +165,15 @@
 														'<span class="glyphicon glyphicon-map-marker">'+joblist[i].position_place+'</span>'+										
 														'</div>'+
 														'<div class="col-sm-4">'+
-														'<span class="glyphicon glyphicon-education">'+joblist[i].position_type+'</span>'+	
+														'<span class="glyphicon glyphicon-education">'+joblist[i].classify.name+'</span>'+	
 														'</div>'+
 													'</div>'+
 												'</div>'+
 												'<div class="col-sm-3">'+
-													'<a class="title1" href="#">'+joblist[i].company[0].name+'</a>'+												
+													'<a class="title1" href="#">'+joblist[i].company.name+'</a>'+												
 												'</div>'+
 												'<div class="col-sm-2">'+
-													'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+													'<img src="'+joblist[i].company.photo_addr+'" alt="公司Logo" />'+
 												'</div>'+
 											'</div>'
 							}
@@ -177,12 +195,12 @@
 							for(var i = 0; i < joblist.length-4; i++){
 								likejobtemp += '<div class="card-body clearfix">'+
 											'<div class="col-sm-4">'+
-												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+												'<img src="'+joblist[i].company.photo_addr+'" alt="公司Logo" />'+
 											'</div>'+
 											'<div class="col-sm-8 card-body-abr">'+
 												'<button class="title" id="position_infomation" position_id="'+joblist[i].id+'" >'+joblist[i].name+'</button>'+
 													'<br />'+
-												'<button class="title1" href="#">'+joblist[i].company[0].name+'</button>'+
+												'<button class="title1" href="#">'+joblist[i].company.name+'</button>'+
 											'</div>'+
 										'</div>'
 							}
@@ -204,12 +222,12 @@
 							for(var i = 4; i < joblist.length; i++){
 								hotjobtemp += '<div class="card-body clearfix">'+
 											'<div class="col-sm-4">'+
-												'<img src="'+joblist[i].company[0].photo_addr+'" alt="公司Logo" />'+
+												'<img src="'+joblist[i].company.photo_addr+'" alt="公司Logo" />'+
 											'</div>'+
 											'<div class="col-sm-8 card-body-abr">'+
 												'<button id="position_infomation" position_id="'+joblist[i].id+'" class="title">'+joblist[i].name+'</button>'+
 													'<br />'+
-												'<button class="title1" href="#">'+joblist[i].company[0].name+'</button>'+
+												'<button class="title1" href="#">'+joblist[i].company.name+'</button>'+
 											'</div>'+
 										'</div>'
 							}
@@ -223,6 +241,62 @@
 				var position_id = $(this).attr("position_id")
 				location.href="position-info.html?"+"id="+encodeURI(position_id)
 			})
+			
+			//点击行业性质添加active
+			$(document).on("click","#industry_id dd",function (){
+				$("#industry_id dd").removeClass("active")
+				$(this).addClass("active")
+				var classify_id = $(this).attr("data-id")
+				if(classify_id != 000){
+					$("#position_list").empty()
+					$(function(){
+						classifyjob_build()
+							//分类显示
+							function classifyjob_build(){
+									var classifyjobtemp = '';
+									$.ajax({
+										type:"get",
+										url:"../static/date/job.json",
+										dataType:"json",
+										success:function(result){
+											var classifyjoblist = result.position
+											console.log(classifyjoblist)
+											for(var i = 0; i < classifyjoblist.length; i++){
+												if(classify_id == classifyjoblist[i].classify.id){
+													classifyjobtemp += 	'<div class="position-list-item clearfix">'+
+																'<div class="col-sm-6">'+
+																	'<button class="title" id="position_infomation" position_id="'+classifyjoblist[i].id+'" >'+classifyjoblist[i].name+
+																	'</button>'+
+																	'<div class="info infoleft">'+
+																		'<div class="col-sm-8 row">'+
+																		'<span class="glyphicon glyphicon-map-marker">'+classifyjoblist[i].position_place+'</span>'+										
+																		'</div>'+
+																		'<div class="col-sm-4">'+
+																		'<span class="glyphicon glyphicon-education">'+classifyjoblist[i].classify.name+'</span>'+	
+																		'</div>'+
+																	'</div>'+
+																'</div>'+
+																'<div class="col-sm-3">'+
+																	'<a class="title1" href="#">'+classifyjoblist[i].company.name+'</a>'+												
+																'</div>'+
+																'<div class="col-sm-2">'+
+																	'<img src="'+classifyjoblist[i].company.photo_addr+'" alt="公司Logo" />'+
+																'</div>'+
+															'</div>'
+												}
+												
+											}
+											$("#position_list").append(classifyjobtemp)
+										}
+									});
+								}
+					})
+				}else{
+					 window.location.href = 'job.html'
+				}
+				
+			})
+						
 			
 			
 			

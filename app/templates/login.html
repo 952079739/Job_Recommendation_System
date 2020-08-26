@@ -49,17 +49,26 @@
 			var login_password = $("#login_password").val()	
 			$.ajax({
 				type:"get",
-				url:"../static/date/login.json",
+				url:"../static/date/user.json",
 				dateType:"json",
 				success:function(result){
 					var loginlist = result.user
 					console.log(loginlist)
-					if(login_name == loginlist[0].name && login_password == loginlist[0].password){
-						 window.location.href = 'job.html'
-					}else{
-						 alert("密码或用户名错误！")
+					var state = ''
+					for(var i=0; i<loginlist.length; i++){
+						if(login_name == loginlist[i].name && login_password == loginlist[i].password){
+								state = "success"
+								var user_name = $("#login_name").val()
+								window.location.href="job.html"
+								sessionStorage.setItem('username',user_name)	
+								break
+						}
+					}
+					if(state != "success"){
+						alert("用户名或密码错误！")
 					}
 				}
+				
 			})
 		})
 	</script>

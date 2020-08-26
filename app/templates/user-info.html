@@ -28,7 +28,7 @@
 			</ul>	
 			
 			<div class="col-sm-2 btn-groupn navbar-right">
-			  <a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user"> 张三</span></a>
+			  <a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user" id="user_name"> </span></a>
 			  <ul class="dropdown-menu dropdown-menu-left">
 			    <li><a href="job.html">返回主页</a></li>
 			    <li><a href="company-info.html">我的招聘</a></li>
@@ -46,11 +46,11 @@
 			<img src="../static/img/user.png" />
 		</div>
 		<div class="col-sm-8 clearfix">
-			<p class="info-p1">张三<span class="glyphicon glyphicon-check"></span></p>
+			<p class="info-p1" id="userinfo_name"></p>
 			<p class="info-p2">
-			<span>邮箱:312321312@qq.com</span>
-			<span>期望职位：python</span>
-			<span>目前职位：职员</span>
+			<span id="userinfo_email">邮箱：</span>
+			<span id="userinfo_like">期望职位：</span>
+			<span id="userinfo_role">目前职位：</span>
 			</p>			
 		</div>
 		<div class="col-sm-1"></div>
@@ -59,7 +59,7 @@
 	
 	<div class="container user-info-nav clearfix " id="user_function">	
 		<ul class="nav navbar-nav clearfix">				
-			<li><a href="user-info.html" class="active">主页</a></li>
+			<li><a href="user-info.html" class="active">推荐</a></li>
 			<li><a href="#" id="user_collect">收藏</a></li>
 			<li><a href="#" id="user_history">历史</a></li>
 			<li><a href="#" id="user_comment">评价</a></li>
@@ -75,19 +75,7 @@
 					
 					<div class="user-list-item1 "><span>|</span> 我的推荐</div>				
 					
-					<div class="container user-list-width">
-						
-						<div class="col-sm-4 user-list-rm">	
-							<a href="../position/position-info.html" class="user-list-title1">软件测试工程师</a>	
-							<div >
-							<div class="col-sm-5 row">
-								<img src="../static/img/example.png" />
-							</div>
-							<div class="col-sm-7 user-list-title2">
-								<a href="#">广电运通金融电子</a>
-							</div>	
-							</div>		
-						</div>
+					<div class="container user-list-width" id="recommend_add">											
 																		
 					</div>					
 					
@@ -188,71 +176,201 @@
     <script src="../static/lib/jquery/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
     <script src="../static/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
-    <script>
+    <script>	
+    	var userinfolist = ''
+		var position = ''
+    	
     	$("#user_function a").click(function(){
 			$("#user_function a").removeClass("active");
 			$(this).addClass("active");
 		})
     	
+    	//收藏
     	$("#user_collect").click(function(){
 			$("#user_function_info").empty()
-			$("#user_function_info").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 我的收藏"))
-									.append($("<div class='container user-list-width'></div>")
-									.append($("<div class='col-sm-4 user-list-rm'></div>")
-									.append($("<a href='position-info.html' class='user-list-title1'></a>").append("软件测试工程师"))
-									.append($("<button class='user-list-btn1'><span>取消收藏</span></button>"))
-									.append($("<div></div>")
-									.append($("<div class='col-sm-5 row'></div>")
-									.append($("<img src='../static/img/example.png'/>"))
-									)
-									.append($("<div class='col-sm-7 user-list-title2'></div>")
-									.append($("<a href='#'></a>").append("广电运通金融电子")
-									)
-									)										
-									)
-									)
-									)									
+			$("#user_function_info").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 我的收藏"))							
+									var date = sessionStorage.getItem('username')
+									var recommendtemp = ''	
+					
+									for(var i = 0 ; i < userinfolist.length; i++){
+														if(userinfolist[i].name==date){
+															for(var z=0 ; z < userinfolist[i].position_collect.length; z++){
+																for(var j=0; j < position.length; j++){
+																	if(userinfolist[i].position_collect[z].id == position[j].id){
+																		recommendtemp += '<div class="col-sm-4 user-list-rm">'+
+																					 '<button id="position_infomation" position_id="'+position[j].id+'" class="user-list-title1">'+position[j].name+'</button>'+	
+																					 '<button class="user-list-btn1"><span>取消收藏</span></button>'+
+																					 '<div >'+ 								 
+																					 '<div class="col-sm-5 row">'+
+																					 '<img src="'+position[j].company.photo_addr+'" />'+
+																					 '</div>'+									 
+																					 '<div class="col-sm-7 user-list-title2">'+
+																					 '<a href="#">'+position[j].company.name+'</a>'+
+																					 '</div>'+					 
+																					 '</div>'+
+																					 '</div>' 
+																	}
+																}
+															}	 
+														}									
+													}
+					 				$("#user_function_info").append($("<div class='container user-list-width'></div>").append(recommendtemp))
+																	
 		})
     	
+    	//历史
     	$("#user_history").click(function(){
 			$("#user_function_info").empty()
-			$("#user_function_info").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 浏览历史"))
-									.append($("<div class='container user-list-width'></div>")
-									.append($("<div class='col-sm-4 user-list-rm'></div>")
-									.append($("<a href='position-info.html' class='user-list-title1'></a>").append("软件测试工程师"))
-									.append($("<div></div>")
-									.append($("<div class='col-sm-5 row'></div>")
-									.append($("<img src='../static/img/example.png'/>"))
-									)
-									.append($("<div class='col-sm-7 user-list-title2'></div>")
-									.append($("<a href='#'></a>").append("广电运通金融电子")
-									)
-									)										
-									)
-									)
-									)									
+			$("#user_function_info").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 浏览历史"))			
+									var date = sessionStorage.getItem('username')
+									var recommendtemp = ''	
+					
+									for(var i = 0 ; i < userinfolist.length; i++){
+														if(userinfolist[i].name==date){
+															for(var z=0 ; z < userinfolist[i].position_history.length; z++){
+																for(var j=0; j < position.length; j++){
+																	if(userinfolist[i].position_history[z].id == position[j].id){
+																		recommendtemp += '<div class="col-sm-4 user-list-rm">'+
+																					 '<button id="position_infomation" position_id="'+position[j].id+'" class="user-list-title1">'+position[j].name+'</button>'+			
+																					 '<div >'+ 								 
+																					 '<div class="col-sm-5 row">'+
+																					 '<img src="'+position[j].company.photo_addr+'" />'+
+																					 '</div>'+									 
+																					 '<div class="col-sm-7 user-list-title2">'+
+																					 '<a href="#">'+position[j].company.name+'</a>'+
+																					 '</div>'+					 
+																					 '</div>'+
+																					 '</div>' 
+																	}
+																}
+															}	 
+														}									
+													}
+					 				$("#user_function_info").append($("<div class='container user-list-width'></div>").append(recommendtemp))							
 		})
-
+		
+		//评价
 		$("#user_comment").click(function(){
 			$("#user_function_info").empty()
 			$("#user_function_info").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 我的评分"))
-									.append($("<div class='container user-list-width'></div>")
-									.append($("<div class='col-sm-4 user-list-rm'></div>")
-									.append($("<a href='position-info.html' class='user-list-title1'></a>").append("软件测试工程师"))
-									.append($("<button class='user-list-btn'><span></span></button>").append("评分：5分"))
-									.append($("<div></div>")
-									.append($("<div class='col-sm-5 row'></div>")
-									.append($("<img src='../static/img/example.png'/>"))
-									)
-									.append($("<div class='col-sm-7 user-list-title2'></div>")
-									.append($("<a href='#'></a>").append("广电运通金融电子")
-									)
-									)										
-									)
-									)
-									)									
+									var date = sessionStorage.getItem('username')
+									var recommendtemp = ''	
+					
+									for(var i = 0 ; i < userinfolist.length; i++){
+														if(userinfolist[i].name==date){
+															for(var z=0 ; z < userinfolist[i].position_comment.length; z++){
+																for(var j=0; j < position.length; j++){
+																	if(userinfolist[i].position_comment[z].id == position[j].id){
+																		recommendtemp += '<div class="col-sm-4 user-list-rm">'+
+																					 '<button id="position_infomation" position_id="'+position[j].id+'" class="user-list-title1">'+position[j].name+'</button>'+			
+																					 '<button class="user-list-btn"><span>评分：'+position[j].position_grade+'</span></button>'+
+																					 '<div >'+
+																					 '<div class="col-sm-5 row">'+
+																					 '<img src="'+position[j].company.photo_addr+'" />'+
+																					 '</div>'+									 
+																					 '<div class="col-sm-7 user-list-title2">'+
+																					 '<a href="#">'+position[j].company.name+'</a>'+
+																					 '</div>'+					 
+																					 '</div>'+
+																					 '</div>' 
+																	}
+																}
+															}	 
+														}									
+													}
+					 				$("#user_function_info").append($("<div class='container user-list-width'></div>").append(recommendtemp))															
 		})
-								
+		
+		$(function(){
+			username_add()
+			userinfo_build()
+			getinfo()
+			recommend_add()
+    			
+    		//增加名字
+				function username_add(){
+					var date = sessionStorage.getItem('username')
+					$("#user_name").append(date)
+				}
+				
+			//个人信息
+				function userinfo_build(){
+					var date = sessionStorage.getItem('username')
+					$.ajax({
+						type:"get",
+						url:"../static/date/user.json",
+						dataType:"json",
+						success:function(result){
+							var userinfolist = result.user
+							for (var i = 0; i<userinfolist.length; i++) {
+								if(userinfolist[i].name == date){
+									$("#userinfo_name").append(userinfolist[i].name).append('<span class="glyphicon glyphicon-check"></span>')
+									$("#userinfo_email").append(userinfolist[i].email)
+									$("#userinfo_like").append(userinfolist[i].like_position)
+									$("#userinfo_role").append(userinfolist[i].role)
+								}
+							}	
+						}
+					})
+				}
+				
+			//推荐信息
+				function recommend_add(){	
+					var date = sessionStorage.getItem('username')
+					var recommendtemp = ''	
+					
+					for(var i = 0 ; i < userinfolist.length; i++){
+										if(userinfolist[i].name==date){
+											for(var z=0 ; z < userinfolist[i].position_recomment.length; z++){
+												for(var j=0; j < position.length; j++){
+													if(userinfolist[i].position_recomment[z].id == position[j].id){
+														recommendtemp += '<div class="col-sm-4 user-list-rm">'+
+																	 '<button id="position_infomation" position_id="'+position[j].id+'" class="user-list-title1">'+position[j].name+'</button>'+								 
+																	 '<div >'+ 								 
+																	 '<div class="col-sm-5 row">'+
+																	 '<img src="'+position[j].company.photo_addr+'" />'+
+																	 '</div>'+									 
+																	 '<div class="col-sm-7 user-list-title2">'+
+																	 '<a href="#">'+position[j].company.name+'</a>'+
+																	 '</div>'+					 
+																	 '</div>'+
+																	 '</div>' 
+													}
+												}
+											}	 
+										}									
+									}
+					 $("#recommend_add").append(recommendtemp)		 					 
+			 }	
+			
+			function getinfo(){
+					 $.ajax({
+					 			async:false,
+								type:"get",
+								url:"../static/date/user.json",
+								dataType:"json",				
+								success:function(result){
+									userinfolist = result.user								
+								}
+							})	
+							
+					 $.ajax({
+					 			async:false,
+								type:"get",
+								url:"../static/date/job.json",
+								dataType:"json",
+								success:function(result){
+									position = result.position							
+								}
+						})
+			}
+		})
+		
+		$(document).on("click","#position_infomation",function (){
+				var position_id = $(this).attr("position_id")
+				location.href="position-info.html?"+"id="+encodeURI(position_id)
+			})
+		
     </script>
     <!--自己的插件 -->
     <script src="../static/js/index.js"></script>

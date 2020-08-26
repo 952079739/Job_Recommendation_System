@@ -113,6 +113,15 @@ body{
 }
 
 .user-list-rm{
+	width: 30%;
+	border: solid 1px #dad6d6;
+	margin-right: 20px;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.user-list-rm1{
 	width: 31%;
 	border: solid 1px #dad6d6;
 	margin-right: 20px;
@@ -131,8 +140,14 @@ body{
 }
 
 .user-list-title1{
+	border: 0;
+	background-color: white;
 	font-size: 18px;
 	color: #080808;
+}
+
+.user-list-title1:hover{
+	color:#33b753;
 }
 
 .user-list-title2{
@@ -181,7 +196,7 @@ body{
 
 .user-list-btn{
 	padding:5px;
-	margin-left: 20px;
+	margin-left: 40px;
 	background-color: #33b753;
 	border: none;
 	color: white;
@@ -189,7 +204,7 @@ body{
 
 .user-list-btn1{
 	padding:5px;
-	margin-left: 20px;
+	margin-left: 40px;
 	background-color: white;
 	border: none;
 	color:#33b753;

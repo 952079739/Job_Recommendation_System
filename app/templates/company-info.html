@@ -29,7 +29,7 @@
 			</ul>	
 			
 			<div class="col-sm-2 btn-groupn navbar-right">
-			  <a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user"> 张三</span></a>
+			  <a class="dropdown-toggle" data-toggle="dropdown" ><span class="glyphicon glyphicon-user" id="user_name"> </span></a>
 			  <ul class="dropdown-menu dropdown-menu-left">
 			    <li><a href="job.html">返回主页</a></li>	
 			     <li><a href="user-info.html">我的求职</a></li>	
@@ -73,7 +73,7 @@
 					<div class="user-list-item1"><span>|</span> 我的发布</div>
 					<div class="container user-list-width">
 						
-						<div class="col-sm-4 user-list-rm">	
+						<div class="col-sm-4 user-list-rm1">	
 							<a href="../position/position-info.html" class="user-list-title1">软件测试工程师</a>	
 							<button class="add-margin user-list-btn2" data-toggle="modal" data-target="#reUpdateModal" ><span>编辑</span></button>
 							<button class="user-list-btn3"><span>删除</span></button>
@@ -233,6 +233,16 @@
     									  )
     							
     	})
+    	
+    	$(function(){
+    		username_add()
+    		//增加名字
+				function username_add(){
+					var date = sessionStorage.getItem('username')
+					$("#user_name").append(date)
+				}
+    	})
+    	 	
     	
     </script>
     <script src="../static/js/index.js"></script>
