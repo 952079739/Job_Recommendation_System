@@ -18,15 +18,12 @@ def index():
     # position = select_position('python')
     # position_name = position.position_treatment
     position_list = []
-    company_list = []
     for position in positions:
         company = select_company(position.company_id)
-        company_list.append({company.name})
         position_list.append({'name': position.name,
                               'treatment': position.position_treatment,
-                              })
-    return render_template('job.html', jsonify(username=name, p_list=position_list, c_list=company_list))
-
+                              'company_name': company.name})
+    return jsonify(position_list)
 
 
 # 查询为职位为python的job，返回job.html
@@ -48,7 +45,15 @@ def job_python():
     return render_template('job.html', jsonify(username=username, p_list=position_list, c_list=company_list))
 
 
-
-
-
+# 测试接口,返回所有职业
+@job.route('/test', methods=['GET'])
+def test():
+    positions = Position.query.all()
+    position_list = []
+    for job_information in positions:
+        company = select_company(job_information.company_id)
+        position_list.append({'position_name': job_information.name,
+                              'treatment': job_information.position_treatment,
+                             'company_name': company.name})
+    return jsonify(position_list)
 
