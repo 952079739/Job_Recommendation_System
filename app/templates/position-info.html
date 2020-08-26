@@ -31,7 +31,7 @@
 				</ul>
 
 				<div class="col-sm-2 btn-groupn navbar-right">
-					<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> 张三</span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" id="user_name"> </span></a>
 					<ul class="dropdown-menu dropdown-menu-left">
 						<li>
 							<a href="job.html">返回主页</a>
@@ -123,6 +123,13 @@
 			
 			$(function(){
 				position_info_add()				
+				username_add()
+				
+				//增加名字
+				function username_add(){
+					var date = sessionStorage.getItem('username')
+					$("#user_name").append(date)
+				}
 				
 				//职位信息变通
 				function position_info_add(){

@@ -27,7 +27,7 @@
 			</ul>-->
 			
 			<div class="col-sm-2 btn-groupn navbar-right">
-				<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"> 张三</span></a>
+				<a class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user" id="user_name"> </span></a>
 				<ul class="dropdown-menu dropdown-menu-left">
 					<li>
 						<a href="user-info.html">我的求职</a>
@@ -111,11 +111,22 @@
 		<script src="../static/lib/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 		
 		<script>
+			
+			var href = location.href
+					
+			
 			$(function(){
+				username_add()
 				classify_build()
 				job_build()
 				likejob_build()
 				hotjob_build()
+				
+				//增加名字
+				function username_add(){
+					var date = sessionStorage.getItem('username')
+					$("#user_name").append(date)
+				}
 				
 				//分类显示
 				function classify_build(){
@@ -285,7 +296,7 @@
 				}
 				
 			})
-			
+						
 			
 			
 			
