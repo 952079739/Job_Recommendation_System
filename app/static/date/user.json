@@ -7,7 +7,21 @@
 			"email":"2323213@qq.com",
 			"like_position":"蓝色骑士",
 			"role":"职员",
-			"company_id":"5",
+			"company":
+      		{
+      			"id":"1",
+      			"name":"美团",
+      			"email":"231232@168.com",  
+      			"photo_addr":"../static/img/company/company1.png",
+      			"position":[
+      				{
+      					"id":"5"
+      				},
+      				{
+      					"id":"6"
+      				}	
+      			]
+      		},
 			"position_collect":[
 				{
 					"id":"4"
@@ -54,7 +68,22 @@
 			"password":"12345",
 			"like_position":"黄色骑士",
 			"role":"骑士",
-			"company_id":"5",
+			"company":
+      		{
+      			"id":"1",
+      			"name":"美团",
+      			"email":"231232@168.com",  
+      			"photo_addr":"../static/img/company/company1.png",
+      			"position":[
+      				{
+      					"id":"1"
+      				},
+      				{
+      					"id":"2"
+      				}
+      				
+      			]
+      		},
 			"position_collect":[
 				{
 					"id":"4"
