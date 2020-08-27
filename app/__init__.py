@@ -7,7 +7,6 @@ from flask_cors import CORS
 
 app = Flask(__name__)
 
-app.debug = True
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/job?charset=utf8mb4'
 
@@ -19,7 +18,8 @@ db = SQLAlchemy(app)
 app.config['JSON_AS_ASCII'] = False
 
 
-# CORS(app, supports_credentials=True)
+CORS(app, supports_credentials=True)
+
 
 from app import routes
 
