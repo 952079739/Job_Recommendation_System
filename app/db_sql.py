@@ -1,5 +1,5 @@
 from app import db
-from app.create_db import User, Position, Company, Role
+from app.create_db import User, Position, Company
 
 
 def select_user(name, password):
@@ -27,11 +27,9 @@ def select_company_two(name, password):
     return company
 
 
-def add_user(user_name, password, email, liking, role_name):
-    job_role = Role(name=role_name)
-    user = User(user_name=user_name, user_password=password, user_email=email, like_position=liking,
-                role=job_role)
-    db.session.add_all(user)
+def add_user(user_name, password, email, liking):
+    user = User(user_name=user_name, user_password=password, user_email=email, like_position=liking)
+    db.session.add_all([user])
     db.session.commit()
 
 
@@ -40,15 +38,11 @@ def select_position(p_type):
     return positions
 
 
-def select_role(id):
-    role = Role.query.filter(Role.role_id == id).first()
-    return role
-#
 #
 # def add_position(p_name, p_type, p_treatment, p_place, c_id):
 #     position = Position(name=p_name, position_type=p_type, position_treatment=p_treatment,
 #                         position_place=p_place, company_id=c_id)
-#     db.session.add_all(position)
+#     db.session.add_all([position])
 #     db.session.commit()
 
 

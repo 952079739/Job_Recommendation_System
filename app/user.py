@@ -13,7 +13,7 @@ def register():
     if request.method == 'GET':
         return render_template('register.html')
     if request.method == 'POST':
-        data = request.get_data()
+        data = request.form.get('data')
         if data is not None:
             data = json.load(data)
             username = data.get('username')
@@ -23,12 +23,12 @@ def register():
             rolename = data.get('role_name')
             if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0 and len(rolename) > 0 :
                 user = select_user(username, password)
-                if user is not None:
+                if user is None:
                     add_user(username, password, email, liking, rolename)
                     return redirect(url_for('user.login'))
                 else:
                     return jsonify(type_information='False')
-            return render_template('register.html')
+            return jsonify(typ_inforamtion='请注册后再登录')
 
 
 # 登录页面,传输数据为json,类型为POST
@@ -37,7 +37,7 @@ def login():
     if request.method == 'GET':
         return render_template('register.html')
     if request.method == 'POST':
-        data = request.get_data()
+        data = request.form.get('data')
         if data is not None:
             data = json.load(data)
             username = data.get('username')
@@ -47,7 +47,7 @@ def login():
                 session['name'] = username
                 return redirect(url_for('job.index'))
             else:
-                return render_template('login.html')
+                return jsonify(type_information='False')
 
 
 # 获取该用户信息
@@ -55,11 +55,16 @@ def login():
 def select():
     username = session.get('name')
     users = select_user_name(username)
-    roles = select_role(users.role_id)
     user = {'username': users.user_name,
              'email': users.user_email,
-             'liking': users.like_position,
-             'role_name': roles.role_name}
+             'liking': users.like_position}
     return jsonify(user)
+
+# 注销用户信息
+# @user.route('/loginout', methods=['GET'])
+# def logingout:
+#     username = session.get('name')
+#
+
 
 
