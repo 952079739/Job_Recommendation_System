@@ -33,6 +33,13 @@ def add_user(user_name, password, email, liking):
     db.session.commit()
 
 
+def add_position(position_name, position_type, position_treatment, position_place, company_id):
+    position = Position(position_name=position_name, position_type=position_type,
+                        position_treatment=position_treatment, position_place=position_place, company_id=company_id)
+    db.session.add_all([position])
+    db.session.commit()
+
+
 def select_position(p_type):
     positions = Position.query.filter(Position.position_type == p_type).all()
     return positions
@@ -44,17 +51,3 @@ def select_position(p_type):
 #                         position_place=p_place, company_id=c_id)
 #     db.session.add_all([position])
 #     db.session.commit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-

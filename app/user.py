@@ -20,11 +20,10 @@ def register():
             password = data.get('password')
             email = data.get('email')
             liking = data.get('like_position')
-            rolename = data.get('role_name')
-            if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0 and len(rolename) > 0 :
+            if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0:
                 user = select_user(username, password)
                 if user is None:
-                    add_user(username, password, email, liking, rolename)
+                    add_user(username, password, email, liking)
                     return redirect(url_for('user.login'))
                 else:
                     return jsonify(type_information='False')

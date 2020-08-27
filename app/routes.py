@@ -1,4 +1,5 @@
 from app import app
+from app.company import company
 from app.job import job
 from app.user import user
 from flask import url_for,redirect, request,render_template
@@ -7,6 +8,7 @@ import json
 
 app.register_blueprint(user, url_prefix='/user')
 app.register_blueprint(job, url_prefix='/job')
+app.register_blueprint(company, url_prefix='/company')
 
 
 @app.route('/')
