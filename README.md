@@ -32,6 +32,8 @@ the session is unavailable because no secret key was set. Set the secret_key on 
 
 ## 前端完成情况
 
+## 如果有些功能要砍掉请尽快告知
+
 实现（接口）（跨域实现，未整合）
 
 1、登录 注册
