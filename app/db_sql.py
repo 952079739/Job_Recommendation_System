@@ -1,5 +1,5 @@
 from app import db
-from app.create_db import User, Position, Company, Collecting
+from app.create_db import User, Position, Company, Collecting, Appraisal
 
 
 def select_user(name, password):
@@ -59,6 +59,14 @@ def select_collect(id):
 def select_position_id(id):
     position_list = Position.query.filter(Position.position_id == id).first()
     return position_list
+
+
+def add_score(company_appraisal, company_id, user_id):
+    score_one = Appraisal(company_appraisal=company_appraisal, company_id=company_id,
+                          user_id=user_id)
+    db.session.add_all([score_one])
+    db.session.commit()
+
 
 #
 # def add_position(p_name, p_type, p_treatment, p_place, c_id):
