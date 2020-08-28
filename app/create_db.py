@@ -13,7 +13,7 @@ class User(db.Model):
     collecting = db.relationship('Collecting', backref='users')
 
     def __repr__(self):
-        return '<User {}>'.format(self.name)
+        return '<User {}>'.format(self.user_name)
 
 
 class Company(db.Model):
@@ -28,7 +28,7 @@ class Company(db.Model):
     appraisal = db.relationship('Appraisal', backref='company')
 
     def __repr__(self):
-        return '<Company {}>'.format(self.name)
+        return '<Company {}>'.format(self.company_name)
 
 
 class Position(db.Model):
@@ -42,7 +42,7 @@ class Position(db.Model):
     company_id = db.Column(db.Integer, db.ForeignKey('company.company_id'))
 
     def __repr__(self):
-        return '<Position {}>'.format(self.name)
+        return '<Position {}>'.format(self.position_name)
 
 
 class Appraisal(db.Model):

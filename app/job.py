@@ -2,8 +2,7 @@ import json
 
 from flask import Blueprint, request, jsonify, render_template, session
 
-from app.create_db import Position
-from app.db_sql import select_company, select_position
+from app.db_sql import *
 
 job = Blueprint('job', __name__)
 
@@ -54,4 +53,17 @@ def test():
                               'company_name': company.company_name,
                               'company_photo': company.company_photo})
     return jsonify(position_list)
+
+
+# 收藏路由
+@job.route('/collect', methods=['POST'])
+def collecting():
+    username = session.get('name')
+    data = request.get('data')
+    if username is not None:
+        json_data = json.load(data)
+        positon_id = json_data.get['position_id']
+        add_collect(positon_id)
+        return 'success'
+
 

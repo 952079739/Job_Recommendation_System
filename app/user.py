@@ -54,7 +54,7 @@ def login():
 def select():
     username = session.get('name')
     users = select_user_name(username)
-    user = {'username': users.user_name,
+    user = {'user_name': users.user_name,
              'email': users.user_email,
              'liking': users.like_position}
     return jsonify(user)
@@ -66,4 +66,18 @@ def select():
 #
 
 
-
+@user.route('/collect', methods=['GET'])
+def info_collect():
+    username = session.get('name')
+    users = select_user_name(username)
+    collects = select_collect(users.user_id)
+    positions = []
+    for collecting in collects:
+        position_id = select_collect(collecting.id)
+        position = select_position_id(position_id)
+        company_first = select_company(position.company_id)
+        positions.append({'position_name': position.position_name,
+                          'position_treatment': position.position_treatment,
+                         'positon_place': position.position_place,
+                         'company_name': company_first.company_name})
+        return jsonify(positions)

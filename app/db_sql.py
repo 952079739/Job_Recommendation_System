@@ -1,5 +1,5 @@
 from app import db
-from app.create_db import User, Position, Company
+from app.create_db import User, Position, Company, Collecting
 
 
 def select_user(name, password):
@@ -44,6 +44,21 @@ def select_position(p_type):
     positions = Position.query.filter(Position.position_type == p_type).all()
     return positions
 
+
+def add_collect(id):
+    collect_one = Collecting(collecting_position_id=id)
+    db.session.add_all([collect_one])
+    db.session.commit()
+
+
+def select_collect(id):
+    collecting_list = Collecting.query.filter(Collecting.user_id == id)
+    return collecting_list
+
+
+def select_position_id(id):
+    position_list = Position.query.filter(Position.position_id == id).first()
+    return position_list
 
 #
 # def add_position(p_name, p_type, p_treatment, p_place, c_id):

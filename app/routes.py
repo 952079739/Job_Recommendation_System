@@ -2,7 +2,8 @@ from app import app
 from app.company import company
 from app.job import job
 from app.user import user
-from flask import url_for,redirect, request,render_template
+from app.db_sql import *
+from flask import url_for, redirect, request, render_template, session
 from werkzeug.exceptions import HTTPException
 import json
 
@@ -26,3 +27,5 @@ def home_page():
 def handle_bad_request(e):
     index = "job/index"
     return render_template('404.html', index=index), 404
+
+
