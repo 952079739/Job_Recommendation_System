@@ -6,7 +6,7 @@ from app.db_sql import *
 
 user = Blueprint('user', __name__)
 
-
+# @wolfer test
 # 注册页面,传输数据为json,方式为
 @user.route('/register', methods=['POST', 'GET'])
 def register():
@@ -15,21 +15,23 @@ def register():
     if request.method == 'POST':
         data = request.form.get('data')
         if data is not None:
-            data = json.load(data)
-            username = data.get('username')
-            password = data.get('password')
-            email = data.get('email')
-            liking = data.get('like_position')
+            data = json.loads(data)
+            username = data['username']
+            password = data['password']
+            email = data['email']
+            liking = data['like_position']
             if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0:
-                user = select_user(username, password)
+                user = select_user_name(username)
                 if user is None:
                     add_user(username, password, email, liking)
-                    return redirect(url_for('user.login'))
+                    # return redirect(url_for('user.login'))
+                    return jsonify({'msg': "success"})
                 else:
-                    return jsonify(type_information='False')
+                    # return jsonify(type_information='False')
+                    return jsonify({'msg': "用户名存在"})
             return jsonify(typ_inforamtion='请注册后再登录')
 
-
+# @wolfer test
 # 登录页面,传输数据为json,类型为POST
 @user.route('/login', methods=['POST', 'GET'])
 def login():
@@ -38,26 +40,33 @@ def login():
     if request.method == 'POST':
         data = request.form.get('data')
         if data is not None:
-            data = json.load(data)
-            username = data.get('username')
-            password = data.get('password')
+            data = json.loads(data)
+            username = data['username']
+            password = data['password']
             users = select_user(username, password)
             if users is not None:
-                session['name'] = username
-                return redirect(url_for('job.index'))
+                # session['name'] = username
+                # return redirect(url_for('job.index'))
+                return jsonify({'msg': "success"})
             else:
-                return jsonify(type_information='False')
+                # return jsonify(type_information='False')
+                return jsonify({'msg': "用户名或密码错误"})
 
 
+# @wolfer test
 # 获取该用户信息
-@user.route('/select', methods=['GET'])
+@user.route('/select', methods=['POST'])
 def select():
-    username = session.get('name')
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    print(data)
     users = select_user_name(username)
-    user = {'user_name': users.user_name,
+    user = {'username': users.user_name,
              'email': users.user_email,
              'liking': users.like_position}
     return jsonify(user)
+
 
 # 注销用户信息
 # @user.route('/loginout', methods=['GET'])

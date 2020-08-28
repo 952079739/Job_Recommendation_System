@@ -21,6 +21,9 @@ def select_company(id):
     company = Company.query.filter(Company.company_id == id).first()
     return company
 
+def select_company_name(name):
+    company = Company.query.filter(Company.company_name == name).first()
+    return company
 
 def select_company_two(name, password):
     company = Company.query.filter(Company.company_name == name, Company.company_password == password).first()
@@ -32,6 +35,10 @@ def add_user(user_name, password, email, liking):
     db.session.add_all([user])
     db.session.commit()
 
+def add_companmy(username, password, email):
+    company = Company(company_name=username, company_password=password, company_email=email)
+    db.session.add(company)
+    db.session.commit()
 
 def add_position(position_name, position_type, position_treatment, position_place, company_id):
     position = Position(position_name=position_name, position_type=position_type,

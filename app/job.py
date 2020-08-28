@@ -39,7 +39,7 @@ def job_python():
                               'username': username})
     return jsonify(position_list)
 
-
+#@wolfer test
 # 测试接口,返回所有职业
 @job.route('/test', methods=['GET'])
 def test():
@@ -47,10 +47,14 @@ def test():
     position_list = []
     for job_information in positions:
         company = select_company(job_information.company_id)
-        position_list.append({'position_name': job_information.position_name,
-                              'treatment': job_information.position_treatment,
-                              'place': job_information.position_place,
+        position_list.append({
+                              'position_id': job_information.position_id,
+                              'position_name': job_information.position_name,
+                              'position_treatment': job_information.position_treatment,
+                              'position_place': job_information.position_place,
+                              'position_type':job_information.position_type,
                               'company_name': company.company_name,
+                              'company_email': company.company_email,
                               'company_photo': company.company_photo})
     return jsonify(position_list)
 

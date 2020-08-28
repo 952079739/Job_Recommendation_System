@@ -6,55 +6,60 @@ from app.db_sql import *
 
 company = Blueprint('company', __name__)
 
-
+#@wolfer test
 @company.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
         return render_template('register.html')
     if request.method == 'POST':
-        data = request.form.data()
+        data = request.form.get('data')
         if data is not None:
-            data = json.load(data)
-            username = data.get('username')
-            password = data.get('password')
-            email = data.get('email')
-            photo_addr = data.get('photo_addr')
-            if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(photo_addr) > 0:
-                company = select_company(username, password)
-                if company is not None:
-                    add_user(username, password, email, photo_addr)
-                    return redirect(url_for('company.login'))
+            data = json.loads(data)
+            username = data['username']
+            password = data['password']
+            email = data['email']
+            if len(username) > 0 and len(password) > 0 and len(email) > 0:
+                company = select_company_name(username)
+                if company is None:
+                    add_companmy(username, password, email)
+                    # return redirect(url_for('company.login'))
+                    return jsonify({'msg': "success"})
                 else:
-                    return jsonify(type_information='False')
+                    # return jsonify(type_information='False')
+                    return jsonify({'msg': "公司已存在"})
             return render_template('register.html')
 
 
+#@wolfer test
 @company.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
         return render_template('register.html')
     if request.method == 'POST':
-        data = request.form.data()
+        data = request.form.get('data')
         if data is not None:
-            data = json.load(data)
-            username = data.get('username')
-            password = data.get('password')
-            company = select_company(username, password)
+            data = json.loads(data)
+            username = data['username']
+            password = data['password']
+            company = select_company_two(username, password)
             if company is not None:
-                session['name'] = username
-                return redirect(url_for('company.info'))
+                # session['name'] = username
+                # return redirect(url_for('company.info'))
+                return jsonify({'msg': "success"})
             else:
-                return render_template('login.html')
+                # return render_template('login.html')
+                return jsonify({'msg': "公司名或密码错误"})
 
-
-@company.route('/info',methods=['GET'])
+#@wolfer test
+@company.route('/info',methods=['POST'])
 def select():
-    username = session.get('name')
-    companys = select_company(username)
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    companys = select_company_name(username)
     company = {
-        'name': companys.company_name,
-        'email': companys.company_email,
-        'photo_addr': companys.company_photo
+        'company_name': companys.company_name,
+        'company_email': companys.company_email
     }
     return jsonify(company)
 
