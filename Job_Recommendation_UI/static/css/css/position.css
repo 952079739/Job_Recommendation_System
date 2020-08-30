@@ -30,6 +30,11 @@
     color: #33b753;
 }
 
+.btn-change{
+	background-color: #33b753;
+	color: white;
+}
+
 .btn-submit {
     width: 182px;
     height: 36px;

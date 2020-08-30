@@ -68,9 +68,13 @@ img{
 }
 
 .container-small1{
-	padding-top: 120px;
+	padding-top: 80px;
 	padding-left: 20px;
 	max-width:460px;
+}
+
+.container-padding{
+	padding-top: 120px;
 }
 
 .container-adapt{
@@ -371,8 +375,9 @@ dd {
 }
 
 .buttom-form{
-	width: 37%;
-	float: left;
-	margin-top: 20px;
-	margin-left: 20px;
+	margin-top: 20px;	
+}
+
+.button-company{
+	border: solid 10px ;
 }
