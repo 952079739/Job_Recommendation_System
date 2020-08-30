@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+# Project exclude paths
+/venv/
+=======
 ./.idea/SearchImage.iml
 ./.idea/misc.xml
 ./.idea/workspace.xml
 ./.idea/vcs.xml
 ./.idea
+>>>>>>> 5f35887c62f15f9a6978a6c965555b1b3fc71e6f

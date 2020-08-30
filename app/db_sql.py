@@ -16,6 +16,9 @@ def select_position(name):
     position_list = Position.query.filter(Position.position_name == name).all()
     return position_list
 
+def select_position_company_all(company_id):
+    position_list = Position.query.filter(Position.company_id == company_id).all()
+    return  position_list
 
 def select_company(id):
     company = Company.query.filter(Company.company_id == id).first()
@@ -46,30 +49,43 @@ def add_position(position_name, position_type, position_treatment, position_plac
     db.session.add_all([position])
     db.session.commit()
 
-
 def select_position(p_type):
     positions = Position.query.filter(Position.position_type == p_type).all()
     return positions
 
 
-def add_collect(id):
-    collect_one = Collecting(collecting_position_id=id)
+def add_collect(user_id, position_id):
+    collect_one = Collecting(user_id=user_id, collecting_position_id=position_id)
     db.session.add_all([collect_one])
     db.session.commit()
 
 
-def select_collect(id):
-    collecting_list = Collecting.query.filter(Collecting.user_id == id)
+def select_collect(user_id,position_id):
+    collecting_list = Collecting.query.filter(Collecting.user_id == user_id,Collecting.collecting_position_id == position_id).first()
     return collecting_list
 
+def select_collect_all(user_id):
+    collecting_list = Collecting.query.filter(Collecting.user_id == user_id).all()
+    return collecting_list
 
 def select_position_id(id):
     position_list = Position.query.filter(Position.position_id == id).first()
     return position_list
 
+def select_score(user_id, position_id):
+    score_list = Appraisal.query.filter(Appraisal.user_id == user_id,Appraisal.position_id == position_id).first()
+    return score_list
 
-def add_score(company_appraisal, company_id, user_id):
-    score_one = Appraisal(company_appraisal=company_appraisal, company_id=company_id,
+def select_score_all(user_id):
+    score_list = Appraisal.query.filter(Appraisal.user_id == user_id).all()
+    return  score_list
+
+def select_position_score_all(position_id):
+    collecting_list = Appraisal.query.filter(Appraisal.position_id == position_id).all()
+    return collecting_list
+
+def add_score(position_appraisal, position_id, user_id):
+    score_one = Appraisal(position_appraisal=position_appraisal, position_id=position_id,
                           user_id=user_id)
     db.session.add_all([score_one])
     db.session.commit()

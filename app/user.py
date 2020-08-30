@@ -62,7 +62,6 @@ def select():
     data = request.form.get('data')
     data = json.loads(data)
     username = data['username']
-    print(data)
     users = select_user_name(username)
     user = {'username': users.user_name,
              'email': users.user_email,
@@ -77,18 +76,115 @@ def select():
 #
 
 
-@user.route('/collect', methods=['GET'])
-def info_collect():
-    username = session.get('name')
+#用户所有收藏信息查询
+@user.route('/collect-select-all', methods=['POST'])
+def info_collect_all():
+    data = request.form.get('data')
+    print(data)
+    data = json.loads(data)
+    collect_list = []
+    username = data['username']
+    print(username)
     users = select_user_name(username)
-    collects = select_collect(users.user_id)
-    positions = []
-    for collecting in collects:
-        position_id = select_collect(collecting.id)
-        position = select_position_id(position_id)
-        company_first = select_company(position.company_id)
-        positions.append({'position_name': position.position_name,
-                          'position_treatment': position.position_treatment,
-                         'positon_place': position.position_place,
-                         'company_name': company_first.company_name})
-        return jsonify(positions)
+    collects = select_collect_all(users.user_id)
+    print(collects)
+    for collect_infomation in collects:
+                position = select_position_id(collect_infomation.collecting_position_id)
+                company = select_company(position.company_id)
+                collect_list.append({
+                    'position_id':position.position_id,
+                    'position_name':position.position_name,
+                    'company_name':company.company_name,
+                    'company_photo':company.company_photo
+                })
+    return  jsonify(collect_list)
+ 
+
+#用户收藏信息查询
+@user.route('/collect-select', methods=['POST'])
+def info_collect():
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    position_id = data['position_id']
+    users = select_user_name(username)
+    collects = select_collect(users.user_id,position_id)
+    if collects is not None:
+        return jsonify({'msg': "yes"})
+    else:
+        return jsonify({'msg': "no"})
+
+# 用户收藏
+@user.route('/collect-position', methods=['POST'])
+def position_collect():
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    position_id = data['position_id']
+    users = select_user_name(username)
+    if users is not None:
+         add_collect(users.user_id, position_id)
+         return jsonify({'msg': "collect_have"})
+
+#用户评分
+@user.route('/score-add', methods=['POST'])
+def Scoring():
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    users = select_user_name(username)
+    position_id = data['position_id']
+    score = data['score']
+    if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
+        add_score(score, position_id, users.user_id)
+        return jsonify({'msg': "success"})
+
+#用户评分信息查询
+@user.route('/score-select', methods=['POST'])
+def info_score():
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    position_id = data['position_id']
+    users = select_user_name(username)
+    score = select_score(users.user_id, position_id)
+    if score is not None:
+        return jsonify({'msg': score.position_appraisal})
+    else:
+        return jsonify({'msg': "no"})
+
+#用户所有评分查询
+@user.route('/score-select-all', methods=['POST'])
+def info_score_all():
+    data = request.form.get('data')
+    data = json.loads(data)
+    username = data['username']
+    score_list = []
+    users = select_user_name(username)
+    scores = select_score_all(users.user_id)
+    print(scores)
+    for score_infomation in scores:
+                position = select_position_id(score_infomation.position_id)
+                company = select_company(position.company_id)
+                score_list.append({
+                    'position_score':score_infomation.position_appraisal,
+                    'position_id': position.position_id,
+                    'position_name': position.position_name,
+                    'company_name': company.company_name,
+                    'company_photo': company.company_photo
+                })
+    return jsonify(score_list)
+
+#职位评分总查询
+@user.route('/score-position-select-all', methods=['POST'])
+def info_position_score_all():
+    data = request.form.get('data')
+    print(data)
+    data = json.loads(data)
+    position_id = data['position_id']
+    scores = select_position_score_all(position_id)
+    score_list = []
+    print(scores)
+    for score_infomation in scores:
+                score_list.append({'score':score_infomation.position_appraisal})
+    return jsonify(score_list)

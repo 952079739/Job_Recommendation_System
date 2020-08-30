@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
+	<title>登录</title>
+	<link rel="stylesheet" href="../static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../static/css/main.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico" />	
+</head>
+<body>
+	<!--导航栏 -->
+		<div class="container">
+			<div class="navbar-header navbar-left">
+				<a href="index.html" class="navbar-brand"></a>
+			</div>
+		</div>		
+	
+	<!--登录信息-->
+	<div  class="container" >
+		<div class="col-sm-7">	
+			<img src="../static/img/sign.png" class="img-bg"/>
+		</div>
+		<div class="col-sm-5 container-small">
+		<h1>登录
+		<small>没有账号！<a href="register.html">注册</a></small>
+		<small id="company_empty"><button class="btn btn-primary" id="user_change">我是招聘方</button></small>
+		</h1>
+		<form action="#" id="formid" enctype="multipart/form-data">		
+			<div class="form-group">
+				<label id="user_cu">用户名</label>
+				<input type="text" class="form-control" name="username" id="login_name"/>
+			</div>
+			<div class="form-group">
+				<label>密码</label>
+				<input type="password" class="form-control" name="password" id="login_password"/>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block" type="button" id="login_user">登录</button>
+			</div>
+	   </form>
+		</div>	
+	</div>
+	
+	<script src="../static/lib/jquery/jquery-3.4.1.js"></script>
+	<script>
+		$("#user_change").click(function(){
+			window.location.href="login-company.html"
+		})
+		
+		$("#login_user").click(function(){
+			var login_name = $("#login_name").val()
+			var login_password = $("#login_password").val()	
+			var data = {
+				data:JSON.stringify({
+					"username":login_name,
+					"password":login_password
+				}),			
+			}
+			console.log(data)
+			$.ajax({
+				type: "post",
+				url: "http://127.0.0.1:5000/user/login",
+				dataType: "json",
+				async: false,
+				data: data,
+				success: function(result){
+					if(result.msg != "success"){
+						alert(result.msg)
+					}else{
+						var user_name = $("#login_name").val()
+						window.location.href="job.html"
+						sessionStorage.setItem('username',user_name)
+						sessionStorage.setItem('user',"用户")
+					}	
+				}
+			});								
+			
+		})
+	</script>
+</body>
+</html>

@@ -69,6 +69,25 @@ def logout():
     session.clear()
     return redirect(url_for('/login'))
 
+@company.route('/company-position-select', methods=['POST'])
+def info_company_position():
+    data = request.form.get('data')
+    print(data)
+    data = json.loads(data)
+    username = data['username']
+    position_list = []
+    company = select_company_name(username)
+    if company is not None:
+        positions = select_position_company_all(company.company_id)
+        for position_infomation in positions:
+           position_list.append({
+                'position_id': position_infomation.position_id,
+                'position_name': position_infomation.position_name,
+                'company_name': company.company_name,
+                'company_photo': company.company_photo
+            })
+        return jsonify(position_list)
+
 
 @company.route('/SendDate', methods=['POST', 'GET'])
 def form_data():
