@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
+	<title>注册</title>
+	<link rel="stylesheet" href="../static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../static/css/main.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="../static/img/favicon.ico" />	
+</head>
+<body>
+	<!--导航栏 -->
+		<div class="container">
+			<div class="navbar-header navbar-left">
+				<a href="index.html" class="navbar-brand"></a>
+			</div>
+		</div>		
+	
+	<!--注册信息-->
+	<div  class="container clearfix">
+		
+		<div class="col-sm-7">	
+			<img src="../static/img/sign.png" class="img-bg"/>
+		</div>
+		
+		<form action="#" enctype="multipart/form-data">
+			<div class="col-sm-5 container-small1 clearfix">
+		
+				<h1>注册</h1>
+				
+					<div class="form-group">
+						<label>用户名</label>
+						<input type="text" class="form-control" id="register_name"/>
+					</div>
+					
+					<div class="form-group">
+						<label>密码</label>
+						<input type="password" class="form-control" id="register_password"/>
+					</div>
+					
+					<div class="form-group">
+						<label>邮箱</label>
+						<input type="email" class="form-control" id="register_email"/>
+					</div>
+					
+					<div class="form-group">
+						<label>期望职位</label>
+						<input type="text" class="form-control" id="register_like"/>
+					</div>
+					
+					<div class="form-group">
+						<button class="btn btn-primary btn-block buttom-form" id="register_come">注册</button>
+					</div>
+					
+	 		</div>
+	 	</form>
+	 	
+	</div>
+	<script src="../static/lib/jquery/jquery-3.4.1.js"></script>
+	<script>
+		$("#register_come").click(function(){
+			var register_name = $("#register_name").val()
+			var register_password = $("#register_password").val()	
+			var register_email = $("#register_email").val()
+			var register_like = $("#register_like").val()
+			var data = {
+				data:JSON.stringify({
+					"username":register_name,
+					"password":register_password,
+					"email":register_email,
+					"like_position":register_like
+				}),			
+			}
+			console.log(data)
+			$.ajax({
+				type: "post",
+				url: "http://127.0.0.1:5000/user/register",
+				dataType: "json",
+				async: false,
+				data: data,
+				success: function(result){	
+					if(result.msg != "success"){
+						alert(result.msg)
+					}else{
+						var user_name = $("#register_name").val()
+						window.location.href="job.html"
+						sessionStorage.setItem('username',user_name)
+						sessionStorage.setItem('user',"用户")
+					}	
+				},
+				error:function(){
+					alert("用户名存在或没有填写完整信息!")
+				}
+			});								
+			
+		})
+	</script>
+	
+</body>
+</html>
