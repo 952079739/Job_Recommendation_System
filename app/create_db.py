@@ -49,7 +49,7 @@ class Appraisal(db.Model):
     __tablename__ = 'appraisals'
     __table_args__ = {'extend_existing': True}
     appraisal_id = db.Column(db.Integer, primary_key=True)
-    position_appraisal = db.Column(db.Integer, unique=False)
+    position_appraisal = db.Column(db.String(50), unique=False)
     position_id = db.Column(db.Integer, db.ForeignKey('position.position_id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 

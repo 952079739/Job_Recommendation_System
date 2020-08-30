@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 
 db = SQLAlchemy(app)
-app.secret_key = '123456'
+app.secret_key = 123456
 
 app.config['JSON_AS_ASCII'] = False
 

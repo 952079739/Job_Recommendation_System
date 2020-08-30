@@ -3,6 +3,7 @@ import json
 from flask import Blueprint, request, render_template, url_for, jsonify, redirect, session
 
 from app.db_sql import *
+from app.logger import load_csv
 
 user = Blueprint('user', __name__)
 
@@ -124,8 +125,8 @@ def position_collect():
     position_id = data['position_id']
     users = select_user_name(username)
     if users is not None:
-         add_collect(users.user_id, position_id)
-         return jsonify({'msg': "collect_have"})
+        add_collect(users.user_id, position_id)
+        return jsonify({'msg': "collect_have"})
 
 
 # 用户评分
@@ -137,12 +138,18 @@ def Scoring():
     users = select_user_name(username)
     position_id = data['position_id']
     score = data['score']
-    if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
-        add_score(score, position_id, users.user_id)
-        return jsonify({'msg': "success"})
+    list = [{'user_id': users.user_id,
+             'position_id': position_id,
+             'score': score}]
+    if len(score) > 0:
+        if select_collect_all(users.user_id) is None:
+            add_score(score, position_id, users.user_id)
+            load_csv(list)
+            return jsonify({'msg': "success"})
+    return jsonify({'msg': "False"})
 
 
-#用户评分信息查询
+# 用户评分信息查询
 @user.route('/score-select', methods=['POST'])
 def info_score():
     data = request.form.get('data')
@@ -156,7 +163,8 @@ def info_score():
     else:
         return jsonify({'msg': "no"})
 
-#用户所有评分查询
+
+# 用户所有评分查询
 @user.route('/score-select-all', methods=['POST'])
 def info_score_all():
     data = request.form.get('data')
@@ -178,7 +186,8 @@ def info_score_all():
                 })
     return jsonify(score_list)
 
-#职位评分总查询
+
+# 职位评分总查询
 @user.route('/score-position-select-all', methods=['POST'])
 def info_position_score_all():
     data = request.form.get('data')
