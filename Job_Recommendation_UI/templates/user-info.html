@@ -52,7 +52,7 @@
 			</p>			
 		</div>
 		<div class="col-sm-1"></div>
-		<div class="col-sm-1 user-info-top-a"><a data-toggle="modal" data-target="#UpdateModal" >编辑</a></div>
+		<div class="col-sm-1 user-info-top-a"><a id="UpdateModal" >编辑</a></div>
 	</div>
 	
 	<div class="container user-info-nav clearfix " id="user_function">	
@@ -77,7 +77,7 @@
 	</div>
                                                          
 	<!--个人信息修改模态框 -->
-	<div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal fade" id="userinfo_edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	    <div class="modal-dialog" role="document">
 	        <div class="modal-content">
 	            <div class="modal-header">
@@ -87,14 +87,7 @@
 	            <div class="modal-body">
 	            
 	                <form class="form-horizontal">
-	                    <div class="form-group">
-	                        <label class="col-sm-2 control-label">姓名</label>
-	                        <div class="col-sm-8">
-	                            <input type="text" name="email" class="form-control" id="uname_update_input" >
-	                            <span class="help-block"></span>
-	                        </div>
-	                    </div>	                    	      
-	                    
+	                                       	                   
 	                    <div class="form-group">
 	                        <label class="col-sm-2 control-label">邮箱</label>
 	                        <div class="col-sm-8">
@@ -158,7 +151,7 @@
 								 '</div>'+
 								 '</div>' 									
 				}
-			$("#user_function_info").append($("<div class='container user-list-width'></div>").append(recommendtemp))															
+			$("#user_function_info").append($("<div class='container user-list-width'></div>").append(recommendtemp))				
 		})
 		
 		$(function(){
@@ -188,8 +181,8 @@
 		
 					for(var i = 0 ; i < collectlist.length; i++){
 						recommendtemp += '<div class="col-sm-4 user-list-rm">'+
-										 '<button id="position_infomation" position_id="'+collectlist[i].position_id+'" class="user-list-title1">'+collectlist[i].position_name+'</button>'+	
-										 '<button class="user-list-btn1"><span>取消收藏</span></button>'+
+										 '<button id="position_infomation" class="user-list-title1">'+collectlist[i].position_name+'</button>'+	
+										 '<button class="user-list-btn1" id="delete-collect" position_id="'+collectlist[i].position_id+'"><span>取消收藏</span></button>'+
 										 '<div >'+ 								 
 										 '<div class="col-sm-5 row">'+
 										 '<img src="'+collectlist[i].company_photo+'" />'+
@@ -245,12 +238,72 @@
 						}
 					})
 			}
+				
 		})
 		
 		$(document).on("click","#position_infomation",function (){
 				var position_id = $(this).attr("position_id")
 				location.href="position-info.html?"+"id="+encodeURI(position_id)
 			})
+		
+		//取消收藏
+		$(document).on("click","#delete-collect",function (){
+				var position_id = $(this).attr("position_id")
+				console.log(position_id)
+				var username = sessionStorage.getItem('username')
+				var data = {
+						data:JSON.stringify({
+							"username":username,
+							"position_id":position_id
+						}),			
+					}
+				console.log(data)
+				$.ajax({
+						type: "post",
+						url: "http://127.0.0.1:5000/user/collect-delete",
+						dataType: "json",
+						async: false,
+						data: data,
+						success: function(result){
+							console.log(result.msg)
+							location.href = "user-info.html"
+						}
+					})
+			})
+		
+		//用户信息修改-弹出模态框
+		$("#UpdateModal").click(function(){
+			$("#email_update_input").val(userinfolist.email)
+			$("#epostion_update_input").val(userinfolist.liking)		
+			$("#userinfo_edit").modal({
+				backdrop:"static"
+			})
+		})
+		
+		//用户信息更改
+		$("#emp_update_btn").click(function(){
+			var username = sessionStorage.getItem('username')
+				var data = {
+						data:JSON.stringify({
+							"username":username,
+							"email":$("#email_update_input").val(),
+							"like_position":$("#epostion_update_input").val()
+						}),			
+					}
+				console.log(data)
+				$.ajax({
+						type: "post",
+						url: "http://127.0.0.1:5000/user/userinfo_update",
+						dataType: "json",
+						async: false,
+						data: data,
+						success: function(result){
+							console.log(result.msg)
+							location.href = "user-info.html"
+						}
+					})
+		})
+		
 		
     </script>
     <!--自己的插件 -->

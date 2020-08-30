@@ -50,10 +50,10 @@
 			<p class="info-p2">
 			<span id="company_emailh"></span>
 			
-			</p>			
+			</p>			 
 		</div>
 		<div class="col-sm-1"></div>
-		<div class="col-sm-1 user-info-top-a"><a data-toggle="modal" data-target="#companyUpdateModal">编辑</a></div>
+		<div class="col-sm-1 user-info-top-a"></div>
 	</div>
 	
 	<div class="container user-info-nav clearfix ">	
@@ -86,93 +86,7 @@
 		</div>
 		
 	</div>
-                                                         
-	
-	<!--发布职位修改模态框 -->
-	<div class="modal fade" id="reUpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header">
-	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	                <h4 class="modal-title" >职位信息修改</h4>
-	            </div>
-	            <div class="modal-body">
-	            
-	                <form class="form-horizontal" action="" method="post">
-	                	
-	                <div class="form-group">
-                        <label class="col-sm-2 control-label">岗位名称</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="empName" class="form-control" id="position_update_input" >                       
-                        </div>
-                    </div>
-                    
-                     <div class="form-group">
-                        <label class="col-sm-2 control-label">职位类型</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="empName" class="form-control" id="positionc_update_input" >                       
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">职位待遇</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="empName" class="form-control" id="positions_update_input" >                       
-                        </div>
-                    </div>
-                    
-                     <div class="form-group">
-                        <label class="col-sm-2 control-label">职位地点</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="empName" class="form-control" id="positionl_update_input" >                       
-                        </div>
-                    </div>                                                                       
-						
-	                </form>
-	            </div>
-	            <div class="modal-footer">
-	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-	                <button type="button" class="btn btn-primary" id="emp_update_btn">确定</button>
-	            </div>
-	        </div>
-	    </div>
-	</div>
-		
-	<!--公司信息修改模态框 -->
-	<div class="modal fade" id="companyUpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	            <div class="modal-header">
-	                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-	                <h4 class="modal-title" >公司信息修改</h4>
-	            </div>
-	            <div class="modal-body">
-	            
-	                <form class="form-horizontal">
-	                 <div class="form-group">
-                        <label class="col-sm-2 control-label">公司名称</label>
-                        <div class="col-sm-8">
-                            <input type="text" name="empName" class="form-control" id="cname_update_input" >                       
-                        </div>
-                    </div>
-                             
-                    <div class="form-group">
-                        <label class="col-sm-2 control-label">公司邮箱</label>
-                        <div class="col-sm-8">
-                            <input type="email" name="empName" class="form-control " id="cemail_update_input" ></textarea>
-                        </div>
-                    </div>
-						
-	                </form>
-	            </div>
-	            <div class="modal-footer">
-	                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-	                <button type="button" class="btn btn-primary" id="emp_update_btn">确定</button>
-	            </div>
-	        </div>
-	    </div>
-	</div>	
-	
+                                                        	
 	 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="../static/lib/jquery/jquery-3.4.1.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
@@ -187,7 +101,7 @@
     	$("#company_function_issue").click(function(){
     		$("#company_function_recruit").empty()
     		$("#company_function_recruit").append($("<div class='user-list-item1'></div>").append($("<span>|</span>")).append(" 发布职位"))
-    									  .append($("<form class='form-horizontal form-cuser' action='#' method='post'></form>")
+    									  .append($("<form class='form-horizontal form-cuser'></form>")
     									  
     									  .append($("<div class='form-group'></div>")
     									  .append($("<label class='col-sm-2 control-label'></label>").append("岗位名称"))
@@ -210,12 +124,38 @@
     									 ))
     									  
     									 .append($("<div class='form-group'></div>")
-    									  .append($("<input type='submit' class='user-submit-btn' value='提交'/>"))
-    									  .append($("<input type='button' class='user-submit-btn submit-btn' value='取消'/>"))
-    									  ) 
-    									 
-    									  
+    									  .append($("<input type='submit' class='user-submit-btn' id='company_add' value='提交'/>"))
+    									  .append($("<input type='button' class='user-submit-btn submit-btn' id='cancel_btn' value='取消'/>"))
+    									 )  
     									  )
+    		    	$("#company_add").click(function(){
+			    		var username = sessionStorage.getItem('username')
+			    		var data = {
+									data:JSON.stringify({
+										"company_name":username,
+										"position_name":$("#pname_add_input").val(),
+										"position_type":$("#positiont_add_input").val(),
+										"position_place":$("#postionl_add_input").val(),
+										"position_treatment":$("#postions_add_input").val()
+									}),			
+								}
+								console.log(data)	
+								
+						$.ajax({
+							type: "post",
+							url: "http://127.0.0.1:5000/company/SendDate",
+							dataType: "json",
+							async: false,
+							data: data,
+							success: function(result){
+								alert(result.msg)
+							}
+						})
+						$("#company_function_issue").click()
+                	})
+                    $("#cancel_btn").click(function () {
+                        $("#company_function_issue").click()
+                    })
     							
     	})
     	
@@ -275,14 +215,12 @@
 						success: function(result){
 							company_position_list = result
 						}
-					})
-									
+					})								
 					var temp = ''	
 					for (var i = 0; i<company_position_list.length; i++) {
 					temp += '<div class="col-sm-4 user-list-rm1">'+
-									'<button id="position_infomation" position_id="'+company_position_list[i].position_id+'" class="user-list-title1">'+company_position_list[i].position_name+'</button>'+
-									'<button class="add-margin user-list-btn2" data-toggle="modal" data-target="#reUpdateModal" ><span>编辑</span></button>'+
-									'<button class="user-list-btn3"><span>删除</span></button>'+
+									'<button id="position_infomation" class="user-list-title1">'+company_position_list[i].position_name+'</button>'+
+									'<button class="add-margin user-list-btn2" position_id="'+company_position_list[i].position_id+'" id="delete-send">取消发布</button>'+
 									'<div >'+
 									'<div class="col-sm-5 row">'+
 									'<img src="'+company_position_list[i].company_photo+'" />'+
@@ -295,12 +233,32 @@
 					}
 					$("#company_release").append(temp)
 					
-				}
-				
-				
+				}		
 				
     	})
-    	 	
+    	
+    	//取消发布
+    	$(document).on("click","#delete-send",function (){
+				var position_id = $(this).attr("position_id")
+				var data = {
+						data:JSON.stringify({
+							"position_id":position_id
+						}),			
+					}
+				console.log(data)
+				$.ajax({
+						type: "post",
+						url: "http://127.0.0.1:5000/company/position-delete",
+						dataType: "json",
+						async: false,
+						data: data,
+						success: function(result){
+							console.log(result.msg)
+							location.href = "company-info.html"
+						}
+					})
+			})
+    	
     	$(document).on("click","#position_infomation",function (){
 				var position_id = $(this).attr("position_id")
 				location.href="position-info.html?"+"id="+encodeURI(position_id)

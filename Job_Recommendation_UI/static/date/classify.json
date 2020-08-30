@@ -1,19 +1,13 @@
 {
 	"classify":[
 		{
-			"name":"互联网"
-		},
-		{
-			"name":"电子通信"
-		},
-		{
 			"name":"python"
 		},
 		{
 			"name":"java"
 		},
 		{
-			"name":"骑士"
+			"name":"c++"
 		}
 	]
 }

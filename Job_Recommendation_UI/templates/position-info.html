@@ -268,12 +268,19 @@
 							var avg = 0
 							for(var i=0; i<position_score.length;i++){							
 								total += parseFloat(JSON.stringify(position_score[i].score))
-							}
+							}				
 							avg = (total / position_score.length).toFixed(1)
-							$('#evaluate_update_total')
-							.append($("<div class='user-list'></div>")
-							.append($("<div class='user-list-item1'></div>")
-							.append($("<span>|</span>")).append("该职位的总评分为：").append(avg+"分")))	
+							if(avg > 0){
+								$('#evaluate_update_total')
+								.append($("<div class='user-list'></div>")
+								.append($("<div class='user-list-item1'></div>")
+								.append($("<span>|</span>")).append("该职位的总评分为：").append(avg+"分")))
+							}else{
+								$('#evaluate_update_total')
+								.append($("<div class='user-list'></div>")
+								.append($("<div class='user-list-item1'></div>")
+								.append($("<span>|</span>")).append("该职位还未评分")))
+							}
 						}
 					});	
 				}
