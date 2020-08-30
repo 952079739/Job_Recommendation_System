@@ -114,6 +114,7 @@ def info_collect():
     else:
         return jsonify({'msg': "no"})
 
+
 # 用户收藏
 @user.route('/collect-position', methods=['POST'])
 def position_collect():
@@ -126,7 +127,8 @@ def position_collect():
          add_collect(users.user_id, position_id)
          return jsonify({'msg': "collect_have"})
 
-#用户评分
+
+# 用户评分
 @user.route('/score-add', methods=['POST'])
 def Scoring():
     data = request.form.get('data')
@@ -138,6 +140,7 @@ def Scoring():
     if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
         add_score(score, position_id, users.user_id)
         return jsonify({'msg': "success"})
+
 
 #用户评分信息查询
 @user.route('/score-select', methods=['POST'])

@@ -84,6 +84,7 @@ def select_position_score_all(position_id):
     collecting_list = Appraisal.query.filter(Appraisal.position_id == position_id).all()
     return collecting_list
 
+
 def add_score(position_appraisal, position_id, user_id):
     score_one = Appraisal(position_appraisal=position_appraisal, position_id=position_id,
                           user_id=user_id)
