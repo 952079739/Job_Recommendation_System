@@ -31,8 +31,10 @@ def register():
                     return jsonify({'msg': "用户名存在"})
             return jsonify(typ_inforamtion='请注册后再登录')
 
+
 # @wolfer test
 # 登录页面,传输数据为json,类型为POST
+
 @user.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
