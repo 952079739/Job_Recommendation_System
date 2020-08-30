@@ -69,6 +69,7 @@ def logout():
     session.clear()
     return redirect(url_for('/login'))
 
+#公司职位查询
 @company.route('/company-position-select', methods=['POST'])
 def info_company_position():
     data = request.form.get('data')
@@ -88,22 +89,30 @@ def info_company_position():
             })
         return jsonify(position_list)
 
-
-@company.route('/SendDate', methods=['POST', 'GET'])
+#公司职位增加
+@company.route('/SendDate', methods=['POST'])
 def form_data():
-    if request.method == 'GET':
-        return redirect(url_for('company.info'))
-    if request.method == 'POST':
-        data = request.form.data()
-        if data is not None:
-            position_name = data.get('position_name')
-            position_type = data.get('position_type')
-            position_treatment = data.get('position_treatment')
-            position_place = data.get('position_place')
-            company_id = session.get('company_id')
-            if len(position_name) > 0 and position_place > 0 and position_type > 0 and position_treatment > 0:
-                add_position(position_name, position_type, position_treatment, position_place, company_id)
-                return jsonify(type_information='Success')
-            else:
-                return jsonify(type_information='Flase')
-        return jsonify(type_information='Flase')
+    data = request.form.get('data')
+    data = json.loads(data)
+    print(data)
+    if data is not None:
+        position_name = data['position_name']
+        position_type = data['position_type']
+        position_treatment = data['position_treatment']
+        position_place = data['position_place']
+        company = select_company_name(data['company_name'])
+        company_id = company.company_id
+        add_position(position_name, position_type, position_treatment, position_place, company_id)
+        return jsonify({'msg' : "发布成功"})
+
+#公司职位删除
+@company.route('/position-delete', methods=['POST'])
+def delete_position_one():
+    data = request.form.get('data')
+    print(data)
+    data = json.loads(data)
+    print(data)
+    position_id = data['position_id']
+    if position_id is not None:
+         delete_position( position_id)
+         return jsonify({'msg': "position_delete"})

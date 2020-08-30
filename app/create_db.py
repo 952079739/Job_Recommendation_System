@@ -34,7 +34,7 @@ class Position(db.Model):
     __tablename__ = 'position'
     __table_args__ = {'extend_existing': True}
     position_id = db.Column(db.Integer, primary_key=True)
-    position_name = db.Column(db.String(100), unique=True)
+    position_name = db.Column(db.String(100), unique=False)
     position_type = db.Column(db.String(100), unique=False)
     position_treatment = db.Column(db.String(200), nullable=True)
     position_place = db.Column(db.String(200), unique=False)

@@ -31,10 +31,8 @@ def register():
                     return jsonify({'msg': "用户名存在"})
             return jsonify(typ_inforamtion='请注册后再登录')
 
-
 # @wolfer test
 # 登录页面,传输数据为json,类型为POST
-
 @user.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
@@ -114,7 +112,6 @@ def info_collect():
     else:
         return jsonify({'msg': "no"})
 
-
 # 用户收藏
 @user.route('/collect-position', methods=['POST'])
 def position_collect():
@@ -127,8 +124,21 @@ def position_collect():
          add_collect(users.user_id, position_id)
          return jsonify({'msg': "collect_have"})
 
+#取消收藏
+@user.route('/collect-delete', methods=['POST'])
+def delete_collect_one():
+    data = request.form.get('data')
+    data = json.loads(data)
+    print(data)
+    username = data['username']
+    position_id = data['position_id']
+    users = select_user_name(username)
+    if users is not None:
+         delete_collect(users.user_id, position_id)
+         return jsonify({'msg': "collect_delete"})
 
-# 用户评分
+
+#用户评分
 @user.route('/score-add', methods=['POST'])
 def Scoring():
     data = request.form.get('data')
@@ -137,10 +147,10 @@ def Scoring():
     users = select_user_name(username)
     position_id = data['position_id']
     score = data['score']
+    print(data)
     if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
         add_score(score, position_id, users.user_id)
         return jsonify({'msg': "success"})
-
 
 #用户评分信息查询
 @user.route('/score-select', methods=['POST'])
@@ -189,5 +199,20 @@ def info_position_score_all():
     score_list = []
     print(scores)
     for score_infomation in scores:
-                score_list.append({'score':score_infomation.position_appraisal})
+        score_list.append({'score':score_infomation.position_appraisal})
     return jsonify(score_list)
+
+#用户信息修改
+@user.route('/userinfo_update', methods=['POST'])
+def update_user_one():
+        data = request.form.get('data')
+        print(data)
+        if data is not None:
+            data = json.loads(data)
+            username = data['username']
+            email = data['email']
+            liking = data['like_position']
+            user = select_user_name(username)
+            if user is not None:
+                update_user(username, email, liking)
+                return jsonify({'msg': "success"})
