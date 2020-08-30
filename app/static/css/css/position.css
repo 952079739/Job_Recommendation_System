@@ -1,0 +1,121 @@
+.position-a a {
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 2px 0;
+    margin-top:50px;
+}
+
+.position-a-bottom button{
+    float: left;
+    text-align: center;
+    font-size: 18px;
+    border: 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin: 0;
+}
+.position-a-bottom button:hover{
+    background-color: #2ba248;
+}
+
+
+.btn-store {
+    width: 180px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #33b753;
+    color: #33b753;
+}
+
+.btn-change{
+	background-color: #33b753;
+	color: white;
+}
+
+.btn-submit {
+    width: 182px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background-color: #33b753;
+}
+
+.container .position-list-item{
+	border: none;
+}
+
+.position-top{
+	margin-top:30px;
+	margin-bottom: 50px;
+	background-color: #fbfbfb;
+	padding-bottom: 20px;
+}
+
+.position-info-1{
+	margin-top: 20px;
+	color: #999;
+	font-size: 16px;
+}
+
+.position-info-reward span{
+	color: red;
+}
+
+.position-info-2{
+	margin-top: 20px;
+	color: #999;
+	font-size: 12px;
+}
+
+.position-desc{
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.company-sketch {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.company-sketch img{	
+	margin: 0 auto ;
+	margin-bottom: 30px;
+
+}
+
+.company-desc{
+	width: 58%;
+	margin-left: 90px;
+	color: #ada8a8;
+	margin-bottom: 30px;
+}
+
+.company-location{
+	margin-left: 90px;
+}
+
+.position-evaluate{
+	margin-top: 100px;
+}
+
+.position-evaluate .user-list{
+	margin-bottom: 30px;
+}
+
+.position-evaluate .form-group{
+	font-size: 20px;
+}
+
+.position-determine a{
+	float: left;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+.position-determine {
+	margin-left: 500px;
+}
