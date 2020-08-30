@@ -60,29 +60,29 @@ def test():
 
 
 # 收藏路由
-@job.route('/collect', methods=['POST'])
-def collecting():
-    username = session.get('name')
-    data = request.get('data')
-    if username is not None:
-        json_data = json.load(data)
-        positon_id = json_data.get['position_id']
-        add_collect(positon_id)
-        return 'success'
+# @job.route('/collect', methods=['POST'])
+# def collecting():
+#     username = session.get('name')
+#     data = request.get('data')
+#     if username is not None:
+#         json_data = json.load(data)
+#         positon_id = json_data.get['position_id']
+#         add_collect(positon_id)
+#         return 'success'
 
 
 # 评分路由
-@job.route('/Scoring', methods=['POST'])
-def Scoring():
-    data = request.get_data('data')
-    json_data = json.load(data)
-    score = json_data.get('score')
-    company_id = json_data.get('company_id')
-    user_id = session.get('user_id')
-    if score is not None:
-        add_score(score, company_id, user_id)
-        return 'Sucess'
-    else:
-        return 'Fail'
+# @job.route('/Scoring', methods=['POST'])
+# def Scoring():
+#     data = request.get_data('data')
+#     json_data = json.load(data)
+#     score = json_data.get('score')
+#     company_id = json_data.get('company_id')
+#     user_id = session.get('user_id')
+#     if score is not None:
+#         add_score(score, company_id, user_id)
+#         return 'Sucess'
+#     else:
+#         return 'Fail'
 
 
