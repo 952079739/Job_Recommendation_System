@@ -61,27 +61,3 @@ class Collecting(db.Model):
     collecting_position_id = db.Column(db.Integer, unique=False)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

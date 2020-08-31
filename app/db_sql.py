@@ -56,9 +56,9 @@ def add_companmy(username, password, email):
     db.session.commit()
 
 
-def add_position(position_name, position_type, position_treatment, position_place, company_id):
+def add_position(position_name, position_type, position_treatment, position_place, company_name):
     position = Position(position_name=position_name, position_type=position_type,
-                        position_treatment=position_treatment, position_place=position_place, company_id=company_id)
+                        position_treatment=position_treatment, position_place=position_place, company_name=company_name)
     db.session.add_all([position])
     db.session.commit()
 
