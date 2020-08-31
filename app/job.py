@@ -1,5 +1,3 @@
-import json
-
 from flask import Blueprint, request, jsonify, render_template, session
 
 from app.db_sql import *

@@ -2,8 +2,8 @@ import pandas as pd
 
 
 score = pd.read_csv("../position.csv")
-job = pd.read_csv("../job.csv")##这里注意如果路径的中文件名开头是r，要转义。
-data = pd.merge(score, job, on='position_id')#通过两数据框之间的movieId连接
+job = pd.read_csv("../job.csv") # 这里注意如果路径的中文件名开头是r，要转义。
+data = pd.merge(score, job, on='position_type') # 通过两数据框之间的movieId连接
 data[['user_id', 'score', 'position_id', 'position_name']].sort_values('user_id').to_csv('../data.csv', index=False)
 file = open("../data.csv", 'r',
             encoding='UTF-8')  # 记得读取文件时加‘r’， encoding='UTF-8'
@@ -61,16 +61,16 @@ RES = top10_simliar('1')
 def recommend(user):
     # 相似度最高的用户
     top_sim_user = top10_simliar(user)[0][0]
-    # 相似度最高的用户的观影记录
+    # 相似度最高的用户的评价记录
     items = data[top_sim_user]
     recommendations = []
-    # 筛选出该用户未观看的电影并添加到列表中
+    # 筛选出该用户未观看的职业并添加到列表中
     for item in items.keys():
         if item not in data[user].keys():
             recommendations.append((item, items[item]))
     recommendations.sort(key=lambda val: val[1], reverse=True)  # 按照评分排序
-    # 返回评分最高的10部电影
-    return recommendations[:10]
+    # 返回评分最高的4个职业
+    return recommendations[:4]
 
 
 Recommendations = recommend('1')

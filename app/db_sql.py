@@ -17,8 +17,8 @@ def select_position(name):
     return position_list
 
 
-def select_position_company_all(company_name):
-    position_list = Position.query.filter(Position.company_name == company_name).all()
+def select_position_company_all(company_id):
+    position_list = Position.query.filter(Position.company_name == company_id).all()
     return  position_list
 
 
@@ -56,9 +56,9 @@ def add_companmy(username, password, email):
     db.session.commit()
 
 
-def add_position(position_name, position_type, position_treatment, position_place, company_name):
+def add_position(position_name, position_type, position_treatment, position_place, company_id):
     position = Position(position_name=position_name, position_type=position_type,
-                        position_treatment=position_treatment, position_place=position_place, company_name=company_name)
+                        position_treatment=position_treatment, position_place=position_place, company_name=company_id)
     db.session.add_all([position])
     db.session.commit()
 

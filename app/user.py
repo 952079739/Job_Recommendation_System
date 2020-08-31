@@ -7,6 +7,7 @@ from app.logger import load_csv
 
 user = Blueprint('user', __name__)
 
+
 # @wolfer test
 # 注册页面,传输数据为json,方式为
 @user.route('/register', methods=['POST', 'GET'])
@@ -77,7 +78,7 @@ def select():
 #
 
 
-#用户所有收藏信息查询
+# 用户所有收藏信息查询
 @user.route('/collect-select-all', methods=['POST'])
 def info_collect_all():
     data = request.form.get('data')
@@ -101,7 +102,7 @@ def info_collect_all():
     return  jsonify(collect_list)
  
 
-#用户收藏信息查询
+# 用户收藏信息查询
 @user.route('/collect-select', methods=['POST'])
 def info_collect():
     data = request.form.get('data')
@@ -137,10 +138,12 @@ def Scoring():
     username = data['username']
     users = select_user_name(username)
     position_id = data['position_id']
+    postions = select_position_id(position_id)
     score = data['score']
     list = [{'user_id': users.user_id,
              'position_id': position_id,
-             'score': score}]
+             'score': score,
+             'positon_type': postions.position_type}]
     if len(score) > 0:
         if select_collect_all(users.user_id) is None:
             add_score(score, position_id, users.user_id)

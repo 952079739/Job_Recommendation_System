@@ -38,7 +38,7 @@ class Position(db.Model):
     position_type = db.Column(db.String(100), unique=False)
     position_treatment = db.Column(db.String(200), nullable=True)
     position_place = db.Column(db.String(200), unique=False)
-    company_name = db.Column(db.Integer, db.ForeignKey('company.company_name'))
+    company_name = db.Column(db.Integer, db.ForeignKey('company.company_id'))
     appraisal = db.relationship('Appraisal', backref='position')
 
     def __repr__(self):

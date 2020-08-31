@@ -81,7 +81,7 @@ def info_company_position():
     position_list = []
     company = select_company_name(username)
     if company is not None:
-        positions = select_position_company_all(company.company_name)
+        positions = select_position_company_all(company.company_id)
         for position_infomation in positions:
            position_list.append({
                 'position_id': position_infomation.position_id,
@@ -98,22 +98,23 @@ def form_data():
     data = request.form.get('data')
     data = json.loads(data)
     company_name = data['company_name']
-    print(data)
     if data is not None:
+        company = select_company_name(company_name)
         position_name = data['position_name']
         position_type = data['position_type']
         position_treatment = data['position_treatment']
         position_place = data['position_place']
-        add_position(position_name, position_type, position_treatment, position_place, company_name)
+        add_position(position_name, position_type, position_treatment, position_place, company.company_id)
         return jsonify({'msg' : "发布成功"})
+
 
 # 公司职位删除
 @company.route('/position-delete', methods=['POST'])
 def delete_position_one():
     data = request.form.get('data')
-    print(data)
+    # print(data)
     data = json.loads(data)
-    print(data)
+    # print(data)
     position_id = data['position_id']
     if position_id is not None:
          delete_position( position_id)
