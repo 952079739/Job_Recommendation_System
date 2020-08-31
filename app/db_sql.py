@@ -110,7 +110,7 @@ def add_score(position_appraisal, position_id, user_id):
 #                         position_place=p_place, company_id=c_id)
 #     db.session.add_all([position])
 #     db.session.commit()
-=======
+
 from app import db
 from app.create_db import User, Position, Company, Collecting, Appraisal
 

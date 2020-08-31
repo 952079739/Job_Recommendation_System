@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from app import db
 
 
@@ -72,7 +71,6 @@ class Collecting(db.Model):
 
 
 
-=======
 from app import db
 
 
@@ -139,11 +137,3 @@ class Collecting(db.Model):
 
 
 
-
-
-
-
-
-
-
->>>>>>> 690208798db77a2678433b55c333e897bfa8ca19
