@@ -39,7 +39,8 @@ def job_python():
                               'username': username})
     return jsonify(position_list)
 
-#@wolfer test
+
+# @wolfer test
 # 测试接口,返回所有职业
 @job.route('/test', methods=['GET'])
 def test():

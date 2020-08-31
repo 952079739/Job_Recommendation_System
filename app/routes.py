@@ -2,7 +2,6 @@ from app import app
 from app.company import company
 from app.job import job
 from app.user import user
-from app.db_sql import *
 from flask import url_for, redirect, request, render_template, session
 from werkzeug.exceptions import HTTPException
 import json

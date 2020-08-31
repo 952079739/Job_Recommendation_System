@@ -1,4 +1,5 @@
 import csv
+import pyhdfs
 
 
 def load_csv(list):
@@ -6,6 +7,7 @@ def load_csv(list):
     with open('../position.csv', 'a', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=header)
         writer.writerow(list)
+
 
 
 

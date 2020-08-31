@@ -1,4 +1,3 @@
-from app.create_db import *
 from app.db_sql import *
 
 db.drop_all()

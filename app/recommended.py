@@ -8,8 +8,8 @@ data[['user_id', 'score', 'position_id', 'position_name']].sort_values('user_id'
 file = open("../data.csv", 'r',
             encoding='UTF-8')  # 记得读取文件时加‘r’， encoding='UTF-8'
 
-## 读取data.csv中每行中除了名字的数据
-data = {}  ##存放每位用户评论的电影和评分
+# 读取data.csv中每行中除了名字的数据
+data = {}  # 存放每位用户评论的电影和评分
 for line in file.readlines()[1:100]:
     # 注意这里不是readline()
     line = line.strip().split(',')

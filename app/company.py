@@ -6,7 +6,8 @@ from app.db_sql import *
 
 company = Blueprint('company', __name__)
 
-#@wolfer test
+
+# @wolfer test
 @company.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
@@ -30,7 +31,7 @@ def register():
             return render_template('register.html')
 
 
-#@wolfer test
+# @wolfer test
 @company.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
@@ -50,7 +51,7 @@ def login():
                 # return render_template('login.html')
                 return jsonify({'msg': "公司名或密码错误"})
 
-#@wolfer test
+# @wolfer test
 @company.route('/info',methods=['POST'])
 def select():
     data = request.form.get('data')
@@ -69,7 +70,8 @@ def logout():
     session.clear()
     return redirect(url_for('/login'))
 
-#公司职位查询
+
+# 公司职位查询
 @company.route('/company-position-select', methods=['POST'])
 def info_company_position():
     data = request.form.get('data')
@@ -79,7 +81,7 @@ def info_company_position():
     position_list = []
     company = select_company_name(username)
     if company is not None:
-        positions = select_position_company_all(company.company_id)
+        positions = select_position_company_all(company.company_name)
         for position_infomation in positions:
            position_list.append({
                 'position_id': position_infomation.position_id,
@@ -89,23 +91,23 @@ def info_company_position():
             })
         return jsonify(position_list)
 
-#公司职位增加
+
+# 公司职位增加
 @company.route('/SendDate', methods=['POST'])
 def form_data():
     data = request.form.get('data')
     data = json.loads(data)
+    company_name = data['company_name']
     print(data)
     if data is not None:
         position_name = data['position_name']
         position_type = data['position_type']
         position_treatment = data['position_treatment']
         position_place = data['position_place']
-        company = select_company_name(data['company_name'])
-        company_id = company.company_id
-        add_position(position_name, position_type, position_treatment, position_place, company_id)
+        add_position(position_name, position_type, position_treatment, position_place, company_name)
         return jsonify({'msg' : "发布成功"})
 
-#公司职位删除
+# 公司职位删除
 @company.route('/position-delete', methods=['POST'])
 def delete_position_one():
     data = request.form.get('data')
