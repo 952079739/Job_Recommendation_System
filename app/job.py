@@ -1,6 +1,10 @@
+import json
+
 from flask import Blueprint, request, jsonify, render_template, session
 
 from app.db_sql import *
+
+from app.recommended import recommend
 
 job = Blueprint('job', __name__)
 
@@ -56,6 +60,24 @@ def test():
                               'company_email': company.company_email,
                               'company_photo': company.company_photo})
     return jsonify(position_list)
+
+
+@job.route('/recommend', methods=['GET'])
+def recommend_list():
+    data = request.form.get('data')
+    data = json.loads(data)
+    user_id = data['user_id']
+    recommends = recommend(str(user_id))
+    position_list = []
+    for recomm in recommends:
+        positions = select_position(recomm[0])
+        company = select_company(positions.company_id)
+        position_list.append({'position_name': positions.position_name,
+                              'position_treatement': positions.position_treatment,
+                              'company_name': company.company_name})
+    return jsonify(positions)
+
+
 
 
 # 收藏路由
