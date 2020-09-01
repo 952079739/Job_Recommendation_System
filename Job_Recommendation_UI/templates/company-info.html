@@ -218,15 +218,15 @@
 					})								
 					var temp = ''	
 					for (var i = 0; i<company_position_list.length; i++) {
-					temp += '<div class="col-sm-4 user-list-rm1">'+
-									'<button id="position_infomation" class="user-list-title1">'+company_position_list[i].position_name+'</button>'+
+					temp += '<div class="col-sm-4 user-list-rm">'+
+									'<button id="position_infomation" class="user-list-title1" position_id="'+company_position_list[i].position_id+'">'+(company_position_list[i].position_name).substring(0,10)+'</button>'+
 									'<button class="add-margin user-list-btn2" position_id="'+company_position_list[i].position_id+'" id="delete-send">取消发布</button>'+
 									'<div >'+
 									'<div class="col-sm-5 row">'+
-									'<img src="'+company_position_list[i].company_photo+'" />'+
+									'<img class="img-user" src="'+company_position_list[i].company_photo+'" />'+
 									'</div>'+
 									'<div class="col-sm-7 user-list-title2">'+
-									'<a href="#">'+company_position_list[i].company_name+'</a>'+
+									'<a href="#" class="font-size">'+company_position_list[i].company_name+'</a>'+
 									'</div>	'+
 									'</div>'+
 									'</div>'
@@ -258,7 +258,8 @@
 						}
 					})
 			})
-    	
+
+
     	$(document).on("click","#position_infomation",function (){
 				var position_id = $(this).attr("position_id")
 				location.href="position-info.html?"+"id="+encodeURI(position_id)

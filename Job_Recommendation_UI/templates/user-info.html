@@ -138,15 +138,15 @@
 			var recommendtemp = ''	
 
 			for(var i = 0 ; i < scorelist.length; i++){
-				recommendtemp += '<div class="col-sm-4 user-list-rm">'+
-								 '<button id="position_infomation" position_id="'+scorelist[i].position_id+'" class="user-list-title1">'+scorelist[i].position_name+'</button>'+			
+				recommendtemp += '<div class="col-sm-6 user-list-rm">'+
+								 '<button id="position_infomation" position_id="'+scorelist[i].position_id+'" class="user-list-title1">'+(scorelist[i].position_name).substring(0,10)+'</button>'+
 								 '<button class="user-list-btn"><span>评分：'+scorelist[i].position_score+'分</span></button>'+
 								 '<div >'+
 								 '<div class="col-sm-5 row">'+
-								 '<img src="'+scorelist[i].company_photo+'" />'+
+								 '<img class="img-user" src="'+scorelist[i].company_photo+'" />'+
 								 '</div>'+									 
 								 '<div class="col-sm-7 user-list-title2">'+
-								 '<a href="#">'+scorelist[i].company_name+'</a>'+
+								 '<a href="#" class="font-size">'+scorelist[i].company_name+'</a>'+
 								 '</div>'+					 
 								 '</div>'+
 								 '</div>' 									
@@ -180,15 +180,15 @@
 					var recommendtemp = ''	
 		
 					for(var i = 0 ; i < collectlist.length; i++){
-						recommendtemp += '<div class="col-sm-4 user-list-rm">'+
-										 '<button id="position_infomation" class="user-list-title1">'+collectlist[i].position_name+'</button>'+	
+						recommendtemp += '<div class="col-sm-6 user-list-rm">'+
+										 '<button id="position_infomation" class="user-list-title1" position_id="'+collectlist[i].position_id+'">'+(collectlist[i].position_name).substring(0,8)+'</button>'+
 										 '<button class="user-list-btn1" id="delete-collect" position_id="'+collectlist[i].position_id+'"><span>取消收藏</span></button>'+
 										 '<div >'+ 								 
 										 '<div class="col-sm-5 row">'+
-										 '<img src="'+collectlist[i].company_photo+'" />'+
+										 '<img class="img-user" src="'+collectlist[i].company_photo+'" />'+
 										 '</div>'+									 
 										 '<div class="col-sm-7 user-list-title2">'+
-										 '<a href="#">'+collectlist[i].company_name+'</a>'+
+										 '<a href="#" class="font-size">'+collectlist[i].company_name+'</a>'+
 										 '</div>'+					 
 										 '</div>'+
 										 '</div>' 													

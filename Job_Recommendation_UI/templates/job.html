@@ -47,20 +47,8 @@
 
 		<!--上-->
 
-		<!--搜索栏-->
-		<div class="container search-index">
-			<div class="col-sm-2"></div>
-			<div class="col-sm-6 search-bar">
-				<input type="search" class="form-control" placeholder="搜职位、搜公司、搜校招、搜关键字...">
-			</div>
-			<div class="col-sm-2 search-btn">
-				<button type="submit" class="button">搜索</button>
-			</div>
-			<div class="col-sm-2"></div>
-		</div>
-
 		<!--下-->
-		<div class="container container-change">
+		<div class="container container-change-job">
 			<!--container-adapt-->
 			<div class="row">
 				<div class="col-sm-9">
@@ -71,7 +59,7 @@
 							<li class="condition">
 								<dl class="clearfix" data-selector="industrys" id="industry_id">
 									<dt class="special">行业：</dt>
-									<dd class="active" data-id="000">不限</dd>
+									<dd class="active" data-name="000">不限</dd>
 								</dl>
 							</li>
 						</ul>
@@ -86,16 +74,19 @@
 				<div class="col-sm-3">
 					<!--推荐栏1-->
 					<div class="recommend-card" id="recommend_like">
-						<div class="card-title clearfix"><span>|</span>猜你喜欢
-							<a href="#">换一批</a>
+						<div class="card-title clearfix" id="recommend_user"><span>|</span> 为您推荐
 						</div>					
 					</div>
 					<!--推荐栏2-->
 					<div class="recommend-card" id="recommend_hot">
-						<div class="card-title clearfix"><span>|</span>热门职位
-							<a href="#">换一批</a>
-						</div>
-											
+						<div class="card-title clearfix"><span>|</span> 友情链接</div>
+                        <a href="https://campus.liepin.com/">猎聘校园</a>
+                        <a href="https://www.1010jz.com/">找兼职</a>
+                        <a href="https://www.liepin.cn/">猎职网</a>
+                        <a href="https://bj.597.com/">北京招聘网</a>
+                        <a href="https://www.doumi.com//">大学生兼职</a>
+                        <a href="https://landing.zhaopin.com/">智联招聘</a>
+                        <a href="https://tuiguang.shixiseng.com/">实习僧</a>
 					</div>
 				</div>
 			</div>
@@ -130,6 +121,7 @@
 					if(user == "用户"){
 						$("#job_company").remove()
 					}else{
+					    $("#recommend_user").remove()
 						$("#job_user").remove()
 					}
 				}
@@ -181,7 +173,7 @@
 											'</button>'+
 											'<div class="info infoleft">'+
 												'<div class="col-sm-8 row">'+
-												'<span class="glyphicon glyphicon-map-marker">'+job_info[i].position_place+'</span>'+										
+												'<span class="glyphicon glyphicon-map-marker">'+job_info[i].position_place+'</span>'+
 												'</div>'+
 												'<div class="col-sm-4">'+
 												'<span class="glyphicon glyphicon-education">'+job_info[i].position_type+'</span>'+	
@@ -192,48 +184,53 @@
 											'<a class="title1" href="#">'+job_info[i].company_name+'</a>'+												
 										'</div>'+
 										'<div class="col-sm-2">'+
-											'<img src="'+job_info[i].company_photo+'" alt="公司Logo" />'+
+											'<img class="img-change" src="'+job_info[i].company_photo+'" alt="公司Logo" />'+
 										'</div>'+
 									'</div>'
 					}
 					$("#position_list").append(jobtemp)
 				}	
 				
-				//猜测职位
+				//推荐职位
 				function likejob_build(){
 					var likejobtemp = '';
-					for(var i = 0; i < job_info.length-0; i++){
+					var job_info_recommend = '';
+                    var username = sessionStorage.getItem('username')
+                    var data = {
+						data:JSON.stringify({
+							"username":username
+						}),
+					}
+                    console.log(data)
+
+                    $.ajax({
+						type:"post",
+						url:"http://127.0.0.1:5000/job/recommend",
+						dataType:"json",
+                        data:data,
+						async: false,
+						success:function(result){
+							job_info_recommend = result
+                            console.log(job_info_recommend)
+						}
+					});
+
+
+					for(var i = 0; i < 4; i++){
 						likejobtemp += '<div class="card-body clearfix">'+
 									'<div class="col-sm-4">'+
-										'<img src="'+job_info[i].company_photo+'" alt="公司Logo" />'+
+										'<img src="'+job_info_recommend[i].company_photo+'" alt="公司Logo" />'+
 									'</div>'+
 									'<div class="col-sm-8 card-body-abr">'+
-										'<button class="title" id="position_infomation" position_id="'+job_info[i].position_id+'" >'+job_info[i].position_name+'</button>'+
+										'<button class="title" id="position_infomation" position_id="'+job_info_recommend[i].position_id+'" >'+job_info_recommend[i].position_name+'</button>'+
 											'<br />'+
-										'<button class="title1" href="#">'+job_info[i].company_name+'</button>'+
+										'<button class="title1" href="#">'+job_info_recommend[i].company_name+'</button>'+
 									'</div>'+
 								'</div>'
 					}
 					$("#recommend_like").append(likejobtemp)
 				}	
-				
-				//热门职业
-				function hotjob_build(){
-					var hotjobtemp = '';
-					for(var i = 0; i < job_info.length; i++){
-						hotjobtemp += '<div class="card-body clearfix">'+
-									'<div class="col-sm-4">'+
-										'<img src="'+job_info[i].company_photo+'" alt="公司Logo" />'+
-									'</div>'+
-									'<div class="col-sm-8 card-body-abr">'+
-										'<button id="position_infomation" position_id="'+job_info[i].position_id+'" class="title">'+job_info[i].position_name+'</button>'+
-											'<br />'+
-										'<button class="title1" href="#">'+job_info[i].company_name+'</button>'+
-									'</div>'+
-								'</div>'
-					}
-					$("#recommend_hot").append(hotjobtemp)
-				}					
+
 			})
 			
 			$(document).on("click","#position_infomation",function (){
@@ -247,7 +244,7 @@
 				$(this).addClass("active")
 				var classify_name = $(this).attr("data-name")
 				var classifyjobtemp = ''
-				if(classify_name != 000){
+				if(classify_name != "000"){
 					$("#position_list").empty()
 					$(function(){
 						classifyjob_build()

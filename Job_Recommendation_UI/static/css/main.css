@@ -2,9 +2,24 @@
 	border: 1px;
 }
 
+.recommend-card a{
+	font-size: 20px;
+	display: block;
+	margin-left: 40px;
+	margin-top: 10px;
+	color: #999;
+}
+
+.recommend-card a:hover{
+	color: #41af55;
+}
+
+.container-change-job{
+	padding-top: 50px;
+}
+
 :focus {
     outline: 0;
-    outline-color: none;
     outline-style: none;
     outline-width: 0;
 }
@@ -380,4 +395,14 @@ dd {
 
 .button-company{
 	border: solid 10px ;
+}
+
+.img-change{
+	max-width: 120px;
+	max-height: 80px;
+}
+
+.img-user{
+	max-width: 100px;
+	max-height: 50px;
 }

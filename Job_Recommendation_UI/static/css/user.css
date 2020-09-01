@@ -22,7 +22,7 @@ body{
 	text-align: center;
 }
 .side-bar .list-group-item{
-	border: 0; 
+	border: 0;
 	border-radius: 3px;
 	background-color:#fafafa ;
 }
@@ -55,7 +55,7 @@ body{
 }
 .user-list-item1:first-child{
 	margin-top: 0;
-} 
+}
 
 .info-worker{
 	width: 100%;
@@ -86,39 +86,41 @@ body{
     border-radius: 80%;
 }
 
-.user-info-top .info-p1{	
+.user-info-top .info-p1{
 	padding-top: 130px;
 	text-align: left;
     font-size: 20px;
     line-height: 18pxw;
-    color: white;   
+    color: white;
     font-weight: 700;
 }
 
 .user-info-top .info-p1 span{
-	color:#ffb37c;	
+	color:#ffb37c;
 	margin-left: 5px;
 }
 
-.user-info-top .info-p2{	
+.user-info-top .info-p2{
 	text-align: left;
     font-size: 20px;
-    color: white;   
+    color: white;
     font-weight: 600;
 }
 .user-info-top span{
 	text-align: center;
 	font-size: 15px;
-	color: white;   
+	color: white;
 }
 
 .user-list-rm{
-	width: 30%;
+	width: 40%;
+	height: 110px;
 	border: solid 1px #dad6d6;
 	margin-right: 20px;
 	margin-top: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	background-color: white;
 }
 
 .user-list-rm1{
@@ -166,9 +168,9 @@ body{
 }
 
 .user-info-top-a{
-	
+
     line-height: 38px;
-    font-size: 14px;  
+    font-size: 14px;
     font-weight: 700;
 }
 
@@ -179,7 +181,7 @@ body{
 
 .user-info-right-a a{
 	line-height: 38px;
-	font-size: 18px; 
+	font-size: 18px;
 	float: right;
     color: #33b753;
 }
@@ -189,14 +191,15 @@ body{
 	margin-top: 25px;
 	font-size: 16px;
 	line-height: 30px;
-	color: ;
+	color: white;
 }
 
 
 
 .user-list-btn{
 	padding:5px;
-	margin-left: 40px;
+	margin-right: 30px;
+	float: right;
 	background-color: #33b753;
 	border: none;
 	color: white;
@@ -204,7 +207,8 @@ body{
 
 .user-list-btn1{
 	padding:5px;
-	margin-left: 40px;
+	margin-right: 40px;
+	float: right;
 	background-color: white;
 	border: none;
 	color:#33b753;
@@ -310,4 +314,8 @@ body{
 
 .navbar-nav .active{
 	border-bottom: solid 2px #33b753 ;
+}
+
+.font-size{
+	font-size: 15px;
 }
