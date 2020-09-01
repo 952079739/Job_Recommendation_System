@@ -1,12 +1,12 @@
 import json
+from app.logger import load_csv
 
 from flask import Blueprint, request, render_template, url_for, jsonify, redirect, session
 
 from app.db_sql import *
-from app.logger import load_csv
+
 
 user = Blueprint('user', __name__)
-
 
 # @wolfer test
 # 注册页面,传输数据为json,方式为
@@ -33,10 +33,8 @@ def register():
                     return jsonify({'msg': "用户名存在"})
             return jsonify(typ_inforamtion='请注册后再登录')
 
-
 # @wolfer test
 # 登录页面,传输数据为json,类型为POST
-
 @user.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
@@ -78,21 +76,21 @@ def select():
 #
 
 
-# 用户所有收藏信息查询
+#用户所有收藏信息查询
 @user.route('/collect-select-all', methods=['POST'])
 def info_collect_all():
     data = request.form.get('data')
-    # print(data)
+    print(data)
     data = json.loads(data)
     collect_list = []
     username = data['username']
-    # print(username)
+    print(username)
     users = select_user_name(username)
     collects = select_collect_all(users.user_id)
-    # print(collects)
+    print(collects)
     for collect_infomation in collects:
                 position = select_position_id(collect_infomation.collecting_position_id)
-                company = select_company(position.company_name)
+                company = select_company(position.company_id)
                 collect_list.append({
                     'position_id':position.position_id,
                     'position_name':position.position_name,
@@ -102,7 +100,7 @@ def info_collect_all():
     return  jsonify(collect_list)
  
 
-# 用户收藏信息查询
+#用户收藏信息查询
 @user.route('/collect-select', methods=['POST'])
 def info_collect():
     data = request.form.get('data')
@@ -116,7 +114,6 @@ def info_collect():
     else:
         return jsonify({'msg': "no"})
 
-
 # 用户收藏
 @user.route('/collect-position', methods=['POST'])
 def position_collect():
@@ -126,11 +123,24 @@ def position_collect():
     position_id = data['position_id']
     users = select_user_name(username)
     if users is not None:
-        add_collect(users.user_id, position_id)
-        return jsonify({'msg': "collect_have"})
+         add_collect(users.user_id, position_id)
+         return jsonify({'msg': "collect_have"})
+
+#取消收藏
+@user.route('/collect-delete', methods=['POST'])
+def delete_collect_one():
+    data = request.form.get('data')
+    data = json.loads(data)
+    print(data)
+    username = data['username']
+    position_id = data['position_id']
+    users = select_user_name(username)
+    if users is not None:
+         delete_collect(users.user_id, position_id)
+         return jsonify({'msg': "collect_delete"})
 
 
-# 用户评分
+#用户评分
 @user.route('/score-add', methods=['POST'])
 def Scoring():
     data = request.form.get('data')
@@ -138,21 +148,18 @@ def Scoring():
     username = data['username']
     users = select_user_name(username)
     position_id = data['position_id']
-    postions = select_position_id(position_id)
     score = data['score']
+    postions = select_position_id(position_id)
     list = [{'user_id': users.user_id,
              'position_id': position_id,
              'score': score,
-             'positon_type': postions.position_type}]
-    if len(score) > 0:
-        if select_collect_all(users.user_id) is None:
-            add_score(score, position_id, users.user_id)
-            load_csv(list)
-            return jsonify({'msg': "success"})
-    return jsonify({'msg': "False"})
+             'position_type': postions.position_type}]
+    load_csv(list)
+    if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
+        add_score(score, position_id, users.user_id)
+        return jsonify({'msg': "success"})
 
-
-# 用户评分信息查询
+#用户评分信息查询
 @user.route('/score-select', methods=['POST'])
 def info_score():
     data = request.form.get('data')
@@ -166,8 +173,7 @@ def info_score():
     else:
         return jsonify({'msg': "no"})
 
-
-# 用户所有评分查询
+#用户所有评分查询
 @user.route('/score-select-all', methods=['POST'])
 def info_score_all():
     data = request.form.get('data')
@@ -179,7 +185,7 @@ def info_score_all():
     print(scores)
     for score_infomation in scores:
                 position = select_position_id(score_infomation.position_id)
-                company = select_company(position.company_name)
+                company = select_company(position.company_id)
                 score_list.append({
                     'position_score':score_infomation.position_appraisal,
                     'position_id': position.position_id,
@@ -189,8 +195,7 @@ def info_score_all():
                 })
     return jsonify(score_list)
 
-
-# 职位评分总查询
+#职位评分总查询
 @user.route('/score-position-select-all', methods=['POST'])
 def info_position_score_all():
     data = request.form.get('data')
@@ -201,6 +206,20 @@ def info_position_score_all():
     score_list = []
     print(scores)
     for score_infomation in scores:
-                score_list.append({'score':score_infomation.position_appraisal})
+        score_list.append({'score':score_infomation.position_appraisal})
     return jsonify(score_list)
 
+#用户信息修改
+@user.route('/userinfo_update', methods=['POST'])
+def update_user_one():
+        data = request.form.get('data')
+        print(data)
+        if data is not None:
+            data = json.loads(data)
+            username = data['username']
+            email = data['email']
+            liking = data['like_position']
+            user = select_user_name(username)
+            if user is not None:
+                update_user(username, email, liking)
+                return jsonify({'msg': "success"})

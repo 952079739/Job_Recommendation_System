@@ -34,11 +34,11 @@ class Position(db.Model):
     __tablename__ = 'position'
     __table_args__ = {'extend_existing': True}
     position_id = db.Column(db.Integer, primary_key=True)
-    position_name = db.Column(db.String(100), unique=True)
+    position_name = db.Column(db.String(100), unique=False)
     position_type = db.Column(db.String(100), unique=False)
     position_treatment = db.Column(db.String(200), nullable=True)
     position_place = db.Column(db.String(200), unique=False)
-    company_name = db.Column(db.Integer, db.ForeignKey('company.company_id'))
+    company_id = db.Column(db.Integer, db.ForeignKey('company.company_id'))
     appraisal = db.relationship('Appraisal', backref='position')
 
     def __repr__(self):
@@ -49,7 +49,7 @@ class Appraisal(db.Model):
     __tablename__ = 'appraisals'
     __table_args__ = {'extend_existing': True}
     appraisal_id = db.Column(db.Integer, primary_key=True)
-    position_appraisal = db.Column(db.String(50), unique=False)
+    position_appraisal = db.Column(db.Integer, unique=False)
     position_id = db.Column(db.Integer, db.ForeignKey('position.position_id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
