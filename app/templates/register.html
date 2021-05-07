@@ -21,16 +21,16 @@
 	<div  class="container clearfix">
 		
 		<div class="col-sm-7">	
-			<img src="../static/img/sign.png" class="img-bg"/>
+			<img src="../static/img/sign2.jpg" class="img-bg"/>
 		</div>
 		
 		<form action="#" enctype="multipart/form-data">
-			<div class="col-sm-5 container-small1 container-padding clearfix">
+			<div class="col-sm-5 container-small1 clearfix">
 		
 				<h1>注册</h1>
 				
 					<div class="form-group">
-						<label>公司名</label>
+						<label>用户名</label>
 						<input type="text" class="form-control" id="register_name"/>
 					</div>
 					
@@ -40,11 +40,15 @@
 					</div>
 					
 					<div class="form-group">
-						<label>邮箱</label>
-						<input type="email" class="form-control" id="register_email"/>
+						<label>确认密码</label>
+						<input type="password" class="form-control" id="register_password2"/>
 					</div>
 					
-					
+<!--					<div class="form-group">-->
+<!--						<label>邮箱</label>-->
+<!--						<input type="text" class="form-control" id="register_like"/>-->
+<!--					</div>-->
+<!--					-->
 					<div class="form-group">
 						<button class="btn btn-primary btn-block buttom-form" id="register_come">注册</button>
 					</div>
@@ -57,19 +61,21 @@
 	<script>
 		$("#register_come").click(function(){
 			var register_name = $("#register_name").val()
-			var register_password = $("#register_password").val()	
+			var register_password = $("#register_password").val()
 			var register_email = $("#register_email").val()
+			var register_like = $("#register_like").val()
 			var data = {
 				data:JSON.stringify({
 					"username":register_name,
 					"password":register_password,
-					"email":register_email
+					"email":register_email,
+					"like_position":register_like
 				}),			
 			}
 			console.log(data)
 			$.ajax({
 				type: "post",
-				url: "http://127.0.0.1:5000/company/register",
+				url: "http://127.0.0.1:5000/user/register",
 				dataType: "json",
 				async: false,
 				data: data,
@@ -80,7 +86,7 @@
 						var user_name = $("#register_name").val()
 						window.location.href="job.html"
 						sessionStorage.setItem('username',user_name)
-						sessionStorage.setItem('user',"公司")
+						sessionStorage.setItem('user',"用户")
 					}	
 				},
 				error:function(){

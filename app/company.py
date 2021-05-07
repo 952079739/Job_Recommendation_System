@@ -1,13 +1,15 @@
 import json
+import os
 
-from flask import Blueprint, request, render_template, url_for, jsonify, redirect, session
+from flask import Blueprint, request, render_template, url_for, jsonify, redirect, session, send_from_directory
 
 from app.db_sql import *
 
-company = Blueprint('company', __name__)
+device = Blueprint('device', __name__)
+
 
 #@wolfer test
-@company.route('/register', methods=['POST', 'GET'])
+@device.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == 'GET':
         return render_template('register.html')
@@ -31,7 +33,7 @@ def register():
 
 
 #@wolfer test
-@company.route('/login', methods=['POST', 'GET'])
+@device.route('/login', methods=['POST', 'GET'])
 def login():
     if request.method == 'GET':
         return render_template('register.html')
@@ -51,46 +53,43 @@ def login():
                 return jsonify({'msg': "公司名或密码错误"})
 
 #@wolfer test
-@company.route('/info',methods=['POST'])
+@device.route('/info',methods=['POST'])
 def select():
     data = request.form.get('data')
     data = json.loads(data)
-    username = data['username']
-    companys = select_company_name(username)
-    company = {
-        'company_name': companys.company_name,
-        'company_email': companys.company_email
+    provice_name = data['device_name']
+    devices = select_device_province_name(provice_name)
+    device = {
+        'device_name': devices.device_name,
     }
-    return jsonify(company)
+    return jsonify(device)
 
 
-@company.route('/logout/', methods=['GET'])
+
+@device.route('/logout/', methods=['GET'])
 def logout():
     session.clear()
     return redirect(url_for('/login'))
 
-#公司职位查询
-@company.route('/company-position-select', methods=['POST'])
-def info_company_position():
+
+# 公司职位查询
+@device.route('/company-position-select', methods=['POST'])
+def info_device_position():
     data = request.form.get('data')
     print(data)
     data = json.loads(data)
-    username = data['username']
-    position_list = []
-    company = select_company_name(username)
-    if company is not None:
-        positions = select_position_company_all(company.company_id)
-        for position_infomation in positions:
-           position_list.append({
-                'position_id': position_infomation.position_id,
-                'position_name': position_infomation.position_name,
-                'company_name': company.company_name,
-                'company_photo': company.company_photo
-            })
-        return jsonify(position_list)
+    provice_name = data['provice_name']
+    device_list = []
+    devices = select_devices_all(provice_name)
+    for device_infomation in positions:
+        device_list.append({
+            'device_name': device_infomation.device_name,
+         })
+        return jsonify(device_list)
 
-#公司职位增加
-@company.route('/SendDate', methods=['POST'])
+
+# 公司职位增加
+@device.route('/SendDate', methods=['POST'])
 def form_data():
     data = request.form.get('data')
     data = json.loads(data)
@@ -105,14 +104,21 @@ def form_data():
         add_position(position_name, position_type, position_treatment, position_place, company_id)
         return jsonify({'msg' : "发布成功"})
 
-#公司职位删除
-@company.route('/position-delete', methods=['POST'])
-def delete_position_one():
+
+# 公司职位删除
+@device.route('/device-delete', methods=['POST'])
+def delete_device():
     data = request.form.get('data')
-    print(data)
     data = json.loads(data)
-    print(data)
-    position_id = data['position_id']
-    if position_id is not None:
-         delete_position( position_id)
-         return jsonify({'msg': "position_delete"})
+    device_one = data['device_name1']
+    device_two = data['device_name2']
+    if device_one == device_two:
+        delete_device(device_one)
+        return jsonify({'msg': "成功删除"})
+    return jsonify({'msg':"设备名不一致"})
+
+
+@device.route("/download/<filename>", methods=['GET'])
+def download_file(filename):
+    directory = os.path.abspath(filename)  # 获得文件路径
+    return send_from_directory(directory, filename, as_attachment=True)

@@ -3,7 +3,7 @@ import json
 from flask import Blueprint, request, jsonify, render_template, session
 
 from app.db_sql import *
-from app.recommended import recommend
+
 
 job = Blueprint('job', __name__)
 
@@ -40,7 +40,9 @@ def job_python():
                               'username': username})
     return jsonify(position_list)
 
-#@wolfer test
+
+
+# @wolfer test
 # 测试接口,返回所有职业
 @job.route('/test', methods=['GET'])
 def test():
@@ -59,24 +61,7 @@ def test():
                               'company_photo': company.company_photo})
     return jsonify(position_list)
 
-@job.route('/recommend', methods=['POST'])
-def recommend_list():
-    data = request.form.get('data')
-    data = json.loads(data)
-    username = data['username']
-    print(data)
-    user = select_user_name(username)
-    recommends = recommend(str(user.user_id))
-    print(recommends)
-    position_list = []
-    for recomm in recommends:
-        positions = select_position_id(recomm[0])
-        company = select_company(positions.company_id)
-        position_list.append({'position_name': positions.position_name,
-                              'position_id':positions.position_id,
-                              'company_photo': company.company_photo,
-                              'company_name': company.company_name})
-    return jsonify(position_list)
+
 
 
 # 收藏路由

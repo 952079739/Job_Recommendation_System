@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
+	<title>更改密码</title>
+	<link rel="stylesheet" href="../static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="../static/css/main.css" />
+	<link rel="shortcut icon" href="../static/img/favicon.ico" />
+</head>
+<body src="">
+	<!--导航栏 -->
+	<div class="container">
+		<div class="navbar-header">
+				<a href="index.html" class="navbar-brand"></a>
+		</div>
+	</div>
+	
+	<!--登录信息-->
+	<div  class="container" >
+		<div class="col-sm-7">	
+			<img src="../static/img/user_n.jpg" class="img-bg"/>
+		</div>
+		<div class="col-sm-7 container-small">
+		<h1>更改用户名</h1>
+		<form action="#" id="formid" enctype="multipart/form-data">		
+			<div class="form-group">
+				<label id="user_cu">旧用户名</label>
+				<input type="text" class="form-control" name="user_name" id="login_username1"/>
+			</div>
+			<div class="form-group">
+				<label>新用户名</label>
+				<input type="text" class="form-control" name="user_name" id="login_username2"/>
+			</div>
+			<div class="form-group">
+				<button class="btn btn-primary btn-block" type="button" id="login_user">更改</button>
+			</div>
+	   </form>
+		</div>	
+	</div>
+	
+	<script src="../static/lib/jquery/jquery-3.4.1.js"></script>
+	<script>
+		$("#login_user").click(function(){
+			var login_name = $("#login_name").val()
+			var login_password = $("#login_password").val()
+			var user_name = sessionStorage.getItem('username')
+			var data = {
+				data:JSON.stringify({
+				    "username":user_name,
+					"password1":login_password1,
+					"password2":login_password2
+				}),			
+			}
+			console.log(data)
+			$.ajax({
+				type: "post",
+				url: "http://127.0.0.1:5000/user/login",
+				dataType: "json",
+				async: false,
+				data: data,
+				success: function(result){
+					if(result.msg != "success"){
+						alert(result.msg)
+					}else{
+						var user_name = $("#login_name").val()
+						window.location.href="user-info.html"
+						sessionStorage.setItem('username',user_name)
+						sessionStorage.setItem('user',"用户")
+					}	
+				}
+			});								
+			
+		})
+	</script>
+</body>
+</html>

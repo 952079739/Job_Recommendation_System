@@ -1,5 +1,5 @@
 import json
-from app.logger import load_csv
+
 
 from flask import Blueprint, request, render_template, url_for, jsonify, redirect, session
 
@@ -20,18 +20,21 @@ def register():
             data = json.loads(data)
             username = data['username']
             password = data['password']
-            email = data['email']
-            liking = data['like_position']
-            if len(username) > 0 and len(password) > 0 and len(email) > 0 and len(liking) > 0:
+            password2 =data['password2']
+            if len(username) > 0 and len(password) > 0  and len(password2) > 0:
                 user = select_user_name(username)
                 if user is None:
-                    add_user(username, password, email, liking)
-                    # return redirect(url_for('user.login'))
-                    return jsonify({'msg': "success"})
+                    if password == password2:
+                        add_user(username, password)
+                        # return redirect(url_for('user.login'))
+                        return jsonify({'msg': "success"})
+                    else:
+                        return jsonify({'msg':"密码不一致"})
                 else:
                     # return jsonify(type_information='False')
                     return jsonify({'msg': "用户名存在"})
             return jsonify(typ_inforamtion='请注册后再登录')
+
 
 # @wolfer test
 # 登录页面,传输数据为json,类型为POST
@@ -47,11 +50,8 @@ def login():
             password = data['password']
             users = select_user(username, password)
             if users is not None:
-                # session['name'] = username
-                # return redirect(url_for('job.index'))
                 return jsonify({'msg': "success"})
             else:
-                # return jsonify(type_information='False')
                 return jsonify({'msg': "用户名或密码错误"})
 
 
@@ -126,7 +126,7 @@ def position_collect():
          add_collect(users.user_id, position_id)
          return jsonify({'msg': "collect_have"})
 
-#取消收藏
+# 取消收藏
 @user.route('/collect-delete', methods=['POST'])
 def delete_collect_one():
     data = request.form.get('data')
@@ -140,7 +140,7 @@ def delete_collect_one():
          return jsonify({'msg': "collect_delete"})
 
 
-#用户评分
+# 用户评分
 @user.route('/score-add', methods=['POST'])
 def Scoring():
     data = request.form.get('data')
@@ -150,16 +150,15 @@ def Scoring():
     position_id = data['position_id']
     score = data['score']
     postions = select_position_id(position_id)
-    list = [{'user_id': users.user_id,
-             'position_id': position_id,
-             'score': score,
-             'position_type': postions.position_type}]
-    load_csv(list)
+    # list = [{'user_id': users.user_id,
+    #          'position_id': position_id,
+    #          'score': score,
+    #          'position_type': postions.position_type}]
     if len(username) > 0 and len(position_id) > 0 and len(score) > 0:
         add_score(score, position_id, users.user_id)
         return jsonify({'msg': "success"})
 
-#用户评分信息查询
+# 用户评分信息查询
 @user.route('/score-select', methods=['POST'])
 def info_score():
     data = request.form.get('data')
@@ -173,7 +172,8 @@ def info_score():
     else:
         return jsonify({'msg': "no"})
 
-#用户所有评分查询
+
+# 用户所有评分查询
 @user.route('/score-select-all', methods=['POST'])
 def info_score_all():
     data = request.form.get('data')
@@ -195,7 +195,8 @@ def info_score_all():
                 })
     return jsonify(score_list)
 
-#职位评分总查询
+
+# 职位评分总查询
 @user.route('/score-position-select-all', methods=['POST'])
 def info_position_score_all():
     data = request.form.get('data')
@@ -209,17 +210,32 @@ def info_position_score_all():
         score_list.append({'score':score_infomation.position_appraisal})
     return jsonify(score_list)
 
-#用户信息修改
-@user.route('/userinfo_update', methods=['POST'])
-def update_user_one():
+
+# 用户信息修改
+@user.route('/add_user', methods=['POST'])
+def add_user():
         data = request.form.get('data')
-        print(data)
         if data is not None:
             data = json.loads(data)
             username = data['username']
-            email = data['email']
-            liking = data['like_position']
+            password = data['password']
+            userphone = data['user_phone']
+            user = select_user_name(username)
+            if user is None:
+                update_user(username, password, userphone)
+                return jsonify({'msg': "success"})
+            return jsonify({'msg':'用户已存在'})
+
+
+@user.route('/delete_user', methods=['POST'])
+def delete_user():
+        data = request.form.get('data')
+        if data is not None:
+            data = json.loads(data)
+            username = data['username']
             user = select_user_name(username)
             if user is not None:
-                update_user(username, email, liking)
+                delete_user(username)
                 return jsonify({'msg': "success"})
+            return jsonify({'msg':'用户不存在'})
+

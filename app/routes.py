@@ -1,15 +1,14 @@
 from app import app
-from app.company import company
+from app.company import device
 from app.job import job
 from app.user import user
-from app.db_sql import *
-from flask import url_for, redirect, request, render_template, session
+from flask import url_for, redirect, request, render_template
 from werkzeug.exceptions import HTTPException
 import json
 
 app.register_blueprint(user, url_prefix='/user')
 app.register_blueprint(job, url_prefix='/job')
-app.register_blueprint(company, url_prefix='/company')
+app.register_blueprint(device, url_prefix='/company')
 
 
 @app.route('/')

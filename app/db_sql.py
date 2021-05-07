@@ -1,6 +1,5 @@
 from app import db
-from app.create_db import User, Position, Company, Collecting, Appraisal
-
+from app.create_db import *
 
 def select_user(name, password):
     user = User.query.filter(User.user_name == name, User.user_password == password).first()
@@ -12,21 +11,30 @@ def select_user_name(name):
     return user
 
 
+def delete_user(username):
+    user = User.query.filter_by(User.user_name == username).first()
+    db.session.delete(user)
+    db.session.commit()
+
+
 def select_position(name):
     position_list = Position.query.filter(Position.position_name == name).first()
     return position_list
 
-def select_position_company_all(company_id):
+def select_devices_all(company_id):
     position_list = Position.query.filter(Position.company_id == company_id).all()
     return  position_list
 
-def select_company(id):
+
+def delete_device(id):
     company = Company.query.filter(Company.company_id == id).first()
     return company
 
-def select_company_name(name):
+
+def select_device_name(name):
     company = Company.query.filter(Company.company_name == name).first()
     return company
+
 
 def select_company_two(name, password):
     company = Company.query.filter(Company.company_name == name, Company.company_password == password).first()
