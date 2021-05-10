@@ -4,10 +4,10 @@
 	<meta charset="UTF-8" />
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
-	<title>注册</title>
+	<title>删除用户</title>
 	<link rel="stylesheet" href="{{ url_for('static', filename='static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}"/>
 	<link rel="stylesheet" href="{{ url_for('static', filename='static/css/main.css') }}" />
-	<link rel="shortcut icon" href="{{ url_for('static', filename='static/img/favicon.ico') }}" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='static/img/favicon.ico') }}" />
 </head>
 <body>
 	<!--导航栏 -->
@@ -21,41 +21,26 @@
 	<div  class="container clearfix">
 		
 		<div class="col-sm-7">	
-			<img src="{{ url_for('static', filename='static/img/device.jpg') }}" class="img-bg"/>
+			<img src="{{ url_for('static', filename='static/img/sign2.jpg') }}" class="img-bg"/>
 		</div>
 		
 		<form action="#" enctype="multipart/form-data">
 			<div class="col-sm-5 container-small1 clearfix">
 		
-				<h1>注册</h1>
+				<h1>删除用户</h1>
 				
 					<div class="form-group">
-						<label>设备名字</label>
-						<input type="text" class="form-control" id="device_name"/>
+						<label>用户名</label>
+						<input type="text" class="form-control" id="user_name"/>
 					</div>
 					
 					<div class="form-group">
-						<label>设备IP</label>
-						<input type="text" class="form-control" id="device_ip"/>
-					</div>
-
-				    <div class="form-group">
-						<label>省份</label>
-						<input type="text" class="form-control" id="device_province"/>
-					</div>
-					
-					<div class="form-group">
-						<label>设备用户</label>
-						<input type="text" class="form-control" id="device_user"/>
-					</div>
-					
-					<div class="form-group">
-						<label>设备密码</label>
-						<input type="password" class="form-control" id="device_password"/>
+						<label>再次输入</label>
+						<input type="text" class="form-control" id="name"/>
 					</div>
 
 					<div class="form-group">
-						<button class="btn btn-primary btn-block buttom-form" id="register_come">注册</button>
+						<button class="btn btn-primary btn-block buttom-form" id="register_come">删除</button>
 					</div>
 					
 	 		</div>
@@ -65,24 +50,18 @@
 	<script src="{{ url_for('static', filename='static/lib/jquery/jquery-3.4.1.js') }}"></script>
 	<script>
 		$("#register_come").click(function(){
-			var device_name = $("#device_name").val()
-			var device_password = $("#device_password").val()
-			var device_user = $("#device_user").val()
-			var province = $("#device_province").val()
-			var device_ip = $("#device_ip").val()
+			var user_name = $("#user_name").val()
+			var name = $("#name").val()
 			var data = {
 				data:JSON.stringify({
-					"device_name":device_name,
-					"password":device_password,
-					"province":province,
-					"device_ip":device_ip,
-					"username":device_user
+					"user_name":device_name,
+					"name":register_password,
 				}),			
 			}
 			console.log(data)
 			$.ajax({
 				type: "post",
-				url: "{{ url_for('device.register')}}",
+				url: "{{ url_for('manager.delete')}}",
 				dataType: "json",
 				async: false,
 				data: data,
@@ -91,9 +70,8 @@
 						alert(result.msg)
 					}else{
 						var user_name = $("#register_name").val()
-						window.location.href="{{ url_for('device.select')}}"
-						sessionStorage.setItem('username',user_name)
-						sessionStorage.setItem('user',"用户")
+						window.location.href="{{ url_for('manager.user_info')}}"
+						
 					}	
 				},
 				error:function(){

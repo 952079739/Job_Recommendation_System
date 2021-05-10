@@ -5,9 +5,9 @@
 	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />-->
 	<title>首页</title>
-	<link rel="stylesheet" href="./static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="./static/css/main.css" />
-	<link rel="shortcut icon" href="./static/img/favicon.ico" />
+	<link rel="stylesheet" href="{{ url_for('static', filename='static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css') }}"/>
+	<link rel="stylesheet" href="{{ url_for('static', filename='static/css/main.css') }}" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='static/img/favicon.ico') }}" />
 </head>
 <body src="">
 	<!--导航栏 -->
@@ -18,9 +18,9 @@
 	</div>
 	
 	<!--登录信息-->
-	<div  class="container" >
+	<div class="container" >
 		<div class="col-sm-7">	
-			<img src="./static/img/user.jpg" class="img-bg"/>
+			<img src="{{ url_for('static', filename='static/img/user.jpg') }}" class="img-bg"/>
 		</div>
 		<div class="col-sm-7 container-small">
 		<h1>登录</h1>
@@ -40,7 +40,7 @@
 		</div>	
 	</div>
 	
-	<script src="./static/lib/jquery/jquery-3.4.1.js"></script>
+	<script src="{{ url_for('static', filename='static/lib/jquery/jquery-3.4.1.js') }}"></script>
 	<script>
 		$("#login_user").click(function(){
 			var login_name = $("#login_name").val()
@@ -54,7 +54,7 @@
 			console.log(data)
 			$.ajax({
 				type: "post",
-				url: "http://127.0.0.1:5000/user/login",
+				url: "{{ url_for('user.login') }}",
 				dataType: "json",
 				async: false,
 				data: data,
@@ -63,7 +63,7 @@
 						alert(result.msg)
 					}else{
 						var user_name = $("#login_name").val()
-						window.location.href="movie.html"
+						window.location.href="{{ url_for('device.select') }}"
 						sessionStorage.setItem('username',user_name)
 						sessionStorage.setItem('user',"用户")
 					}	

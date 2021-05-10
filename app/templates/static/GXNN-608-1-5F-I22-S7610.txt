@@ -1,0 +1,1864 @@
+﻿<GXNN-608-1-5F-I22-S7610>dis cpu
+Slot 0 CPU 0 CPU usage:
+       2% in last 5 seconds
+       2% in last 1 minute
+       2% in last 5 minutes
+
+Slot 1 CPU 0 CPU usage:
+       2% in last 5 seconds
+       2% in last 1 minute
+       2% in last 5 minutes
+
+Slot 2 CPU 0 CPU usage:
+       8% in last 5 seconds
+       7% in last 1 minute
+       7% in last 5 minutes
+
+Slot 3 CPU 0 CPU usage:
+       7% in last 5 seconds
+       7% in last 1 minute
+       7% in last 5 minutes
+
+Slot 4 CPU 0 CPU usage:
+       7% in last 5 seconds
+       7% in last 1 minute
+       7% in last 5 minutes
+
+Slot 5 CPU 0 CPU usage:
+       5% in last 5 seconds
+       5% in last 1 minute
+       5% in last 5 minutes
+
+Slot 6 CPU 0 CPU usage:
+       3% in last 5 seconds
+       3% in last 1 minute
+       3% in last 5 minutes
+
+Slot 7 CPU 0 CPU usage:
+       3% in last 5 seconds
+       3% in last 1 minute
+       3% in last 5 minutes
+
+<GXNN-608-1-5F-I22-S7610> dis mem
+                              ^
+ % Ambiguous command found at '^' position.
+<GXNN-608-1-5F-I22-S7610> dis mem
+<GXNN-608-1-5F-I22-S7610>dis memory
+The statistics about memory is measured in KB:
+Slot 0: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       3984760    830884   3153876         0         0    245052       81.4%
+-/+ Buffers/Cache:    585832   3398928
+Swap:           0         0         0
+
+Slot 1: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:       3984760    704644   3280116         0         0    154448       82.3%
+-/+ Buffers/Cache:    550196   3434564
+Swap:           0         0         0
+
+Slot 2: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        929944    468528    461416         0         0     39400       49.6%
+-/+ Buffers/Cache:    429128    500816
+Swap:           0         0         0
+
+Slot 3: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        929944    468112    461832         0         0     39400       49.7%
+-/+ Buffers/Cache:    428712    501232
+Swap:           0         0         0
+
+Slot 4: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        929944    468424    461520         0         0     39400       49.6%
+-/+ Buffers/Cache:    429024    500920
+Swap:           0         0         0
+
+Slot 5: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        999900    420932    578968         0         0     31220       57.9%
+-/+ Buffers/Cache:    389712    610188
+Swap:           0         0         0
+
+Slot 6: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        999900    418724    581176         0         0     31220       58.1%
+-/+ Buffers/Cache:    387504    612396
+Swap:           0         0         0
+
+Slot 7: 
+             Total      Used      Free    Shared   Buffers    Cached   FreeRatio
+Mem:        999900    420732    579168         0         0     31220       57.9%
+-/+ Buffers/Cache:    389512    610388
+Swap:           0         0         0
+
+<GXNN-608-1-5F-I22-S7610>dis alarm all
+                                   ^
+ % Too many parameters found at '^' position.
+<GXNN-608-1-5F-I22-S7610>dis alarm
+No alarm information.
+<GXNN-608-1-5F-I22-S7610>dis interface bri
+Bridge-Aggregation100
+Current state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-GXNN-608-1-5F-I23-S7610
+Bandwidth: 20000000 kbps
+20Gbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+PVID: 1
+Port link-type: Trunk
+ VLAN Passing:   2, 8, 95, 100, 130, 140, 160, 210
+ VLAN permitted: 2, 8, 95, 100, 130, 140, 160, 210
+ Trunk port encapsulation: IEEE 802.1q
+Last clearing of counters: Never
+Last 300 seconds input:  256 packets/sec 174953 bytes/sec 0%
+Last 300 seconds output:  82 packets/sec 17204 bytes/sec 0%
+Input (total):  48611364385 packets, 40684258899245 bytes
+        48290233492 unicasts, 767327 broadcasts, 320363566 multicasts, 0 pauses
+Input (normal):  48611364385 packets, - bytes
+        48290233492 unicasts, 767327 broadcasts, 320363566 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, - overruns, 0 aborts
+        - ignored, - parity errors
+Output (total): 30929766057 packets, 17406468856110 bytes
+<GXNN-608-1-5F-I22-S7610>dis interface 
+Bridge-Aggregation100
+Current state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-GXNN-608-1-5F-I23-S7610
+Bandwidth: 20000000 kbps
+20Gbps-speed mode, full-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+PVID: 1
+Port link-type: Trunk
+ VLAN Passing:   2, 8, 95, 100, 130, 140, 160, 210
+ VLAN permitted: 2, 8, 95, 100, 130, 140, 160, 210
+ Trunk port encapsulation: IEEE 802.1q
+Last clearing of counters: Never
+Last 300 seconds input:  238 packets/sec 152655 bytes/sec 0%
+Last 300 seconds output:  81 packets/sec 17049 bytes/sec 0%
+Input (total):  48611369260 packets, 40684264355045 bytes
+        48290238228 unicasts, 767327 broadcasts, 320363705 multicasts, 0 pauses
+Input (normal):  48611369260 packets, - bytes
+        48290238228 unicasts, 767327 broadcasts, 320363705 multicasts, 0 pauses
+Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+        0 CRC, 0 frame, - overruns, 0 aborts
+        - ignored, - parity errors
+Output (total): 30929766917 packets, 17406469067481 bytes
+        30464384768 unicasts, 78840790 broadcasts, 386541359 multicasts, 0 pauses
+Output (normal): 30929766917 packets, - bytes
+        30464384768 unicasts, 78840790 broadcasts, 386541359 multicasts, 0 pauses
+Output: 0 output errors, - underruns, - buffer failures
+        0 aborts, 0 deferred, 0 collisions, 0 late collisions
+        0 lost carrier, - no carrier
+
+GigabitEthernet5/0/1
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-608B-URP2-SW03-S9303
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 1000_BASE_LX_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1        
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   30
+ VLAN permitted: 30
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 34 weeks 4 days 10 hours 37 minutes
+Last clearing of counters: Never
+ Peak input rate: 11156337 bytes/sec, at 2021-01-28 01:24:31 
+ Peak output rate: 14158683 bytes/sec, at 2021-01-28 01:17:19 
+ Last 300 second input: 2192 packets/sec 355436 bytes/sec 0%
+ Last 300 second output: 2657 packets/sec 2489846 bytes/sec 2%
+ Input (total):  60339627637 packets, 9568537081588 bytes
+         60315096999 unicasts, 3 broadcasts, 24530635 multicasts, 0 pauses
+ Input (normal):  60339627637 packets, - bytes
+         60315096999 unicasts, 3 broadcasts, 24530635 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 76382280358 packets, 79655921223086 bytes
+         76375107311 unicasts, 54 broadcasts, 7172993 multicasts, 0 pauses
+ Output (normal): 76382280358 packets, - bytes
+         76375107311 unicasts, 54 broadcasts, 7172993 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/2
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-RBT-608-2-2F-V10-UP-CTI01-s5320
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 1000_BASE_LX_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   40
+ VLAN permitted: 40
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 53 weeks 1 days 0 hours 27 minutes
+Last clearing of counters: Never
+ Peak input rate: 21624249 bytes/sec, at 2021-01-20 15:24:01 
+ Peak output rate: 9358858 bytes/sec, at 2020-11-23 16:56:59 
+ Last 300 second input: 415 packets/sec 71457 bytes/sec 0%
+ Last 300 second output: 321 packets/sec 72321 bytes/sec 0%
+ Input (total):  7948883831 packets, 1904460425012 bytes
+         7904299936 unicasts, 31620 broadcasts, 44552275 multicasts, 0 pauses
+ Input (normal):  7948883831 packets, - bytes
+         7904299936 unicasts, 31620 broadcasts, 44552275 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 6536395626 packets, 3451253486098 bytes
+         6529162292 unicasts, 32 broadcasts, 7233302 multicasts, 0 pauses
+ Output (normal): 6536395626 packets, - bytes
+         6529162292 unicasts, 32 broadcasts, 7233302 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/3
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-GXNN-BaiSha-S6503-2
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 1000_BASE_LX_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   10
+ VLAN permitted: 10
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 6 weeks 4 days 23 hours 36 minutes
+Last clearing of counters: Never
+ Peak input rate: 9435 bytes/sec, at 2020-05-02 13:14:31 
+ Peak output rate: 42907526 bytes/sec, at 2020-11-12 17:09:02 
+ Last 300 second input: 0 packets/sec 33 bytes/sec 0%
+ Last 300 second output: 62 packets/sec 38557 bytes/sec 0%
+ Input (total):  9408839 packets, 1558455741 bytes
+         2968618 unicasts, 34 broadcasts, 6440187 multicasts, 0 pauses
+ Input (normal):  9408839 packets, - bytes
+         2968618 unicasts, 34 broadcasts, 6440187 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 5076191722 packets, 5709932951625 bytes
+         5069031184 unicasts, 51 broadcasts, 7160487 multicasts, 0 pauses
+ Output (normal): 5076191722 packets, - bytes
+         5069031184 unicasts, 51 broadcasts, 7160487 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+               
+GigabitEthernet5/0/4
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-URP4-WX-6F-G12-Up-CTI01
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 1000_BASE_LX_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   60
+ VLAN permitted: 60
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 11 weeks 6 days 18 hours 22 minutes
+Last clearing of counters: Never
+ Peak input rate: 20762113 bytes/sec, at 2021-01-20 15:46:09 
+ Peak output rate: 10966374 bytes/sec, at 2020-05-07 20:55:35 
+ Last 300 second input: 1225 packets/sec 1017952 bytes/sec 0%
+ Last 300 second output: 962 packets/sec 637249 bytes/sec 0%
+ Input (total):  20383568683 packets, 15357583219364 bytes
+         20377120890 unicasts, 33 broadcasts, 6447753 multicasts, 0 pauses
+ Input (normal):  20383568676 packets, - bytes
+         20377120890 unicasts, 33 broadcasts, 6447753 multicasts, 0 pauses
+ Input:  7 input errors, 0 runts, 0 giants, 0 throttles
+         7 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 17244926940 packets, 11666689922792 bytes
+         17237737873 unicasts, 69 broadcasts, 7188998 multicasts, 0 pauses
+ Output (normal): 17244926940 packets, - bytes
+         17237737873 unicasts, 69 broadcasts, 7188998 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/5
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-VEDIO-WX-6F-G12-UP-CTI01
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 10G_BASE_LR_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Trunk
+ VLAN Passing:   80
+ VLAN permitted: 80
+ Trunk port encapsulation: IEEE 802.1q
+Port priority: 0
+Last link flapping: 4 weeks 5 days 23 hours 49 minutes
+Last clearing of counters: Never
+ Peak input rate: 47268356 bytes/sec, at 2021-02-05 00:33:31 
+ Peak output rate: 57273883 bytes/sec, at 2020-11-26 23:50:58 
+ Last 300 second input: 837 packets/sec 487115 bytes/sec 0%
+ Last 300 second output: 879 packets/sec 773802 bytes/sec 0%
+ Input (total):  27861436972 packets, 19032116945016 bytes
+         27855047333 unicasts, 72 broadcasts, 6389567 multicasts, 0 pauses
+ Input (normal):  27861436972 packets, - bytes
+         27855047333 unicasts, 72 broadcasts, 6389567 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 34422080639 packets, 39362109559652 bytes
+         34414865765 unicasts, 134 broadcasts, 7214740 multicasts, 0 pauses
+ Output (normal): 34422080639 packets, - bytes
+         34414865765 unicasts, 134 broadcasts, 7214740 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/6
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-12580-608-4-3F-G11-Fortinet-1
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 10G_BASE_LR_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 160
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 160
+Port priority: 0
+Last link flapping: 62 weeks 4 days 10 hours 53 minutes
+Last clearing of counters: Never
+ Peak input rate: 55874 bytes/sec, at 2020-04-08 11:02:19 
+ Peak output rate: 66939 bytes/sec, at 2020-03-14 09:27:18 
+ Last 300 second input: 1 packets/sec 76 bytes/sec 0%
+ Last 300 second output: 1 packets/sec 129 bytes/sec 0%
+ Input (total):  85462926 packets, 8815661767 bytes
+         45730062 unicasts, 38194623 broadcasts, 1538241 multicasts, 0 pauses
+ Input (normal):  85462926 packets, - bytes
+         45730062 unicasts, 38194623 broadcasts, 1538241 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 106978358 packets, 21956903388 bytes
+         47627182 unicasts, 35 broadcasts, 59351141 multicasts, 0 pauses
+ Output (normal): 106978358 packets, - bytes
+         47627182 unicasts, 35 broadcasts, 59351141 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/7
+Current state: UP
+Line protocol state: UP
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: TO-608-2-2F-lajiduanxin-fw1
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 1000_BASE_LX_SFP
+1000Mbps-speed mode, full-duplex mode
+Link speed type is force link, link duplex type is force link
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 95
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 95
+Port priority: 0
+Last link flapping: 47 weeks 4 days 10 hours 4 minutes
+Last clearing of counters: Never
+ Peak input rate: 1670 bytes/sec, at 2020-06-05 12:06:23 
+ Peak output rate: 3550 bytes/sec, at 2020-06-05 12:06:23 
+ Last 300 second input: 1 packets/sec 83 bytes/sec 0%
+ Last 300 second output: 1 packets/sec 82 bytes/sec 0%
+ Input (total):  36250948 packets, 2435594956 bytes
+         7324185 unicasts, 120049 broadcasts, 28806714 multicasts, 0 pauses
+ Input (normal):  36250948 packets, - bytes
+         7324185 unicasts, 120049 broadcasts, 28806714 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 37050455 packets, 2436971503 bytes
+         6313537 unicasts, 23711 broadcasts, 30713207 multicasts, 0 pauses
+ Output (normal): 37050455 packets, - bytes
+         6313537 unicasts, 23711 broadcasts, 30713207 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/8
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: GigabitEthernet5/0/8 Interface
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is not sure, port hardware type is no connector
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: Never
+ Peak input rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Peak output rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Last 300 second input: 0 packets/sec 0 bytes/sec -%
+ Last 300 second output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/9
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: GigabitEthernet5/0/9 Interface
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 10G_BASE_LR_SFP
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: Never
+ Peak input rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Peak output rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Last 300 second input: 0 packets/sec 0 bytes/sec -%
+ Last 300 second output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/10
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: GigabitEthernet5/0/10 Interface
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 10G_BASE_LR_SFP
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+Port link-type: Access
+ Tagged VLANs:   None
+ Untagged VLANs: 1
+Port priority: 0
+Last link flapping: Never
+Last clearing of counters: Never
+ Peak input rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Peak output rate: 0 bytes/sec, at 2017-11-01 17:39:44 
+ Last 300 second input: 0 packets/sec 0 bytes/sec -%
+ Last 300 second output: 0 packets/sec 0 bytes/sec -%
+ Input (total):  0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input (normal):  0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Input:  0 input errors, 0 runts, 0 giants, 0 throttles
+         0 CRC, 0 frame, - overruns, 0 aborts
+         - ignored, - parity errors
+ Output (total): 0 packets, 0 bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output (normal): 0 packets, - bytes
+         0 unicasts, 0 broadcasts, 0 multicasts, 0 pauses
+ Output: 0 output errors, - underruns, - buffer failures
+         0 aborts, 0 deferred, 0 collisions, 0 late collisions
+         0 lost carrier, - no carrier
+
+GigabitEthernet5/0/11
+Current state: DOWN
+Line protocol state: DOWN
+IP packet frame type: Ethernet II, hardware address: 1cab-34c2-f600
+Description: GigabitEthernet5/0/11 Interface
+Bandwidth: 1000000 kbps
+Loopback is not set
+Media type is optical fiber, port hardware type is 10G_BASE_LR_SFP
+Unknown-speed mode, unknown-duplex mode
+Link speed type is autonegotiation, link duplex type is autonegotiation
+Flow-control is not enabled
+Maximum frame length: 9216
+Allow jumbo frames to pass
+Broadcast max-ratio: 100%
+Multicast max-ratio: 100%
+Unicast max-ratio: 100%
+PVID: 1
+MDI type: Automdix
+<GXNN-608-1-5F-I22-S7610>dis log
+Log buffer: Enabled
+Max buffer size: 1024
+Actual buffer size: 1024
+Dropped messages: 0
+Overwritten messages: 43027
+Current messages: 1024
+%Dec 21 02:21:16:043 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022116
+
+%Dec 21 02:21:18:035 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022118
+
+%Dec 21 02:21:20:880 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022120
+
+%Dec 21 02:21:22:855 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022122
+
+%Dec 21 02:21:27:899 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022127
+
+%Dec 21 02:21:35:822 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022135
+
+%Dec 21 02:21:51:982 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022151
+
+%Dec 21 02:21:58:969 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022158
+
+%Dec 21 02:22:04:834 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022204
+               
+%Dec 21 02:22:32:982 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022232
+
+%Dec 21 02:22:34:878 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.1;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022234
+
+%Dec 21 02:22:35:315 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:22:36:725 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022236
+
+%Dec 21 02:22:37:862 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022237
+
+%Dec 21 02:22:39:048 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022239
+
+%Dec 21 02:22:39:922 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022239
+
+%Dec 21 02:22:40:913 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022240
+
+%Dec 21 02:22:41:373 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022241
+
+%Dec 21 02:22:42:412 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022242
+
+%Dec 21 02:22:43:176 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:22:43:176 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:22:43:967 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022243
+
+%Dec 21 02:22:44:859 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022244
+
+%Dec 21 02:22:45:382 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022245
+
+%Dec 21 02:22:46:417 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022246
+
+%Dec 21 02:22:47:506 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022247
+
+%Dec 21 02:22:48:400 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022248
+
+%Dec 21 02:22:49:425 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022249
+
+%Dec 21 02:22:49:765 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:22:49:765 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user  (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:22:50:446 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022250
+
+%Dec 21 02:22:51:461 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022251
+
+%Dec 21 02:22:52:333 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022252
+
+%Dec 21 02:22:53:465 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022253
+
+%Dec 21 02:22:54:469 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022254
+
+%Dec 21 02:22:55:484 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022255
+
+%Dec 21 02:22:56:402 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022256
+
+%Dec 21 02:22:57:389 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022257
+
+%Dec 21 02:22:58:480 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022258
+
+%Dec 21 02:22:59:442 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022259
+
+%Dec 21 02:23:00:348 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022300
+
+%Dec 21 02:23:00:507 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:01:472 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022301
+
+%Dec 21 02:23:01:029 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:01:055 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:02:466 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022302
+
+%Dec 21 02:23:02:691 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 52, seq 4.
+%Dec 21 02:23:02:699 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 90, seq 5.
+%Dec 21 02:23:03:354 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022303
+
+%Dec 21 02:23:04:570 2020 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.230.2;atckSpeed(1047)=300;atckTime_cn(1048)=20201221022304
+
+%Dec 21 02:23:04:723 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:04:724 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:04:923 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:04:945 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:07:430 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:11:183 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:11:210 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:11:836 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:11:836 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:16:420 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user #_does_not_exists_#.
+%Dec 21 02:23:16:531 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user #_does_not_exists_# from 10.184.234.211 port 44582 ssh2.
+
+%Dec 21 02:23:16:536 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:16:537 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user #_does_not_exists_# (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:16:981 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user root.
+%Dec 21 02:23:17:078 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user root from 10.184.234.211 port 47656 ssh2.
+
+%Dec 21 02:23:17:083 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:17:084 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:17:707 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user bin.
+%Dec 21 02:23:17:807 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user bin from 10.184.234.211 port 50390 ssh2.
+
+%Dec 21 02:23:17:812 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:17:812 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user bin (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:18:520 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user daemon.
+%Dec 21 02:23:18:626 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user daemon from 10.184.234.211 port 53886 ssh2.
+
+%Dec 21 02:23:18:631 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:18:631 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user daemon (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:18:875 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:18:876 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user  (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:19:287 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user nobody.
+%Dec 21 02:23:19:389 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user nobody from 10.184.234.211 port 57914 ssh2.
+               
+%Dec 21 02:23:19:395 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:19:395 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user nobody (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:20:092 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:20:492 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user sshd.
+%Dec 21 02:23:20:610 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user sshd from 10.184.234.211 port 33514 ssh2.
+
+%Dec 21 02:23:20:616 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:20:616 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user sshd (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:21:513 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user admin.
+%Dec 21 02:23:21:623 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user admin from 10.184.234.211 port 39552 ssh2.
+
+%Dec 21 02:23:21:628 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:21:628 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user admin (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:22:184 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user mail.
+%Dec 21 02:23:22:293 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user mail from 10.184.234.211 port 44244 ssh2.
+
+%Dec 21 02:23:22:298 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:22:298 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mail (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:22:789 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:23:296 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:24:114 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:24:132 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:28:338 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 52, seq 4.
+%Dec 21 02:23:28:342 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 90, seq 5.
+%Dec 21 02:23:29:157 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:30:352 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:30:352 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:32:521 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:36:501 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:36:561 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:41:071 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user #_does_not_exists_#.
+%Dec 21 02:23:41:182 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user #_does_not_exists_# from 10.184.234.211 port 54844 ssh2.
+
+%Dec 21 02:23:41:188 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:41:188 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user #_does_not_exists_# (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:41:653 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user root.
+%Dec 21 02:23:41:768 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user root from 10.184.234.211 port 57572 ssh2.
+
+%Dec 21 02:23:41:773 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+               
+%Dec 21 02:23:41:773 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:42:185 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user bin.
+%Dec 21 02:23:42:297 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user bin from 10.184.234.211 port 33952 ssh2.
+
+%Dec 21 02:23:42:303 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:42:303 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user bin (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:43:679 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user daemon.
+%Dec 21 02:23:43:791 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user daemon from 10.184.234.211 port 39102 ssh2.
+
+%Dec 21 02:23:43:797 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:43:797 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user daemon (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:44:344 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 02:23:44:444 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user nobody.
+%Dec 21 02:23:44:544 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user nobody from 10.184.234.211 port 53580 ssh2.
+
+%Dec 21 02:23:44:549 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:44:549 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user nobody (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:46:044 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user sshd.
+%Dec 21 02:23:46:155 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user sshd from 10.184.234.211 port 60934 ssh2.
+               
+%Dec 21 02:23:46:160 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:46:160 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user sshd (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:46:732 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user admin.
+%Dec 21 02:23:46:837 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user admin from 10.184.234.211 port 49382 ssh2.
+
+%Dec 21 02:23:46:842 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:46:842 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user admin (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:47:392 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user mail.
+%Dec 21 02:23:47:492 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user mail from 10.184.234.211 port 56442 ssh2.
+
+%Dec 21 02:23:47:497 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Dec 21 02:23:47:497 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mail (IP: 10.184.234.211) disconnected from the server.
+%Dec 21 02:23:48:149 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Dec 21 09:52:44:020 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.222 port 51170 ssh2.
+
+%Dec 21 09:52:44:067 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.222) connected to the server successfully.
+%Dec 21 09:52:45:480 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.222.
+%Dec 21 09:52:48:128 2020 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command dis ver in view shell failed to be matched.
+%Dec 21 09:52:50:426 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty2-IPAddr=10.187.230.222-User=gxyd; Command is su
+%Dec 21 09:52:55:044 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the su command is ******.
+%Dec 21 09:52:57:082 2020 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command dis ver in view shell failed to be matched.
+%Dec 21 09:53:00:697 2020 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command show ver in view shell failed to be matched.
+%Dec 21 09:53:06:222 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty2-IPAddr=10.187.230.222-User=gxyd; Command is display version
+%Dec 21 14:40:52:027 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 14:40:52:038 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 14:40:54:898 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 14:40:54:899 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 14:43:26:096 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 14:43:26:109 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 14:43:28:515 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 14:43:28:516 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 21 15:06:24:233 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 15:06:24:244 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 15:06:26:634 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 15:06:26:637 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 15:06:29:737 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 15:06:29:746 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 15:06:32:363 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 15:06:32:365 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 21 15:11:52:327 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 15:11:52:337 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 15:11:54:949 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 15:11:54:951 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 15:12:51:811 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 15:12:51:823 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 15:12:54:325 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 15:12:54:327 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 21 15:24:12:828 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 15:24:12:838 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 15:24:15:237 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 15:24:15:239 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 21 15:24:15:242 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 15:24:15:251 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 15:24:17:754 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 15:24:17:754 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 15:30:24:541 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 15:30:24:551 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 15:30:27:170 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 15:30:27:171 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 15:30:49:814 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 15:30:49:827 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 15:30:52:233 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 15:30:52:234 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 21 15:38:51:422 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 21 15:38:51:431 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 21 15:38:53:944 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 21 15:38:53:946 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 21 15:52:03:915 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 21 15:52:03:925 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 21 15:52:06:437 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 21 15:52:06:439 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 09:57:01:200 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.222.
+%Dec 22 09:57:01:303 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.222 port 49954.
+%Dec 22 09:57:01:303 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.222) disconnected from the server.
+%Dec 22 09:57:14:729 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.222.
+%Dec 22 09:57:14:774 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.222 port 58120.
+%Dec 22 09:57:14:774 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.222) disconnected from the server.
+%Dec 22 09:57:27:087 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.222.
+%Dec 22 09:57:27:133 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.222 port 51170.
+%Dec 22 09:57:27:133 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.222) disconnected from the server.
+%Dec 22 10:47:42:920 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 10:47:42:931 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 10:47:45:557 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 10:47:45:558 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 10:48:59:218 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 10:48:59:230 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 10:49:01:768 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 10:49:01:771 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 10:56:14:391 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 10:56:14:405 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 10:56:17:046 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 10:56:17:047 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 11:06:10:998 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 11:06:11:009 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 11:06:13:439 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 11:06:13:440 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 11:06:22:689 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 11:06:22:698 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 11:06:25:552 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 11:06:25:553 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 11:27:24:361 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 11:27:24:369 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 11:27:27:115 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 11:27:27:118 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 11:27:35:002 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 11:27:35:012 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 11:27:37:412 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 11:27:37:415 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 11:33:08:228 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 11:33:08:237 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 11:33:10:757 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 11:33:10:761 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 11:37:38:645 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 11:37:38:655 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 11:37:41:285 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 11:37:41:287 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 11:45:12:819 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 11:45:12:828 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 11:45:15:452 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 11:45:15:453 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 11:45:28:363 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 11:45:28:371 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 11:45:30:886 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 11:45:30:889 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 14:13:14:916 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 14:13:14:926 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 14:13:17:553 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 14:13:17:555 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 14:14:29:056 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 22 14:14:29:065 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 22 14:14:31:704 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 22 14:14:31:705 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 22 14:34:59:748 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 14:34:59:757 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 14:35:02:402 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 14:35:02:404 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 14:42:59:896 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 14:42:59:906 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 14:43:02:525 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 14:43:02:527 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 15:45:27:249 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 15:45:27:261 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 15:45:29:666 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 15:45:29:670 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 16:03:56:729 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 16:03:56:729 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 16:03:59:231 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 16:03:59:233 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 16:23:57:394 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 16:23:57:403 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 16:23:59:931 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 16:23:59:933 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 16:36:35:975 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 16:36:35:987 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 16:36:38:507 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 16:36:38:509 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 22 16:43:26:735 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 22 16:43:26:744 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 22 16:43:29:250 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 22 16:43:29:254 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 23 09:47:23:146 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 23 09:47:23:159 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 23 09:47:25:641 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 23 09:47:25:643 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 23 15:01:25:037 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 23 15:01:25:045 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 23 15:01:27:454 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 23 15:01:27:457 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 23 17:53:29:917 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 23 17:53:29:926 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 23 17:53:32:562 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 23 17:53:32:563 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 23 17:59:46:399 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 23 17:59:46:420 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 23 18:00:15:573 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 23 18:00:15:574 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 23 18:01:09:104 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 23 18:01:09:119 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 23 18:01:11:770 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 23 18:01:11:772 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 23 18:01:15:971 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 23 18:01:15:982 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 23 18:01:19:052 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 23 18:01:19:055 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 23 18:02:12:605 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 23 18:02:12:617 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 23 18:02:15:584 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 23 18:02:15:586 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 08:33:14:961 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 24 08:33:14:972 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 24 08:33:17:611 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 24 08:33:17:612 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 08:33:19:890 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 24 08:33:19:901 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 24 08:33:22:859 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 24 08:33:22:860 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 08:33:25:723 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 24 08:33:25:741 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 24 08:33:28:569 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 24 08:33:28:572 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 08:33:31:906 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 24 08:33:31:916 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 24 08:33:34:765 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 24 08:33:34:766 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 08:34:24:509 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Dec 24 08:34:24:520 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Dec 24 08:34:27:481 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Dec 24 08:34:27:482 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Dec 24 15:46:24:957 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 15:46:24:967 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 15:46:27:365 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 15:46:27:366 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 15:59:20:433 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 15:59:20:443 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 15:59:23:082 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 15:59:23:082 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 16:03:14:573 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 16:03:14:583 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 16:09:27:157 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 16:09:27:157 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 16:17:39:806 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 16:17:39:814 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 16:17:42:197 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 16:17:42:198 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 16:22:11:221 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 16:22:11:230 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 16:22:13:734 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 16:22:13:736 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 16:34:50:323 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 16:34:50:369 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 16:34:52:734 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 16:34:52:735 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 16:42:46:462 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 16:42:46:472 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 16:42:48:993 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 16:42:48:994 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 16:55:22:528 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 16:55:22:540 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 16:55:24:929 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 16:55:24:931 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 16:59:00:653 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 16:59:00:661 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 17:04:26:288 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 17:04:26:289 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 17:16:55:075 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 17:16:55:089 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 17:17:39:372 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 17:17:39:374 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 17:22:20:627 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 17:22:20:636 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 17:22:23:272 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 17:22:23:274 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 17:27:39:471 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 17:27:39:482 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 17:27:42:095 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 17:27:42:096 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 24 17:47:34:688 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Dec 24 17:47:34:698 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Dec 24 17:47:37:115 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Dec 24 17:47:37:116 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Dec 24 17:47:38:376 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Dec 24 17:47:38:387 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Dec 24 17:47:40:887 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Dec 24 17:47:40:887 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Dec 25 16:51:24:607 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 51021 ssh2.
+
+%Dec 25 16:51:24:815 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.229) connected to the server successfully.
+%Dec 25 16:51:25:088 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 51055 ssh2.
+
+%Dec 25 16:51:25:098 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Disconnecting: SFTP server is disabled or service type is not supported.
+
+%Dec 25 16:51:25:099 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Dec 25 16:51:26:213 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.229.
+%Dec 25 16:51:27:789 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is dis cu
+%Dec 25 16:51:58:162 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is su
+%Dec 25 16:52:04:445 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the su command is ******.
+%Dec 25 16:52:07:655 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is sys
+%Dec 25 16:52:54:812 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is ip route-static 10.182.11.0 24 10.187.250.228 description route to BOSS
+%Dec 25 16:53:03:591 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is quit
+%Dec 25 16:53:04:860 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is save
+%Dec 25 16:53:06:156 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_CONFIRM: Confirm option of command save is yes.
+%Dec 25 16:53:07:813 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the save command is the Enter key.
+%Dec 25 16:53:08:967 2020 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_CONFIRM: Confirm option of command save is yes.
+%Dec 25 16:55:45:025 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.229 port 51021.
+%Dec 25 16:55:45:025 2020 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Dec 25 16:55:45:775 2020 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.229.
+%Dec 25 16:57:44:551 2020 GXNN-608-1-5F-I22-S7610 CFGMAN/5/CFGMAN_CFGCHANGED: -EventIndex=308-CommandSource=snmp-ConfigSource=startup-ConfigDestination=running; Configuration is changed.
+%Dec 28 15:38:14:015 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 15:38:14:033 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 15:38:14:034 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 15:38:14:034 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 15:38:14:036 2020 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Dec 28 15:38:14:037 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Dec 28 15:38:14:156 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 15:38:14:158 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 15:38:14:161 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 15:38:14:162 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 15:38:15:268 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 15:38:15:280 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 15:38:15:280 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 15:38:15:281 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 15:38:15:528 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 15:38:15:530 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 15:38:15:531 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 15:38:15:533 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 15:38:59:441 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Dec 28 17:01:02:485 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 17:01:02:504 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 17:01:02:505 2020 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Dec 28 17:01:02:505 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 17:01:02:505 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 17:01:02:507 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Dec 28 17:01:13:953 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 17:01:13:956 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 17:01:13:957 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 17:01:13:960 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 17:01:36:052 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 17:01:36:063 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 17:01:36:065 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 17:01:36:066 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 17:01:36:068 2020 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Dec 28 17:01:36:070 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from 2-WAY to DOWN.
+%Dec 28 17:05:20:216 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 17:05:20:221 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 17:05:20:222 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 17:05:20:223 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 17:06:02:122 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Dec 28 21:44:07:092 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 21:44:07:106 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 21:44:07:106 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 21:44:07:107 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 21:44:07:105 2020 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Dec 28 21:44:07:109 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Dec 28 21:44:07:229 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 21:44:07:232 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 21:44:07:236 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 21:44:07:237 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 21:44:50:324 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Dec 28 21:50:46:349 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Dec 28 21:50:46:360 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Dec 28 21:50:46:362 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Dec 28 21:50:46:363 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Dec 28 21:50:46:366 2020 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Dec 28 21:50:46:366 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Dec 28 21:50:46:606 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Dec 28 21:50:46:610 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Dec 28 21:50:46:611 2020 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Dec 28 21:50:46:613 2020 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Dec 28 21:51:28:714 2020 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Jan 10 14:17:18:079 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Jan 10 14:17:18:087 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Jan 10 14:17:20:942 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Jan 10 14:17:20:944 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Jan 10 14:17:23:102 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Jan 10 14:17:23:114 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Jan 10 14:17:26:189 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Jan 10 14:17:26:191 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Jan 10 14:17:28:942 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Jan 10 14:17:28:950 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Jan 10 14:17:31:684 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Jan 10 14:17:31:686 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Jan 10 14:17:35:105 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Jan 10 14:17:35:114 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Jan 10 14:17:38:078 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Jan 10 14:17:38:080 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Jan 10 14:18:27:405 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is down.
+%Jan 10 14:18:27:417 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is down.
+%Jan 10 14:18:30:611 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/13 link status is up.
+%Jan 10 14:18:30:614 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/13 is up.
+%Jan 12 17:56:53:774 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48892 ssh2.
+
+%Jan 12 17:56:53:804 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Jan 12 17:56:55:191 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Jan 12 17:57:06:483 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is ping 218.200.160.66
+%Jan 12 17:57:12:835 2021 GXNN-608-1-5F-I22-S7610 PING/6/PING_STATIS_INFO: Ping statistics for 218.200.160.66: 3 packet(s) transmitted, 0 packet(s) received, 100.0% packet loss.
+%Jan 12 17:57:21:078 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is tracert 218.200.160.66
+%Jan 12 17:59:21:044 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is tracert 36.159.0.140
+%Jan 12 17:59:32:322 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is ping 36.159.0.140
+%Jan 12 17:59:33:392 2021 GXNN-608-1-5F-I22-S7610 PING/6/PING_STATIS_INFO: Ping statistics for 36.159.0.140: 5 packet(s) transmitted, 5 packet(s) received, 0.0% packet loss, round-trip min/avg/max/std-dev = 1.599/3.410/10.249/3.421 ms.
+%Jan 12 18:01:34:291 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command di sip int b in view shell failed to be matched.
+%Jan 12 18:01:36:264 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis ip int b
+%Jan 12 18:07:09:914 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Jan 12 18:07:09:961 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Jan 12 18:54:19:059 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48902 ssh2.
+
+%Jan 12 18:54:19:087 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Jan 12 18:54:20:469 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Jan 12 18:54:26:270 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis logb
+%Jan 12 18:58:24:636 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis int bri
+%Jan 12 18:58:44:837 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis int brief
+%Jan 12 18:59:14:447 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis int
+%Jan 12 18:59:58:828 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface brief
+%Jan 12 19:00:55:190 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is disp stp brie
+%Jan 12 19:06:26:196 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Jan 12 19:06:26:245 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Jan 13 02:17:45:885 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210113021745
+
+%Jan 13 02:17:46:783 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210113021746
+
+%Jan 13 02:17:47:752 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210113021747
+
+%Jan 13 02:17:47:617 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:17:54:192 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:17:54:193 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:00:157 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:00:158 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user  (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:10:405 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:10:785 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:10:804 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:12:979 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 52, seq 4.
+%Jan 13 02:18:12:983 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 90, seq 5.
+%Jan 13 02:18:15:022 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:15:089 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:15:089 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:16:861 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:20:647 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:20:673 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:26:149 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user #_does_not_exists_#.
+%Jan 13 02:18:26:262 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user #_does_not_exists_# from 10.184.234.211 port 41806 ssh2.
+
+%Jan 13 02:18:26:268 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:26:268 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user #_does_not_exists_# (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:27:056 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user root.
+%Jan 13 02:18:27:154 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user root from 10.184.234.211 port 54710 ssh2.
+
+%Jan 13 02:18:27:168 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:27:168 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:27:739 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user bin.
+%Jan 13 02:18:27:853 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user bin from 10.184.234.211 port 41854 ssh2.
+
+%Jan 13 02:18:27:857 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:27:858 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user bin (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:28:115 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user daemon.
+%Jan 13 02:18:28:223 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user daemon from 10.184.234.211 port 57194 ssh2.
+
+%Jan 13 02:18:28:228 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:28:228 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user daemon (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:28:615 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user nobody.
+%Jan 13 02:18:28:696 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 13 02:18:28:735 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user nobody from 10.184.234.211 port 35574 ssh2.
+
+%Jan 13 02:18:28:739 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:28:739 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user nobody (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:29:059 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user sshd.
+%Jan 13 02:18:29:174 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user sshd from 10.184.234.211 port 45944 ssh2.
+
+%Jan 13 02:18:29:179 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:29:179 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user sshd (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:29:563 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user admin.
+%Jan 13 02:18:29:686 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user admin from 10.184.234.211 port 54782 ssh2.
+
+%Jan 13 02:18:29:690 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:29:690 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user admin (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:30:179 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user mail.
+%Jan 13 02:18:30:286 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user mail from 10.184.234.211 port 35340 ssh2.
+
+%Jan 13 02:18:30:304 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Jan 13 02:18:30:304 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mail (IP: 10.184.234.211) disconnected from the server.
+%Jan 13 02:18:31:231 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Jan 20 15:27:05:099 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is down.
+%Jan 20 15:27:05:110 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is down.
+%Jan 20 15:27:24:199 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is up.
+%Jan 20 15:27:24:202 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is up.
+%Jan 20 15:29:14:752 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is down.
+%Jan 20 15:29:14:764 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is down.
+%Jan 20 15:29:17:641 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is up.
+%Jan 20 15:29:17:643 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is up.
+%Jan 20 15:32:35:427 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is down.
+%Jan 20 15:32:35:436 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is down.
+%Jan 20 15:33:33:218 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/5 link status is up.
+%Jan 20 15:33:33:218 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/5 is up.
+%Jan 20 15:47:17:800 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is down.
+%Jan 20 15:47:17:812 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is down.
+%Jan 20 15:48:08:062 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is up.
+%Jan 20 15:48:08:065 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is up.
+%Jan 20 15:49:59:859 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is down.
+%Jan 20 15:49:59:872 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is down.
+%Jan 20 15:50:02:832 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is up.
+%Jan 20 15:50:02:835 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is up.
+%Jan 20 15:53:25:689 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is down.
+%Jan 20 15:53:25:703 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is down.
+%Jan 20 15:54:22:017 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/2 link status is up.
+%Jan 20 15:54:22:019 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/2 is up.
+%Jan 21 12:04:37:729 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/3 link status is down.
+%Jan 21 12:04:37:747 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/3 is down.
+%Jan 21 12:04:37:747 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.251.18 Local address: 10.187.250.121 Remote address: 10.187.250.122 Reason: Ospf_ifachange.
+%Jan 21 12:04:37:748 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface10 link status is down.
+%Jan 21 12:04:37:749 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface10 is down.
+%Jan 21 12:04:37:750 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.122(Vlan-interface10) from FULL to DOWN.
+%Jan 21 12:05:12:998 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/3 link status is up.
+%Jan 21 12:05:13:001 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/3 is up.
+%Jan 21 12:05:13:001 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface10 link status is up.
+%Jan 21 12:05:13:005 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface10 is up.
+%Jan 21 12:05:55:971 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.122(Vlan-interface10) from LOADING to FULL.
+%Jan 25 11:23:41:586 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 36.159.0.133.
+
+%Jan 25 11:23:41:587 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 36.159.0.133) disconnected from the server.
+%Jan 25 11:24:12:297 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Authentication failed for mg_zhoujiang from 36.159.0.133 port 48914 because of invalid username or wrong password  ssh2.
+
+%Jan 25 11:24:21:883 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Authentication failed for mg_zhoujiang from 36.159.0.133 port 48914 because of invalid username or wrong password  ssh2.
+
+%Jan 25 11:25:02:044 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48914 ssh2.
+
+%Jan 25 11:25:02:072 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Jan 25 11:25:03:459 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Jan 25 11:25:55:311 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cur
+%Jan 25 11:26:11:536 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis ip int b
+%Jan 25 11:26:32:903 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface brief
+%Jan 25 11:26:45:050 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis arp
+%Jan 25 11:26:56:630 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis mac-address
+%Jan 25 11:27:07:115 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface
+%Jan 25 11:34:05:181 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Jan 25 11:34:05:259 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Jan 25 14:18:41:982 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48918 ssh2.
+               
+%Jan 25 14:18:42:013 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Jan 25 14:18:43:397 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Jan 25 14:18:59:605 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cu
+%Jan 25 14:20:59:542 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cu
+%Jan 25 14:21:26:123 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface
+%Jan 25 14:22:55:590 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command exit in view shell failed to be matched.
+%Jan 25 14:23:00:700 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is quit
+%Jan 25 14:23:00:704 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Jan 25 14:23:00:744 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Jan 25 15:57:20:934 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is down.
+%Jan 25 15:57:20:946 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is down.
+%Jan 25 15:57:23:330 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/9 link status is up.
+%Jan 25 15:57:23:332 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/9 is up.
+%Jan 25 16:18:42:794 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is down.
+%Jan 25 16:18:42:803 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is down.
+%Jan 25 16:18:45:313 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/10 link status is up.
+%Jan 25 16:18:45:316 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/10 is up.
+%Jan 28 18:16:29:438 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/11 link status is down.
+%Jan 28 18:16:29:449 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/11 is down.
+%Jan 28 18:16:33:693 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/11 link status is up.
+%Jan 28 18:16:33:694 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/11 is up.
+%Jan 28 18:21:57:754 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/11 link status is down.
+%Jan 28 18:21:57:765 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/11 is down.
+%Jan 28 18:22:00:269 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/11 link status is up.
+%Jan 28 18:22:00:269 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/11 is up.
+%Jan 30 18:31:10:331 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Jan 30 18:31:10:345 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Jan 30 18:31:10:346 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Jan 30 18:31:10:348 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Jan 30 18:31:10:349 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Jan 30 18:31:10:351 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Jan 30 18:31:10:469 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Jan 30 18:31:10:471 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Jan 30 18:31:10:474 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Jan 30 18:31:10:477 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Jan 30 18:31:52:493 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Jan 30 18:41:57:396 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Jan 30 18:41:57:407 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Jan 30 18:41:57:407 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Jan 30 18:41:57:408 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Jan 30 18:41:57:409 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Jan 30 18:41:57:411 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Jan 30 18:41:57:651 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Jan 30 18:41:57:653 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Jan 30 18:41:57:655 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Jan 30 18:41:57:659 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Jan 30 18:42:39:884 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Feb  1 09:36:36:827 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Feb  1 09:36:36:838 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Feb  1 09:36:36:843 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Feb  1 09:36:36:843 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Feb  1 09:36:36:844 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Feb  1 09:36:36:845 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Feb  1 09:36:36:962 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Feb  1 09:36:36:963 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Feb  1 09:36:36:968 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Feb  1 09:36:36:969 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Feb  1 09:37:18:682 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Feb  1 09:47:32:081 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Feb  1 09:47:32:090 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Feb  1 09:47:32:092 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Feb  1 09:47:32:098 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Feb  1 09:47:32:105 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Feb  1 09:47:32:107 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Feb  1 09:47:32:221 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Feb  1 09:47:32:225 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Feb  1 09:47:32:226 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Feb  1 09:47:32:226 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Feb  1 09:48:17:609 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Feb  2 14:38:32:357 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48934 ssh2.
+
+%Feb  2 14:38:32:389 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Feb  2 14:38:33:764 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Feb  2 14:40:45:637 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cpu
+%Feb  2 14:40:52:161 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command dis mem in view shell failed to be matched.
+%Feb  2 14:40:56:447 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis memory
+%Feb  2 14:41:09:246 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface bri
+%Feb  2 14:41:36:261 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface
+%Feb  2 14:42:19:874 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface brief
+%Feb  2 14:42:49:952 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cpu
+%Feb  2 14:42:56:616 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis memory
+%Feb  2 14:43:10:404 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface bri
+%Feb  2 14:43:18:317 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface brief
+%Feb  2 14:43:30:732 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface
+%Feb  2 14:44:40:173 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis alarm
+%Feb  2 14:44:47:605 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis environment
+%Feb  2 14:44:55:815 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis stp bri
+%Feb  2 14:46:12:512 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis device
+%Feb  2 14:46:59:700 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command exit in view shell failed to be matched.
+%Feb  2 14:47:02:014 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is quit
+%Feb  2 14:47:02:018 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Feb  2 14:47:02:055 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Feb  2 15:44:49:003 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.222 port 53684 ssh2.
+
+%Feb  2 15:44:49:043 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.222) connected to the server successfully.
+%Feb  2 15:44:50:433 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.222.
+%Feb  2 15:44:52:533 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.222-User=gxyd; Command is su
+%Feb  2 15:44:58:106 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the su command is ******.
+%Feb  2 15:47:19:300 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command  stelnet 10.187.241.135 in view shell failed to be matched.
+%Feb  2 15:49:11:803 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48938 ssh2.
+
+%Feb  2 15:49:11:859 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Feb  2 15:49:13:253 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Feb  2 15:49:16:667 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty1-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cu
+%Feb  2 15:49:45:645 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command  show cpu in view shell failed to be matched.
+%Feb  2 15:49:52:315 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.222-User=gxyd; Command is sys
+%Feb  2 15:49:59:211 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.222; Command show cpu in view system failed to be matched.
+%Feb  2 15:50:32:799 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.222.
+%Feb  2 15:50:32:846 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.222 port 53684.
+%Feb  2 15:50:32:846 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.222) disconnected from the server.
+%Feb  2 15:55:47:697 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command  exit in view shell failed to be matched.
+%Feb  2 15:55:49:880 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty1-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is quit
+%Feb  2 15:55:49:885 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Feb  2 15:55:49:944 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Feb  3 11:42:03:938 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Feb  3 11:42:03:951 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Feb  3 11:42:03:955 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Feb  3 11:42:03:956 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Feb  3 11:42:03:957 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Feb  3 11:42:03:958 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Feb  3 11:42:04:079 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Feb  3 11:42:04:081 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Feb  3 11:42:04:086 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Feb  3 11:42:04:088 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Feb  3 11:42:49:661 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Feb  3 11:52:11:431 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is down.
+%Feb  3 11:52:11:442 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is down.
+%Feb  3 11:52:11:443 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is down.
+%Feb  3 11:52:11:447 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is down.
+%Feb  3 11:52:11:449 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.234.2 Local address: 10.187.250.193 Remote address: 10.187.250.194 Reason: Ospf_ifachange.
+%Feb  3 11:52:11:450 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from FULL to DOWN.
+%Feb  3 11:52:11:574 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet5/0/5 link status is up.
+%Feb  3 11:52:11:575 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet5/0/5 is up.
+%Feb  3 11:52:11:577 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface80 link status is up.
+%Feb  3 11:52:11:583 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface80 is up.
+%Feb  3 11:52:56:794 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.194(Vlan-interface80) from LOADING to FULL.
+%Feb  3 13:43:25:076 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 59516 ssh2.
+               
+%Feb  3 13:43:25:227 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.229) connected to the server successfully.
+%Feb  3 13:43:25:471 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 59523 ssh2.
+
+%Feb  3 13:43:25:483 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Disconnecting: SFTP server is disabled or service type is not supported.
+
+%Feb  3 13:43:25:484 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb  3 13:43:26:620 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.229.
+%Feb  3 13:43:28:238 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is su
+%Feb  3 13:43:34:267 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the su command is ******.
+%Feb  3 13:43:36:587 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is dis cu
+%Feb  3 13:44:06:981 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is quit
+%Feb  3 13:44:06:985 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.229.
+%Feb  3 13:44:07:034 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.229 port 59516.
+%Feb  3 13:44:07:035 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb  3 13:45:38:069 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 49434 ssh2.
+
+%Feb  3 13:45:38:261 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.229) connected to the server successfully.
+%Feb  3 13:45:38:487 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 49436 ssh2.
+
+%Feb  3 13:45:38:496 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Disconnecting: SFTP server is disabled or service type is not supported.
+
+%Feb  3 13:45:38:497 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb  3 13:45:39:672 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.229.
+%Feb  3 13:45:41:864 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is dis cu
+%Feb  3 13:46:24:117 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.229 port 49434.
+%Feb  3 13:46:24:117 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb  3 13:46:24:823 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.229.
+%Feb  7 16:06:11:137 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is down.
+%Feb  7 16:06:11:149 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is down.
+%Feb  7 16:06:20:298 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is up.
+%Feb  7 16:06:20:300 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is up.
+%Feb  7 16:06:26:250 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is down.
+%Feb  7 16:06:26:260 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is down.
+%Feb  7 16:06:29:795 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is up.
+%Feb  7 16:06:29:796 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is up.
+%Feb  7 16:06:31:164 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is down.
+%Feb  7 16:06:31:172 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is down.
+%Feb  7 16:06:38:830 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is up.
+%Feb  7 16:06:38:833 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is up.
+%Feb  7 16:07:02:280 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is down.
+%Feb  7 16:07:02:289 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is down.
+%Feb  7 16:09:23:821 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is up.
+%Feb  7 16:09:23:822 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is up.
+%Feb  7 16:15:46:784 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is down.
+%Feb  7 16:15:46:793 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is down.
+%Feb  7 16:15:49:310 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/14 link status is up.
+%Feb  7 16:15:49:312 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/14 is up.
+%Feb  9 12:35:27:652 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:35:27:664 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:35:29:382 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:35:29:383 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 12:35:36:127 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:35:36:141 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:35:39:128 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:35:39:128 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 12:39:16:557 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:39:16:568 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:39:18:950 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:39:18:951 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 12:52:47:841 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:52:47:851 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:52:49:569 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:52:49:570 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 12:52:59:525 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:52:59:554 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:53:02:640 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:53:02:642 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 12:56:21:025 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 12:56:21:036 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 12:56:23:541 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 12:56:23:542 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 13:30:20:245 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 13:30:20:255 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb  9 13:30:21:983 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is up.
+%Feb  9 13:30:21:985 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is up.
+%Feb  9 13:33:38:906 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet6/0/6 link status is down.
+%Feb  9 13:33:38:914 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet6/0/6 is down.
+%Feb 18 01:54:06:653 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015406
+
+%Feb 18 01:54:07:686 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015407
+
+%Feb 18 01:54:08:588 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015408
+
+%Feb 18 01:54:09:556 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015409
+
+%Feb 18 01:54:10:571 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015410
+
+%Feb 18 01:54:11:634 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015411
+
+%Feb 18 01:54:12:634 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015412
+
+%Feb 18 01:54:13:587 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015413
+
+%Feb 18 01:54:14:561 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015414
+
+%Feb 18 01:54:15:603 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015415
+
+%Feb 18 01:54:16:571 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015416
+
+%Feb 18 01:54:17:586 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015417
+
+%Feb 18 01:54:18:699 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015418
+
+%Feb 18 01:54:19:708 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015419
+
+%Feb 18 01:54:20:657 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015420
+
+%Feb 18 01:54:21:711 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015421
+
+%Feb 18 01:54:22:648 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015422
+
+%Feb 18 01:54:23:594 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015423
+
+%Feb 18 01:54:24:637 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015424
+               
+%Feb 18 01:54:25:607 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015425
+
+%Feb 18 01:54:26:676 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015426
+
+%Feb 18 01:54:27:760 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015427
+
+%Feb 18 01:54:28:671 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015428
+
+%Feb 18 01:54:29:724 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015429
+
+%Feb 18 01:54:30:781 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015430
+
+%Feb 18 01:54:31:764 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015431
+
+%Feb 18 01:54:32:625 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015432
+
+%Feb 18 01:54:33:722 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015433
+
+%Feb 18 01:54:34:616 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015434
+
+%Feb 18 01:54:35:688 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015435
+
+%Feb 18 01:54:36:648 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015436
+
+%Feb 18 01:54:37:737 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015437
+
+%Feb 18 01:54:38:861 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015438
+
+%Feb 18 01:54:39:713 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015439
+
+%Feb 18 01:54:40:871 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015440
+
+%Feb 18 01:54:41:894 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015441
+
+%Feb 18 01:54:42:867 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015442
+
+%Feb 18 01:54:43:786 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015443
+
+%Feb 18 01:54:44:788 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015444
+
+%Feb 18 01:54:45:727 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015445
+
+%Feb 18 01:54:46:912 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015446
+
+%Feb 18 01:54:47:760 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015447
+               
+%Feb 18 01:54:48:844 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015448
+
+%Feb 18 01:54:49:884 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015449
+
+%Feb 18 01:54:50:771 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015450
+
+%Feb 18 01:54:51:859 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015451
+
+%Feb 18 01:54:52:849 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015452
+
+%Feb 18 01:54:53:759 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015453
+
+%Feb 18 01:54:54:878 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015454
+
+%Feb 18 01:54:55:755 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015455
+
+%Feb 18 01:54:56:866 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015456
+
+%Feb 18 01:54:57:839 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015457
+
+%Feb 18 01:54:58:791 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015458
+
+%Feb 18 01:54:59:819 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015459
+
+%Feb 18 01:55:00:785 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015500
+
+%Feb 18 01:55:01:793 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015501
+
+%Feb 18 01:55:02:787 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015502
+
+%Feb 18 01:55:03:788 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015503
+
+%Feb 18 01:55:04:765 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015504
+
+%Feb 18 01:55:05:907 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015505
+
+%Feb 18 01:55:06:770 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015506
+
+%Feb 18 01:55:07:892 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015507
+
+%Feb 18 01:55:08:814 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015508
+
+%Feb 18 01:55:09:825 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015509
+
+%Feb 18 01:55:10:926 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015510
+               
+%Feb 18 01:55:11:768 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015511
+
+%Feb 18 01:55:12:931 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015512
+
+%Feb 18 01:55:13:777 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015513
+
+%Feb 18 01:55:14:881 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015514
+
+%Feb 18 01:55:15:889 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015515
+
+%Feb 18 01:55:16:841 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015516
+
+%Feb 18 01:55:17:907 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015517
+
+%Feb 18 01:55:18:821 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015518
+
+%Feb 18 01:55:19:898 2021 GXNN-608-1-5F-I22-S7610 SOCKET/6/TCP_SYNFLOOD: -Slot=2; atckType(1016)=(05)SYN-flood;srcIPAddr(1017)=10.184.234.211;destIPAddr(1019)=10.187.242.2;atckSpeed(1047)=300;atckTime_cn(1048)=20210218015519
+
+%Feb 18 01:55:20:207 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:55:26:905 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:26:906 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:29:737 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 52, seq 4.
+%Feb 18 01:55:29:742 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Protocol dispatch error: type 90, seq 5.
+%Feb 18 01:55:30:117 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:30:143 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:30:414 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:30:414 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user  (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:31:751 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:31:751 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user (null) (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:31:869 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user #_does_not_exists_#.
+%Feb 18 01:55:31:976 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user #_does_not_exists_# from 10.184.234.211 port 56854 ssh2.
+
+%Feb 18 01:55:31:982 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:31:982 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user #_does_not_exists_# (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:32:397 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user root.
+%Feb 18 01:55:32:504 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user root from 10.184.234.211 port 34262 ssh2.
+
+%Feb 18 01:55:32:508 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:32:508 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:33:035 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user bin.
+%Feb 18 01:55:33:145 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user bin from 10.184.234.211 port 38018 ssh2.
+
+%Feb 18 01:55:33:149 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:33:149 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user bin (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:33:903 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user daemon.
+%Feb 18 01:55:34:039 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user daemon from 10.184.234.211 port 43072 ssh2.
+
+%Feb 18 01:55:34:043 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:34:043 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user daemon (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:34:377 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user nobody.
+%Feb 18 01:55:34:496 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user nobody from 10.184.234.211 port 49772 ssh2.
+
+%Feb 18 01:55:34:508 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:34:508 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user nobody (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:34:791 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user sshd.
+%Feb 18 01:55:34:900 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user sshd from 10.184.234.211 port 53322 ssh2.
+
+%Feb 18 01:55:34:905 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:34:906 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user sshd (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:36:229 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user admin.
+%Feb 18 01:55:36:333 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user admin from 10.184.234.211 port 56362 ssh2.
+
+%Feb 18 01:55:36:338 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:36:338 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user admin (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:36:883 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Invalid user mail.
+%Feb 18 01:55:36:984 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Failed publickey for invalid user mail from 10.184.234.211 port 38882 ssh2.
+
+%Feb 18 01:55:36:989 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Connection closed by 10.184.234.211.
+
+%Feb 18 01:55:36:990 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mail (IP: 10.184.234.211) disconnected from the server.
+%Feb 18 01:55:49:899 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:55:54:527 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:55:55:470 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:55:55:522 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:55:55:800 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 01:56:01:545 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_VERSION_MISMATCH: SSH client 10.184.234.211 failed to log in because of version mismatch.
+%Feb 18 03:03:36:173 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/12 link status is down.
+%Feb 18 03:03:36:184 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/12 is down.
+%Feb 18 03:03:38:695 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/12 link status is up.
+%Feb 18 03:03:38:696 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/12 is up.
+%Feb 18 03:06:16:631 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/12 link status is down.
+%Feb 18 03:06:16:641 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/12 is down.
+%Feb 18 03:06:19:174 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: GigabitEthernet7/0/12 link status is up.
+%Feb 18 03:06:19:175 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface GigabitEthernet7/0/12 is up.
+%Feb 25 14:55:09:660 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user Pass*67890- (IP: 10.187.230.229) disconnected from the server.
+%Feb 25 14:55:12:687 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Authentication failed for root from 10.187.230.229 port 50017 because of invalid username or wrong password  ssh2.
+
+%Feb 25 14:55:14:347 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user root (IP: 10.187.230.229) disconnected from the server.
+%Feb 25 14:55:24:007 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 50018 ssh2.
+
+%Feb 25 14:55:24:154 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user gxyd (IP: 10.187.230.229) connected to the server successfully.
+%Feb 25 14:55:24:521 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for gxyd from 10.187.230.229 port 50019 ssh2.
+
+%Feb 25 14:55:24:559 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Disconnecting: SFTP server is disabled or service type is not supported.
+
+%Feb 25 14:55:24:560 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb 25 14:55:25:546 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: gxyd logged in from 10.187.230.229.
+%Feb 25 14:55:28:182 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.229; Command top in view shell failed to be matched.
+%Feb 25 14:55:32:537 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=10.187.230.229-User=gxyd; Command is su -
+%Feb 25 14:55:35:767 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD_INPUT: Input string for the su - command is ******.
+%Feb 25 14:55:38:022 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=gxyd-IPAddr=10.187.230.229; Command top in view shell failed to be matched.
+%Feb 25 14:55:45:148 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: User gxyd logged out from 10.187.230.229 port 50018.
+%Feb 25 14:55:45:148 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user gxyd (IP: 10.187.230.229) disconnected from the server.
+%Feb 25 14:55:45:882 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: gxyd logged out from 10.187.230.229.
+%Mar  2 12:16:04:157 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48946 ssh2.
+
+%Mar  2 12:16:04:186 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Mar  2 12:16:05:604 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Mar  2 12:16:11:876 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cpu
+%Mar  2 12:16:15:875 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command dis mem in view shell failed to be matched.
+%Mar  2 12:16:22:248 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis memory
+%Mar  2 12:17:09:665 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command dis alarm all in view shell failed to be matched.
+%Mar  2 12:17:15:529 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis alarm
+%Mar  2 12:17:19:954 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cu
+%Mar  2 12:17:51:350 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis version
+%Mar  2 12:18:00:748 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis environment
+%Mar  2 12:18:17:809 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command exit in view shell failed to be matched.
+%Mar  2 12:18:19:650 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is quit
+%Mar  2 12:18:19:654 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Mar  2 12:18:19:691 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Mar  2 12:41:45:799 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48950 ssh2.
+
+%Mar  2 12:41:45:831 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Mar  2 12:41:47:226 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Mar  2 12:41:49:835 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cpu
+%Mar  2 12:42:58:182 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command dis mem in view shell failed to be matched.
+%Mar  2 12:43:03:960 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis memory
+%Mar  2 12:45:22:802 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is quit
+%Mar  2 12:45:22:805 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGOUT: mg_zhoujiang logged out from 36.159.0.133.
+%Mar  2 12:45:22:846 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_DISCONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) disconnected from the server.
+%Mar  7 19:36:08:098 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from FULL to INIT.
+%Mar  7 19:36:16:364 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from LOADING to FULL.
+%Mar  7 19:36:22:194 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Ten-GigabitEthernet4/0/1 link status is down.
+%Mar  7 19:36:22:211 2021 GXNN-608-1-5F-I22-S7610 OSPF/6/OSPF_LAST_NBR_DOWN: OSPF 1 Last neighbor down event: Router ID: 10.187.243.3 Local address: 10.187.250.249 Remote address: 10.187.250.250 Reason: Ospf_ifachange.
+%Mar  7 19:36:22:212 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Ten-GigabitEthernet4/0/1 is down.
+%Mar  7 19:36:22:212 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface771 link status is down.
+%Mar  7 19:36:22:213 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface771 is down.
+%Mar  7 19:36:22:215 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from FULL to DOWN.
+%Mar  7 19:36:22:322 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Ten-GigabitEthernet4/0/1 link status is up.
+%Mar  7 19:36:22:325 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Ten-GigabitEthernet4/0/1 is up.
+%Mar  7 19:36:22:326 2021 GXNN-608-1-5F-I22-S7610 IFNET/3/PHY_UPDOWN: Vlan-interface771 link status is up.
+%Mar  7 19:36:22:327 2021 GXNN-608-1-5F-I22-S7610 IFNET/5/LINK_UPDOWN: Line protocol on the interface Vlan-interface771 is up.
+%Mar  7 19:37:08:950 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from LOADING to FULL.
+%Mar  7 19:56:14:756 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from FULL to INIT.
+%Mar  7 19:56:17:342 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from LOADING to FULL.
+%Mar  7 19:56:29:001 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from FULL to INIT.
+%Mar  7 19:56:37:290 2021 GXNN-608-1-5F-I22-S7610 OSPF/5/OSPF_NBR_CHG: OSPF 1 Neighbor 10.187.250.250(Vlan-interface771) from LOADING to FULL.
+%Mar  9 11:38:45:298 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_LOG: Accepted password for mg_zhoujiang from 36.159.0.133 port 48956 ssh2.
+
+%Mar  9 11:38:45:326 2021 GXNN-608-1-5F-I22-S7610 SSHS/6/SSHS_CONNECT: SSH user mg_zhoujiang (IP: 36.159.0.133) connected to the server successfully.
+%Mar  9 11:38:46:709 2021 GXNN-608-1-5F-I22-S7610 SHELL/5/SHELL_LOGIN: mg_zhoujiang logged in from 36.159.0.133.
+%Mar  9 11:41:09:976 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis cpu
+%Mar  9 11:41:17:358 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command  dis mem in view shell failed to be matched.
+%Mar  9 11:41:20:397 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis memory
+%Mar  9 11:41:31:866 2021 GXNN-608-1-5F-I22-S7610 SHELL/4/SHELL_CMD_MATCHFAIL: -User=mg_zhoujiang-IPAddr=36.159.0.133; Command dis alarm all in view shell failed to be matched.
+%Mar  9 11:41:37:238 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis alarm
+%Mar  9 11:41:43:320 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface bri
+%Mar  9 11:41:57:144 2021 GXNN-608-1-5F-I22-S7610 SHELL/6/SHELL_CMD: -Line=vty0-IPAddr=36.159.0.133-User=mg_zhoujiang; Command is dis interface
+<GXNN-608-1-5F-I22-S7610>exit
+                         ^
+ % Unrecognized command found at '^' position.
+<GXNN-608-1-5F-I22-S7610>quit
+Connection to 10.187.242.2 closed.

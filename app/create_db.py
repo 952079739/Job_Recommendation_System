@@ -33,19 +33,20 @@ class Device(db.Model):
     device_ip = db.Column(db.String(200), unique=True)
     device_user = db.Column(db.String(200), unique=False)
     device_password = db.Column(db.String(100), unique=False)
-    data = db.relationship('Data', backref='device')
+    data = db.relationship('Ddata', backref='device')
 
     def __repr__(self):
         return '<Device {}>'.format(self.device_name)
 
 
-class Data(db.Model):
-    __tablename__ = 'data'
+class Ddata(db.Model):
+    __tablename__ = 'device_data'
     __table_args__ = {'extend_existing': True}
     data_id = db.Column(db.Integer, primary_key=True)
-    data_cpu = db.Column(db.String(100), unique=False)
-    data_memory = db.Column(db.String(100), unique=False)
-    data_flow = db.Column(db.String(100), unique=False)
+    data_cpu = db.Column(db.String(100), nullable=True)
+    data_memory = db.Column(db.String(100), nullable=True)
+    data_flow = db.Column(db.String(100), nullable=True)
+    data_time = db.Column(db.String(100), nullable=True)
     device_id = db.Column(db.Integer, db.ForeignKey('device.device_id'))
 
 

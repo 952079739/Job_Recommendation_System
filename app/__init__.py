@@ -5,11 +5,11 @@ from app.util import Redis
 from flask import Flask
 from flask_cors import *
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="templates")
 
 # 数据库配置
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:123456@127.0.0.1:3306/' \
-                                        'device?charset=utf8mb4'
+                                        'devicedata?charset=utf8mb4'
 
 app.config['SQLALCHEMY_COMMIT_ON_TEARDOWN'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
